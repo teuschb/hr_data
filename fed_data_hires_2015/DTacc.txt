@@ -1,0 +1,6 @@
+ACC,ACCT
+AA,Transfer In - Individual Transfer
+AB,Transfer In - Mass Transfer
+AC,New Hire - Competitive Service Appointment
+AD,New Hire - Excepted Service Appointment
+AE,New Hire - Senior Executive Service (SES) Appt

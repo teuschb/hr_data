@@ -1,0 +1,3 @@
+WORKSTAT,WORKSTATT
+1,Non-Seasonal Full Time Permanent
+2,Other Employees

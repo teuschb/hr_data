@@ -1,0 +1,13 @@
+WSTYP,WSTYPT,WORKSCH,WORKSCHT
+1,Full-time,B,B - Full-time Nonseasonal Baylor Pln
+1,Full-time,F,F - Full-time Nonseasonal
+1,Full-time,G,G - Full-time Seasonal
+1,Full-time,H,H - Full-time On-call
+2,Not Full-time,I,I - Intermittent Nonseasonal
+2,Not Full-time,J,J - Intermittent Seasonal
+2,Not Full-time,P,P - Part-time Nonseasonal
+2,Not Full-time,Q,Q - Part-time Seasonal
+2,Not Full-time,R,R - Part-time On-call
+2,Not Full-time,S,S - Part-time Job Sharer Nonseasonal
+2,Not Full-time,T,T - Part-time Job Sharer Seasonal
+3,Unspecified,*,* - Unspecified

@@ -1,0 +1,13 @@
+AGELVL,AGELVLT
+A,Less than 20
+B,20-24
+C,25-29
+D,30-34
+E,35-39
+F,40-44
+G,45-49
+H,50-54
+I,55-59
+J,60-64
+K,65 or more
+Z,Unspecified

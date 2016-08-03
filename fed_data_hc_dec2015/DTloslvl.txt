@@ -1,0 +1,12 @@
+LOSLVL,LOSLVLT
+A,Less than 1 year
+B,1 - 2 years
+C,3 - 4 years
+D,5 - 9 years
+E,10 - 14 years
+F,15 - 19 years
+G,20 - 24 years
+H,25 - 29 years
+I,30 - 34 years
+J,35 years or more
+Z,Unspecified

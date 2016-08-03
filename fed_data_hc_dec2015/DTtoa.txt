@@ -1,0 +1,22 @@
+TOATYP,TOATYPT,TOA,TOAT
+1,Permanent,10,10-Competitive Service - Career
+1,Permanent,15,15-Competitive Service - Career-Conditional
+1,Permanent,30,30-Excepted Service - Schedule A
+1,Permanent,32,32-Excepted Service - Schedule B
+1,Permanent,34,34-Excepted Service - Schedule C
+1,Permanent,35,35-Excepted Service - Schedule D
+1,Permanent,36,36-Excepted Service - Executive
+1,Permanent,38,38-Excepted Service - Other
+1,Permanent,50,50-Senior Executive Service - Career
+1,Permanent,55,55-Senior Executive Service - Non-Career
+1,Permanent,99,**-Unspecified
+2,Non-permanent,20,20-Competitive Service
+2,Non-permanent,40,40-Excepted Service - Schedule A
+2,Non-permanent,42,42-Excepted Service - Schedule B
+2,Non-permanent,44,44-Excepted Service - Schedule C
+2,Non-permanent,45,45-Excepted Service - Schedule D
+2,Non-permanent,46,46-Excepted Service - Executive
+2,Non-permanent,48,48-Excepted Service - Other
+2,Non-permanent,60,60-Senior Executive Service - Limited Term
+2,Non-permanent,65,65-Senior Executive Service - Limited Emergency
+3,Unspecified,**,**-Unspecified

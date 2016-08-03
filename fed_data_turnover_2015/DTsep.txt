@@ -1,0 +1,13 @@
+SEP,SEPT
+SA,Transfer Out - Individual Transfer
+SB,Transfer Out - Mass Transfer
+SC,Quit
+SD,Retirement - Voluntary
+SE,Retirement - Early Out
+SF,Retirement - Disability
+SG,Retirement - Other
+SH,Reduction In Force (RIF)
+SI,Termination or Removal (Discipline/Performance)
+SJ,Termination (Expired Appt/Other)
+SK,Death
+SL,Other Separation

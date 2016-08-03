@@ -1,0 +1,225 @@
+LOCTYP,LOCTYPT,LOC,LOCT
+1,United States,01,01-ALABAMA
+1,United States,02,02-ALASKA
+1,United States,04,04-ARIZONA
+1,United States,05,05-ARKANSAS
+1,United States,06,06-CALIFORNIA
+1,United States,08,08-COLORADO
+1,United States,09,09-CONNECTICUT
+1,United States,10,10-DELAWARE
+1,United States,11,11-DISTRICT OF COLUMBIA
+1,United States,12,12-FLORIDA
+1,United States,13,13-GEORGIA
+1,United States,15,15-HAWAII
+1,United States,16,16-IDAHO
+1,United States,17,17-ILLINOIS
+1,United States,18,18-INDIANA
+1,United States,19,19-IOWA
+1,United States,20,20-KANSAS
+1,United States,21,21-KENTUCKY
+1,United States,22,22-LOUISIANA
+1,United States,23,23-MAINE
+1,United States,24,24-MARYLAND
+1,United States,25,25-MASSACHUSETTS
+1,United States,26,26-MICHIGAN
+1,United States,27,27-MINNESOTA
+1,United States,28,28-MISSISSIPPI
+1,United States,29,29-MISSOURI
+1,United States,30,30-MONTANA
+1,United States,31,31-NEBRASKA
+1,United States,32,32-NEVADA
+1,United States,33,33-NEW HAMPSHIRE
+1,United States,34,34-NEW JERSEY
+1,United States,35,35-NEW MEXICO
+1,United States,36,36-NEW YORK
+1,United States,37,37-NORTH CAROLINA
+1,United States,38,38-NORTH DAKOTA
+1,United States,39,39-OHIO
+1,United States,40,40-OKLAHOMA
+1,United States,41,41-OREGON
+1,United States,42,42-PENNSYLVANIA
+1,United States,44,44-RHODE ISLAND
+1,United States,45,45-SOUTH CAROLINA
+1,United States,46,46-SOUTH DAKOTA
+1,United States,47,47-TENNESSEE
+1,United States,48,48-TEXAS
+1,United States,49,49-UTAH
+1,United States,50,50-VERMONT
+1,United States,51,51-VIRGINIA
+1,United States,53,53-WASHINGTON
+1,United States,54,54-WEST VIRGINIA
+1,United States,55,55-WISCONSIN
+1,United States,56,56-WYOMING
+1,United States,US,US-SUPPRESSED (SEE DATA DEFINITIONS)
+2,U.S. Territories,AQ,AQ-AMERICAN SAMOA
+2,U.S. Territories,CQ,CQ-NORTHERN MARIANA ISLANDS
+2,U.S. Territories,GQ,GQ-GUAM
+2,U.S. Territories,MQ,MQ-MIDWAY ISLANDS
+2,U.S. Territories,RQ,RQ-PUERTO RICO
+2,U.S. Territories,VQ,VQ-VIRGIN ISLANDS
+3,Foreign Countries,AA,AA-ARUBA
+3,Foreign Countries,AE,AE-UNITED ARAB EMIRATES
+3,Foreign Countries,AF,AF-AFGHANISTAN
+3,Foreign Countries,AG,AG-ALGERIA
+3,Foreign Countries,AJ,AJ-AZERBAIJAN
+3,Foreign Countries,AL,AL-ALBANIA
+3,Foreign Countries,AM,AM-ARMENIA
+3,Foreign Countries,AO,AO-ANGOLA
+3,Foreign Countries,AR,AR-ARGENTINA
+3,Foreign Countries,AS,AS-AUSTRALIA
+3,Foreign Countries,AU,AU-AUSTRIA
+3,Foreign Countries,AY,AY-ANTARCTICA
+3,Foreign Countries,BA,BA-BAHRAIN
+3,Foreign Countries,BB,BB-BARBADOS
+3,Foreign Countries,BC,BC-BOTSWANA
+3,Foreign Countries,BD,BD-BERMUDA
+3,Foreign Countries,BE,BE-BELGIUM
+3,Foreign Countries,BF,"BF-BAHAMAS, THE"
+3,Foreign Countries,BG,BG-BANGLADESH
+3,Foreign Countries,BH,BH-BELIZE
+3,Foreign Countries,BK,BK-BOSNIA AND HERZEGOVINA
+3,Foreign Countries,BM,BM-BURMA
+3,Foreign Countries,BN,BN-BENIN
+3,Foreign Countries,BR,BR-BRAZIL
+3,Foreign Countries,BU,BU-BULGARIA
+3,Foreign Countries,BY,BY-BURUNDI
+3,Foreign Countries,CA,CA-CANADA
+3,Foreign Countries,CB,CB-CAMBODIA
+3,Foreign Countries,CD,CD-CHAD
+3,Foreign Countries,CE,CE-SRI LANKA
+3,Foreign Countries,CF,CF-CONGO
+3,Foreign Countries,CG,"CG-CONGO, DEMOCRATIC REPUBLIC OF THE"
+3,Foreign Countries,CH,CH-CHINA
+3,Foreign Countries,CI,CI-CHILE
+3,Foreign Countries,CM,CM-CAMEROON
+3,Foreign Countries,CN,CN-COMOROS
+3,Foreign Countries,CO,CO-COLOMBIA
+3,Foreign Countries,CS,CS-COSTA RICA
+3,Foreign Countries,CU,CU-CUBA
+3,Foreign Countries,CV,CV-CAPE VERDE
+3,Foreign Countries,CY,CY-CYPRUS
+3,Foreign Countries,DA,DA-DENMARK
+3,Foreign Countries,DJ,DJ-DJIBOUTI
+3,Foreign Countries,DR,DR-DOMINICAN REPUBLIC
+3,Foreign Countries,EC,EC-ECUADOR
+3,Foreign Countries,EG,EG-EGYPT
+3,Foreign Countries,EI,EI-IRELAND
+3,Foreign Countries,EN,EN-ESTONIA
+3,Foreign Countries,ES,ES-EL SALVADOR
+3,Foreign Countries,ET,ET-ETHIOPIA
+3,Foreign Countries,EZ,EZ-CZECH REPUBLIC
+3,Foreign Countries,FI,FI-FINLAND
+3,Foreign Countries,FJ,FJ-FIJI
+3,Foreign Countries,FM,"FM-MICRONESIA, FEDERATED STATES OF"
+3,Foreign Countries,FR,FR-FRANCE
+3,Foreign Countries,GA,"GA-GAMBIA, THE"
+3,Foreign Countries,GB,GB-GABON
+3,Foreign Countries,GG,GG-GEORGIA
+3,Foreign Countries,GH,GH-GHANA
+3,Foreign Countries,GL,GL-GREENLAND
+3,Foreign Countries,GM,GM-GERMANY
+3,Foreign Countries,GR,GR-GREECE
+3,Foreign Countries,GT,GT-GUATEMALA
+3,Foreign Countries,GV,GV-GUINEA
+3,Foreign Countries,GY,GY-GUYANA
+3,Foreign Countries,HA,HA-HAITI
+3,Foreign Countries,HK,HK-HONG KONG
+3,Foreign Countries,HO,HO-HONDURAS
+3,Foreign Countries,HR,HR-CROATIA
+3,Foreign Countries,HU,HU-HUNGARY
+3,Foreign Countries,IC,IC-ICELAND
+3,Foreign Countries,ID,ID-INDONESIA
+3,Foreign Countries,IN,IN-INDIA
+3,Foreign Countries,IO,IO-BRITISH INDIAN OCEAN TERRITORY
+3,Foreign Countries,IS,IS-ISRAEL
+3,Foreign Countries,IT,IT-ITALY
+3,Foreign Countries,IV,IV-COTE D'IVOIRE
+3,Foreign Countries,IZ,IZ-IRAQ
+3,Foreign Countries,JA,JA-JAPAN
+3,Foreign Countries,JM,JM-JAMAICA
+3,Foreign Countries,JO,JO-JORDAN
+3,Foreign Countries,KE,KE-KENYA
+3,Foreign Countries,KG,KG-KYRGYZSTAN
+3,Foreign Countries,KS,"KS-KOREA, REPUBLIC OF"
+3,Foreign Countries,KU,KU-KUWAIT
+3,Foreign Countries,KV,KV-KOSOVO
+3,Foreign Countries,KZ,KZ-KAZAKHSTAN
+3,Foreign Countries,LA,LA-LAOS
+3,Foreign Countries,LE,LE-LEBANON
+3,Foreign Countries,LG,LG-LATVIA
+3,Foreign Countries,LH,LH-LITHUANIA
+3,Foreign Countries,LI,LI-LIBERIA
+3,Foreign Countries,LT,LT-LESOTHO
+3,Foreign Countries,LU,LU-LUXEMBOURG
+3,Foreign Countries,MA,MA-MADAGASCAR
+3,Foreign Countries,MD,MD-MOLDOVA
+3,Foreign Countries,MG,MG-MONGOLIA
+3,Foreign Countries,MI,MI-MALAWI
+3,Foreign Countries,MK,MK-MACEDONIA
+3,Foreign Countries,ML,ML-MALI
+3,Foreign Countries,MO,MO-MOROCCO
+3,Foreign Countries,MP,MP-MAURITIUS
+3,Foreign Countries,MT,MT-MALTA
+3,Foreign Countries,MU,MU-OMAN
+3,Foreign Countries,MX,MX-MEXICO
+3,Foreign Countries,MY,MY-MALAYSIA
+3,Foreign Countries,MZ,MZ-MOZAMBIQUE
+3,Foreign Countries,NG,NG-NIGER
+3,Foreign Countries,NH,NH-VANUATU
+3,Foreign Countries,NI,NI-NIGERIA
+3,Foreign Countries,NL,NL-NETHERLANDS
+3,Foreign Countries,NO,NO-NORWAY
+3,Foreign Countries,NP,NP-NEPAL
+3,Foreign Countries,NT,NT-NETHERLANDS ANTILLES
+3,Foreign Countries,NU,NU-NICARAGUA
+3,Foreign Countries,NZ,NZ-NEW ZEALAND
+3,Foreign Countries,PA,PA-PARAGUAY
+3,Foreign Countries,PE,PE-PERU
+3,Foreign Countries,PK,PK-PAKISTAN
+3,Foreign Countries,PL,PL-POLAND
+3,Foreign Countries,PM,PM-PANAMA
+3,Foreign Countries,PO,PO-PORTUGAL
+3,Foreign Countries,PP,PP-PAPUA NEW GUINEA
+3,Foreign Countries,QA,QA-QATAR
+3,Foreign Countries,RI,RI-SERBIA
+3,Foreign Countries,RM,RM-MARSHALL ISLANDS
+3,Foreign Countries,RO,RO-ROMANIA
+3,Foreign Countries,RP,RP-PHILIPPINES
+3,Foreign Countries,RS,RS-RUSSIA
+3,Foreign Countries,RW,RW-RWANDA
+3,Foreign Countries,SA,SA-SAUDI ARABIA
+3,Foreign Countries,SF,SF-SOUTH AFRICA
+3,Foreign Countries,SG,SG-SENEGAL
+3,Foreign Countries,SI,SI-SLOVENIA
+3,Foreign Countries,SL,SL-SIERRA LEONE
+3,Foreign Countries,SN,SN-SINGAPORE
+3,Foreign Countries,SP,SP-SPAIN
+3,Foreign Countries,SU,SU-SUDAN
+3,Foreign Countries,SW,SW-SWEDEN
+3,Foreign Countries,SZ,SZ-SWITZERLAND
+3,Foreign Countries,TD,TD-TRINIDAD AND TOBAGO
+3,Foreign Countries,TH,TH-THAILAND
+3,Foreign Countries,TI,TI-TAJIKISTAN
+3,Foreign Countries,TN,TN-TONGA
+3,Foreign Countries,TO,TO-TOGO
+3,Foreign Countries,TP,TP-SAO TOME AND PRINCIPE
+3,Foreign Countries,TS,TS-TUNISIA
+3,Foreign Countries,TT,TT-TIMOR-LESTE
+3,Foreign Countries,TU,TU-TURKEY
+3,Foreign Countries,TW,TW-TAIWAN
+3,Foreign Countries,TX,TX-TURKMENISTAN
+3,Foreign Countries,TZ,TZ-TANZANIA
+3,Foreign Countries,UG,UG-UGANDA
+3,Foreign Countries,UK,UK-UNITED KINGDOM
+3,Foreign Countries,UP,UP-UKRAINE
+3,Foreign Countries,UV,UV-BURKINA FASO
+3,Foreign Countries,UY,UY-URUGUAY
+3,Foreign Countries,UZ,UZ-UZBEKISTAN
+3,Foreign Countries,VE,VE-VENEZUELA
+3,Foreign Countries,VM,VM-VIETNAM
+3,Foreign Countries,WA,WA-NAMIBIA
+3,Foreign Countries,WS,WS-SAMOA
+3,Foreign Countries,WZ,WZ-SWAZILAND
+3,Foreign Countries,ZA,ZA-ZAMBIA
+3,Foreign Countries,ZI,ZI-ZIMBABWE
+9,Unspecified,**,**-UNSPECIFIED
