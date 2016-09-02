@@ -2,7 +2,7 @@
 # -- Analysis --
 ####
 
-
+wat <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/recruitment_evaluation_data.csv")
 
 ### Just start analyzing this - see how far you are from something good before you keep tweaking it forever
 ### --------------
