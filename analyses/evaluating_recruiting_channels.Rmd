@@ -1,0 +1,45 @@
+---
+title: "Evaluating Recruiting Channels"
+author: "Ben Teusch"
+date: "September 6, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+What I'm doing, what this is for
+
+### Load in data
+I'm going to load in the data using `read.csv`. This function can be used to read in a .csv file from your computer, or from the Internet. Here, I'll load in the data I've saved on my github site, and store it as a `data.frame` called `mydata`.
+```{r}
+mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/recruitment_evaluation_data.csv")
+```
+
+Whenever I have a new dataset, I like to see what I'm working with. I tend to use `str()` and `summary()`. `str()` shows the structure of your data: the column names and how many there are, and what type of data each one is. `summary()` willIf you're used to working with spreadsheets, `View(mydata)` will show you a spreadsheet with your data (note the capital **V**).
+
+```{r}
+str(mydata)
+```
+
+I see there is a column called HireSource that shows which recruiting channel our hires came from. Instead of using `summary()` on the entire dataset, let's use it on just the HireSource column. The `$` operator is one way to specify a column in R.
+
+```{r}
+summary(mydata$HireSource)
+```
+
+This shows the number of hires that came from the four broad hiring channels we have, as well as `NA`, which R uses to denote missing data. It can be helpful to understand why data is missing. In this case, I know that our ATS only started tracking hire data 7 years ago, so anybody hired over 7 years ago won't have this data. I can check that by calling `summary()` on `mydata$TotalWorkingYears`, subset by only the people whose `HireSource` information is missing `is.na(mydata$HireSource)`.
+
+```{r}
+summary(mydata$TotalWorkingYears[is.na(mydata$HireSource)])
+```
+
+Since I'm trying to determine which of these hiring channels is best, I need some way to compare them. Hopefully I know what is most important in my company for recruiting success, but if I want to quickly see all the data I could use, another trick is the `names()` function, which lists all the columns in my data very cleanly.
+
+```{r}
+names(mydata)
+```
+
