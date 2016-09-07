@@ -21,8 +21,6 @@ wat$Over18 <- NULL
 wat$PerformanceRating <- floor(rnorm(nrow(wat), 3.4, .6))
 wat$SalesRating <- ifelse(wat$Department == "Sales", rnorm(nrow(wat),1.1,.7),NA)
 
-wat$SalesRating[wat$Department == "Sales"] <- ifelse(wat$HireSource[wat$Department == "Sales"] == "Referral", wat$SalesRating + .4, wat$SalesRating)
-
 #
 wat$RandNum <- runif(nrow(wat))
 wat$RandNum <- ifelse(wat$YearsAtCompany > 6, NA, wat$RandNum) # we only have data for the last 6 years
@@ -33,13 +31,37 @@ wat$HireSource <- ifelse(wat$Education == 1 & wat$RandNum < .8, "Applied Online"
 wat$HireSource <- ifelse(wat$Education == 1 & wat$RandNum > .8, "Referral", wat$HireSource)
 wat$HireSource <- ifelse(wat$RandNum > .9, "Referral", wat$HireSource)
 # make sure search firm hires are high level
-wat$HireSource <- ifelse(wat$RandNum > .8 & wat$MonthlyRate > 20000, "Search Firm", wat$HireSource)
+wat$HireSource <- ifelse(wat$RandNum > .9 & wat$MonthlyRate > 20000 & wat$Attrition == 0,
+                         "Campus", wat$HireSource)
+wat$HireSource <- ifelse(wat$RandNum > .75 & wat$MonthlyRate > 20000 & wat$HireSource == 0,
+                         "Search Firm", wat$HireSource)
 
 
 wat$HireSource <- ifelse(wat$RandNum <= .4 & wat$HireSource == 0, "Applied Online", wat$HireSource)
 wat$HireSource <- ifelse(wat$RandNum >= .4 & wat$RandNum <= .5 & wat$HireSource == 0, "Referral", wat$HireSource)
 wat$HireSource <- ifelse(wat$RandNum > .5 & wat$HireSource == 0, "Campus", wat$HireSource)
 wat$HireSource <- as.factor(wat$HireSource)
+
+wat$Attrition <- ifelse(wat$Attrition == "Yes", 1, 0)
+
+# make referrals have higher sales ratings
+adjustData <- function(str, num){
+  if(str == "Referral"){
+   num + .4
+  } 
+  return(num)
+}
+
+sapply(wat$HireSource[wat$Department == "Sales"], adjustData, wat$SalesRating[wat$Department == "Sales"])
+
+# ---
+
+t.test(wat$Attrition[wat$HireSource == "Search Firm"], wat$Attrition[wat$HireSource == "Referral"])
+t.test(wat$SalesRating[wat$HireSource != "Referral"], wat$SalesRating[wat$HireSource == "Referral"])
+
+
+
+# ---
 summary(factor(wat$HireSource))
 
 watHire <- na.omit(wat)
@@ -56,7 +78,7 @@ summary(factor(wat$Campus))
 
 wat$RandNum = NULL
 
-wat$Attrition <- ifelse(wat$Attrition == "Yes", 1, 0)
+
 
 
 watCampus <- na.omit(wat)

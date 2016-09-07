@@ -32,7 +32,7 @@ I see there is a column called HireSource that shows which recruiting channel ou
 summary(mydata$HireSource)
 ```
 
-This shows the number of hires that came from the four broad hiring channels we have, as well as `NA`, which R uses to denote missing data. It can be helpful to understand why data is missing. In this case, I know that our ATS only started tracking hire data 7 years ago, so anybody hired over 7 years ago won't have this data. I can check that by calling `summary()` on `mydata$TotalWorkingYears`, subset by only the people whose `HireSource` information is missing `is.na(mydata$HireSource)`.
+This shows the number of hires that came from the four broad hiring channels we have, as well as `NA`, which R uses to denote missing data. It can be helpful to understand why data is missing. In this case, I know that our ATS only started tracking hire data 6 years ago, so anybody hired over 6 years ago won't have this data. I can check that by calling `summary()` on `mydata$TotalWorkingYears`, subset by only the people whose `HireSource` information is missing: `is.na(mydata$HireSource)`.
 
 ```{r}
 summary(mydata$TotalWorkingYears[is.na(mydata$HireSource)])
@@ -65,19 +65,27 @@ In this case, the package is `psych`, so before running the next code block, you
 
 ```{r}
 library(psych)
-# describe attrition by hiresource, and put it into a matrix
+# describe attrition by hiresource, and put the output into a matrix
 describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  
 ```
 
-I like this package because the information is output close together, so it is easy to compare. I don't always care about range or skew, but if I did, it's all there. Here I'm most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?
+I like `describeBy()` because the information is output close together, so it is easy to compare. I don't always care about range or skew, but if I did, it's all there. Here I'm most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?
 
 <span style="color:blue">what graphs should I be using?</span>
-Visually comparing the means, 
+
+Visually comparing the means, it looks like employees hired by a search firm have higher attrition, and referral hires have lower attrition. Is that difference significant? We can check by using a t-test, which will help us know if the difference in attrition between the two groups is real, or just due to variation in the data.
 
 ##### <span style="color:blue">data will be fixed so search firm as higher attrition and referral has lower</span>
 
+Using the function `t.test()`, I can compare attrition from employees whose `HireSource` is Search Firm with employees whose `HireSource` is Referral. See if you understand how I use the `$` and `[` operators to tell R to look at those cuts of data.
+
 ```{r}
-t.test(mydata$Attrition[mydata$HireSource == "Campus"], mydata$Attrition[mydata$HireSource == "Referral"]) #
+t.test(mydata$Attrition[mydata$HireSource == "Search Firm"], mydata$Attrition[mydata$HireSource == "Referral"])
+```
+
+<span style="color:blue">regression</span>
+
+```{r}
 att_mod <- glm(Attrition ~ HireSource + Department + BusinessTravel + OverTime + YearsAtCompany +
                 TrainingTimesLastYear + WorkLifeBalance,
                family = binomial(link = 'logit'), data = mydata)
@@ -85,7 +93,7 @@ summary(att_mod)
 exp(summary(att_mod)$coefficients)
 ```
 
-<span style="color:blue">t-test, regression</span>
+
 
 #### Performance Ratings
 

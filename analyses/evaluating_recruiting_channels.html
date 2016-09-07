@@ -232,14 +232,94 @@ describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  </code></pre>
 ## X12   0   1     1 1.451612 0.10762158 0.02471614
 ## X13   0   1     1 1.750913 1.07278887 0.03028484
 ## X14   0   1     1 1.450279 0.10716049 0.06030227</code></pre>
-<p>I like this package because the information is output close together, so it is easy to compare. I don’t always care about range or skew, but if I did, it’s all there. Here I’m most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?</p>
-<div id="analysis-here-but-wait-because-i-might-change-data" class="section level5">
-<h5><span style="color:blue">analysis here, but wait because I might change data</span></h5>
+<p>I like <code>describeBy()</code> because the information is output close together, so it is easy to compare. I don’t always care about range or skew, but if I did, it’s all there. Here I’m most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?</p>
+<p><span style="color:blue">what graphs should I be using?</span> Visually comparing the means, it looks like employees hired by a search firm have higher attrition, and referral hires have lower attrition. Is that difference significant? We can check by using a t-test, which will help us know if the difference in attrition between the two groups is real, or just due to variation in the data.</p>
+<div id="data-will-be-fixed-so-search-firm-as-higher-attrition-and-referral-has-lower" class="section level5">
+<h5><span style="color:blue">data will be fixed so search firm as higher attrition and referral has lower</span></h5>
+<pre class="r"><code>t.test(mydata$Attrition[mydata$HireSource == &quot;Search Firm&quot;], mydata$Attrition[mydata$HireSource == &quot;Referral&quot;]) </code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  mydata$Attrition[mydata$HireSource == &quot;Search Firm&quot;] and mydata$Attrition[mydata$HireSource == &quot;Referral&quot;]
+## t = 0.4619, df = 67.755, p-value = 0.6456
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -0.1034940  0.1658317
+## sample estimates:
+## mean of x mean of y 
+## 0.2000000 0.1688312</code></pre>
+<pre class="r"><code>att_mod &lt;- glm(Attrition ~ HireSource + Department + BusinessTravel + OverTime + YearsAtCompany +
+                TrainingTimesLastYear + WorkLifeBalance,
+               family = binomial(link = 'logit'), data = mydata)
+summary(att_mod)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = Attrition ~ HireSource + Department + BusinessTravel + 
+##     OverTime + YearsAtCompany + TrainingTimesLastYear + WorkLifeBalance, 
+##     family = binomial(link = &quot;logit&quot;), data = mydata)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -1.7361  -0.6473  -0.4337  -0.2519   2.5474  
+## 
+## Coefficients:
+##                                   Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)                       0.145852   0.696020   0.210 0.834018    
+## HireSourceCampus                  0.192201   0.220408   0.872 0.383195    
+## HireSourceReferral               -0.258071   0.275390  -0.937 0.348703    
+## HireSourceSearch Firm            -0.008945   0.435046  -0.021 0.983596    
+## DepartmentResearch &amp; Development -0.973813   0.422006  -2.308 0.021022 *  
+## DepartmentSales                  -0.255398   0.430050  -0.594 0.552593    
+## BusinessTravelTravel_Frequently   1.440701   0.408349   3.528 0.000419 ***
+## BusinessTravelTravel_Rarely       0.480051   0.375835   1.277 0.201500    
+## OverTimeYes                       1.467669   0.192715   7.616 2.62e-14 ***
+## YearsAtCompany                   -0.350017   0.055530  -6.303 2.91e-10 ***
+## TrainingTimesLastYear            -0.136500   0.077624  -1.758 0.078665 .  
+## WorkLifeBalance                  -0.256544   0.132216  -1.940 0.052339 .  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 854.35  on 851  degrees of freedom
+## Residual deviance: 711.84  on 840  degrees of freedom
+##   (618 observations deleted due to missingness)
+## AIC: 735.84
+## 
+## Number of Fisher Scoring iterations: 5</code></pre>
+<pre class="r"><code>exp(summary(att_mod)$coefficients)</code></pre>
+<pre><code>##                                   Estimate Std. Error      z value
+## (Intercept)                      1.1570249   2.005753 1.233125e+00
+## HireSourceCampus                 1.2119145   1.246585 2.391748e+00
+## HireSourceReferral               0.7725405   1.317045 3.917588e-01
+## HireSourceSearch Firm            0.9910949   1.545034 9.796489e-01
+## DepartmentResearch &amp; Development 0.3776405   1.525017 9.950165e-02
+## DepartmentSales                  0.7746081   1.537335 5.521810e-01
+## BusinessTravelTravel_Frequently  4.2236547   1.504333 3.405950e+01
+## BusinessTravelTravel_Rarely      1.6161566   1.456207 3.586906e+00
+## OverTimeYes                      4.3391107   1.212537 2.029936e+03
+## YearsAtCompany                   0.7046761   1.057100 1.830352e-03
+## TrainingTimesLastYear            0.8724059   1.080716 1.723056e-01
+## WorkLifeBalance                  0.7737210   1.141355 1.436562e-01
+##                                  Pr(&gt;|z|)
+## (Intercept)                      2.302551
+## HireSourceCampus                 1.466964
+## HireSourceReferral               1.417228
+## HireSourceSearch Firm            2.674054
+## DepartmentResearch &amp; Development 1.021245
+## DepartmentSales                  1.737753
+## BusinessTravelTravel_Frequently  1.000419
+## BusinessTravelTravel_Rarely      1.223236
+## OverTimeYes                      1.000000
+## YearsAtCompany                   1.000000
+## TrainingTimesLastYear            1.081842
+## WorkLifeBalance                  1.053733</code></pre>
 <p><span style="color:blue">t-test, regression</span></p>
 </div>
 </div>
 <div id="performance-ratings" class="section level4">
 <h4>Performance Ratings</h4>
+<p><span style="color:blue">same as attrition, basically</span></p>
 </div>
 </div>
 
