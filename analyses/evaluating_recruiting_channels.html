@@ -122,14 +122,21 @@ $(document).ready(function () {
 </div>
 
 
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
-<p>What I’m doing, what this is for</p>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<div id="i-believe-my-audience-is-people-who-have-downloaded-r-and-are-comfortable-with-at-least-copying-code-and-running-it.-no-actual-knowledge-of-r-is-expected-but-a-willingness-to-learn-on-your-own-is-because-im-not-covering-everything-here.-analysts-trying-to-move-into-r-should-find-this-helpful-and-some-r-users-trying-to-break-into-people-analytics-will-find-the-r-simple-but-hopefully-will-find-the-applications-interesting." class="section level5">
+<h5><span style="color:blue"> I believe my audience is people who have downloaded R, and are comfortable with at least copying code and running it. No actual knowledge of R is expected, but a willingness to learn on your own is, because I’m not covering everything here. Analysts trying to move into R should find this helpful, and some R users trying to break into people analytics will find the R simple, but hopefully will find the applications interesting.</span></h5>
+<p>What I’m doing, what this is for (assumption – already have R, possibly R Studio installed)</p>
+</div>
+</div>
 <div id="load-in-data" class="section level3">
 <h3>Load in data</h3>
 <p>I’m going to load in the data using <code>read.csv</code>. This function can be used to read in a .csv file from your computer, or from the Internet. Here, I’ll load in the data I’ve saved on my github site, and store it as a <code>data.frame</code> called <code>mydata</code>.</p>
 <pre class="r"><code>mydata &lt;- read.csv(&quot;https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/recruitment_evaluation_data.csv&quot;)</code></pre>
-<p>Whenever I have a new dataset, I like to see what I’m working with. I tend to use <code>str()</code> and <code>summary()</code>. <code>str()</code> shows the structure of your data: the column names and how many there are, and what type of data each one is. <code>summary()</code> willIf you’re used to working with spreadsheets, <code>View(mydata)</code> will show you a spreadsheet with your data (note the capital <strong>V</strong>).</p>
+</div>
+<div id="examineexplore-data" class="section level3">
+<h3>Examine/explore data</h3>
+<p>Whenever I have a new dataset, I like to see what I’m working with. I tend to use <code>str()</code> and <code>summary()</code>. The <code>str()</code> function shows the structure of your data: the column names and how many there are, and what type of data each one is. The <code>summary()</code> function will show means and quadriles of each column, as well as how many observations are missing. If you’re used to working with spreadsheets, <code>View(mydata)</code> will show you a spreadsheet with your data (note the capital <strong>V</strong>).</p>
 <pre class="r"><code>str(mydata)</code></pre>
 <pre><code>## 'data.frame':    1470 obs. of  36 variables:
 ##  $ X                       : int  1 2 3 4 5 6 7 8 9 10 ...
@@ -176,6 +183,12 @@ $(document).ready(function () {
 <pre class="r"><code>summary(mydata$TotalWorkingYears[is.na(mydata$HireSource)])</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##    7.00   10.00   12.50   15.32   20.00   40.00</code></pre>
+<div id="would-also-be-good-here-to-see-if-the-recruiting-channel-has-the-same-distribution-across-departments" class="section level5">
+<h5><span style="color:blue">Would also be good here to see if the recruiting channel has the same distribution across departments</span></h5>
+</div>
+</div>
+<div id="analyze-data" class="section level3">
+<h3>Analyze data</h3>
 <p>Since I’m trying to determine which of these hiring channels is best, I need some way to compare them. Hopefully I know what is most important in my company for recruiting success, but if I want to quickly see all the data I could use, another trick is the <code>names()</code> function, which lists all the columns in my data very cleanly.</p>
 <pre class="r"><code>names(mydata)</code></pre>
 <pre><code>##  [1] &quot;X&quot;                        &quot;Age&quot;                     
@@ -196,6 +209,37 @@ $(document).ready(function () {
 ## [31] &quot;YearsInCurrentRole&quot;       &quot;YearsSinceLastPromotion&quot; 
 ## [33] &quot;YearsWithCurrManager&quot;     &quot;SalesRating&quot;             
 ## [35] &quot;HireSource&quot;               &quot;Campus&quot;</code></pre>
+<p>Scanning over this I see <code>Attrition</code>, <code>PerformanceRating</code>, and <code>SalesRating</code> as possible outcome variables (or measures of success).</p>
+<div id="attrition" class="section level4">
+<h4>Attrition</h4>
+<p>Let’s start with attrition. If employees from one of the recruiting channels turn over less, I might want to do more recruiting there in the future. Let’s look at the data:</p>
+<pre class="r"><code>summary(mydata$Attrition)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.0000  0.0000  0.0000  0.1612  0.0000  1.0000</code></pre>
+<p>This is very simple attrition data. I only have one time period, and I don’t know whether the attrition was voluntary or involuntary, or whether the employee retired, or lots of other things I might wonder about. For this example, however, I’ll use what I have and compare the attrition across the recruiting channels.</p>
+<p>In Excel, I might use a pivot table for this. There are several ways to do it in R. My favorite requires installing and loading a <code>package</code>, which is a separate set of functions contributed by the R community, but not part of the base R installation.</p>
+<p>In this case, the package is <code>psych</code>, so before running the next code block, you’ll need to type <code>install.packages(&quot;psych&quot;)</code> into your R console to download and install the <code>psych</code> package to your computer. The <code>describeBy()</code> function in this next block is part of the <code>psych</code> package. Before we can use it, I have to load the package into my current session using <code>library()</code>.</p>
+<pre class="r"><code>library(psych)
+# describe attrition by hiresource, and put it into a matrix
+describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  </code></pre>
+<pre><code>##     item         group1 vars   n      mean        sd median    trimmed mad
+## X11    1 Applied Online    1 385 0.2103896 0.4081157      0 0.13915858   0
+## X12    2         Campus    1 268 0.2052239 0.4046207      0 0.13425926   0
+## X13    3       Referral    1 154 0.1688312 0.3758249      0 0.08870968   0
+## X14    4    Search Firm    1  45 0.2000000 0.4045199      0 0.13513514   0
+##     min max range     skew   kurtosis         se
+## X11   0   1     1 1.415570 0.00386827 0.02079950
+## X12   0   1     1 1.451612 0.10762158 0.02471614
+## X13   0   1     1 1.750913 1.07278887 0.03028484
+## X14   0   1     1 1.450279 0.10716049 0.06030227</code></pre>
+<p>I like this package because the information is output close together, so it is easy to compare. I don’t always care about range or skew, but if I did, it’s all there. Here I’m most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?</p>
+<div id="analysis-here-but-wait-because-i-might-change-data" class="section level5">
+<h5><span style="color:blue">analysis here, but wait because I might change data</span></h5>
+<p><span style="color:blue">t-test, regression</span></p>
+</div>
+</div>
+<div id="performance-ratings" class="section level4">
+<h4>Performance Ratings</h4>
 </div>
 </div>
 

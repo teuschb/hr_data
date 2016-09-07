@@ -19,10 +19,16 @@ summary(HireSource)
 # attrition
 describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)                                  # 
 t.test(mydata$Attrition[mydata$HireSource == "Campus"], mydata$Attrition[mydata$HireSource == "Referral"]) #
-att_mod <- lm(Attrition ~ HireSource, data = mydata)
-
+att_mod <- glm(Attrition ~ HireSource + Department + BusinessTravel + OverTime + YearsAtCompany +
+                TrainingTimesLastYear + WorkLifeBalance,
+               family = binomial(link = 'logit'), data = mydata)
+summary(att_mod)
+exp(summary(att_mod)$coefficients)
 # performance rating
 describeBy(mydata$PerformanceRating, mydata$HireSource, mat = TRUE)
+
+att_mod <- lm(PerformanceRating ~ HireSource + Department + , data = mydata)
+
 describeBy(mydata$SalesRating, mydata$HireSource, mat = TRUE)
 t.test(mydata$SalesRating[mydata$HireSource == "Campus"], mydata$SalesRating[mydata$HireSource == "Referral"]) #
 

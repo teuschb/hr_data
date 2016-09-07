@@ -9,9 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Introduction
-
-What I'm doing, what this is for
+### Introduction
+##### <span style="color:blue"> I believe my audience is people who have downloaded R, and are comfortable with at least copying code and running it. No actual knowledge of R is expected, but a willingness to learn on your own is, because I'm not covering everything here. Analysts trying to move into R should find this helpful, and some R users trying to break into people analytics will find the R simple, but hopefully will find the applications interesting.</span>
+What I'm doing, what this is for (assumption -- already have R, possibly R Studio installed)
 
 ### Load in data
 I'm going to load in the data using `read.csv`. This function can be used to read in a .csv file from your computer, or from the Internet. Here, I'll load in the data I've saved on my github site, and store it as a `data.frame` called `mydata`.
@@ -19,7 +19,8 @@ I'm going to load in the data using `read.csv`. This function can be used to rea
 mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/recruitment_evaluation_data.csv")
 ```
 
-Whenever I have a new dataset, I like to see what I'm working with. I tend to use `str()` and `summary()`. `str()` shows the structure of your data: the column names and how many there are, and what type of data each one is. `summary()` willIf you're used to working with spreadsheets, `View(mydata)` will show you a spreadsheet with your data (note the capital **V**).
+### Examine/explore data
+Whenever I have a new dataset, I like to see what I'm working with. I tend to use `str()` and `summary()`. The  `str()` function shows the structure of your data: the column names and how many there are, and what type of data each one is. The `summary()` function will show means and quadriles of each column, as well as how many observations are missing. If you're used to working with spreadsheets, `View(mydata)` will show you a spreadsheet with your data (note the capital **V**).
 
 ```{r}
 str(mydata)
@@ -37,9 +38,55 @@ This shows the number of hires that came from the four broad hiring channels we 
 summary(mydata$TotalWorkingYears[is.na(mydata$HireSource)])
 ```
 
+##### <span style="color:blue">Would also be good here to see if the recruiting channel has the same distribution across departments</span>
+
+
+### Analyze data
 Since I'm trying to determine which of these hiring channels is best, I need some way to compare them. Hopefully I know what is most important in my company for recruiting success, but if I want to quickly see all the data I could use, another trick is the `names()` function, which lists all the columns in my data very cleanly.
 
 ```{r}
 names(mydata)
 ```
 
+Scanning over this I see `Attrition`, `PerformanceRating`, and `SalesRating` as possible outcome variables (or measures of success). 
+
+#### Attrition
+Let's start with attrition. If employees from one of the recruiting channels turn over less, I might want to do more recruiting there in the future. Let's look at the data:
+
+```{r}
+summary(mydata$Attrition)
+```
+
+This is very simple attrition data. I only have one time period, and I don't know whether the attrition was voluntary or involuntary, or whether the employee retired, or lots of other things I might wonder about. For this example, however, I'll use what I have and compare the attrition across the recruiting channels.
+
+In Excel, I might use a pivot table for this. There are several ways to do it in R. My favorite requires installing and loading a `package`, which is a separate set of functions contributed by the R community, but not part of the base R installation.
+
+In this case, the package is `psych`, so before running the next code block, you'll need to type `install.packages("psych")` into your R console to download and install the `psych` package to your computer. The `describeBy()` function in this next block is part of the `psych` package. Before we can use it, I have to load the package into my current session using `library()`.
+
+```{r}
+library(psych)
+# describe attrition by hiresource, and put it into a matrix
+describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  
+```
+
+I like this package because the information is output close together, so it is easy to compare. I don't always care about range or skew, but if I did, it's all there. Here I'm most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?
+
+<span style="color:blue">what graphs should I be using?</span>
+Visually comparing the means, 
+
+##### <span style="color:blue">data will be fixed so search firm as higher attrition and referral has lower</span>
+
+```{r}
+t.test(mydata$Attrition[mydata$HireSource == "Campus"], mydata$Attrition[mydata$HireSource == "Referral"]) #
+att_mod <- glm(Attrition ~ HireSource + Department + BusinessTravel + OverTime + YearsAtCompany +
+                TrainingTimesLastYear + WorkLifeBalance,
+               family = binomial(link = 'logit'), data = mydata)
+summary(att_mod)
+exp(summary(att_mod)$coefficients)
+```
+
+<span style="color:blue">t-test, regression</span>
+
+#### Performance Ratings
+
+<span style="color:blue">same as attrition, basically</span>
