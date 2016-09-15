@@ -44,20 +44,29 @@ wat$HireSource <- as.factor(wat$HireSource)
 
 wat$Attrition <- ifelse(wat$Attrition == "Yes", 1, 0)
 
-# make referrals have higher sales ratings
-adjustData <- function(str, num){
-  if(str == "Referral"){
-   num + .4
-  } 
-  return(num)
-}
-
-sapply(wat$HireSource[wat$Department == "Sales"], adjustData, wat$SalesRating[wat$Department == "Sales"])
-
 # ---
+
+# Increase sales rating for referral hires
+wat$SalesRating <- ifelse(!is.na(wat$HireSource) & wat$HireSource == "Referral",
+                          wat$SalesRating + .4, wat$SalesRating)
+
+# Increase performance rating for search firm hires
+wat$PerformanceRating <- ifelse(!is.na(wat$HireSource) & wat$HireSource == "Search Firm",
+                          wat$PerformanceRating + .3, wat$PerformanceRating)
+
+# Decrease attrition for referral hires ???
+
+# Increase attrition for search firm hires ???
 
 t.test(wat$Attrition[wat$HireSource == "Search Firm"], wat$Attrition[wat$HireSource == "Referral"])
 t.test(wat$SalesRating[wat$HireSource != "Referral"], wat$SalesRating[wat$HireSource == "Referral"])
+t.test(wat$PerformanceRating[wat$HireSource != "Search Firm"], wat$PerformanceRating[wat$HireSource == "Search Firm"])
+
+describeBy(wat$SalesRating, wat$HireSource, mat=T)
+describeBy(wat$PerformanceRating, wat$HireSource, mat=T)
+
+
+
 
 
 

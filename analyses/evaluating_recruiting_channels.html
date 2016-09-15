@@ -126,7 +126,6 @@ $(document).ready(function () {
 <h3>Introduction</h3>
 <div id="i-believe-my-audience-is-people-who-have-downloaded-r-and-are-comfortable-with-at-least-copying-code-and-running-it.-no-actual-knowledge-of-r-is-expected-but-a-willingness-to-learn-on-your-own-is-because-im-not-covering-everything-here.-analysts-trying-to-move-into-r-should-find-this-helpful-and-some-r-users-trying-to-break-into-people-analytics-will-find-the-r-simple-but-hopefully-will-find-the-applications-interesting." class="section level5">
 <h5><span style="color:blue"> I believe my audience is people who have downloaded R, and are comfortable with at least copying code and running it. No actual knowledge of R is expected, but a willingness to learn on your own is, because I’m not covering everything here. Analysts trying to move into R should find this helpful, and some R users trying to break into people analytics will find the R simple, but hopefully will find the applications interesting.</span></h5>
-<p>What I’m doing, what this is for (assumption – already have R, possibly R Studio installed)</p>
 </div>
 </div>
 <div id="load-in-data" class="section level3">
@@ -179,7 +178,7 @@ $(document).ready(function () {
 <pre class="r"><code>summary(mydata$HireSource)</code></pre>
 <pre><code>## Applied Online         Campus       Referral    Search Firm           NA's 
 ##            385            268            154             45            618</code></pre>
-<p>This shows the number of hires that came from the four broad hiring channels we have, as well as <code>NA</code>, which R uses to denote missing data. It can be helpful to understand why data is missing. In this case, I know that our ATS only started tracking hire data 7 years ago, so anybody hired over 7 years ago won’t have this data. I can check that by calling <code>summary()</code> on <code>mydata$TotalWorkingYears</code>, subset by only the people whose <code>HireSource</code> information is missing <code>is.na(mydata$HireSource)</code>.</p>
+<p>This shows the number of hires that came from the four broad hiring channels we have, as well as <code>NA</code>, which R uses to denote missing data. It can be helpful to understand why data is missing. In this case, I know that our ATS only started tracking hire data 6 years ago, so anybody hired over 6 years ago won’t have this data. I can check that by calling <code>summary()</code> on <code>mydata$TotalWorkingYears</code>, subset by only the people whose <code>HireSource</code> information is missing: <code>is.na(mydata$HireSource)</code>.</p>
 <pre class="r"><code>summary(mydata$TotalWorkingYears[is.na(mydata$HireSource)])</code></pre>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 ##    7.00   10.00   12.50   15.32   20.00   40.00</code></pre>
@@ -220,7 +219,7 @@ $(document).ready(function () {
 <p>In Excel, I might use a pivot table for this. There are several ways to do it in R. My favorite requires installing and loading a <code>package</code>, which is a separate set of functions contributed by the R community, but not part of the base R installation.</p>
 <p>In this case, the package is <code>psych</code>, so before running the next code block, you’ll need to type <code>install.packages(&quot;psych&quot;)</code> into your R console to download and install the <code>psych</code> package to your computer. The <code>describeBy()</code> function in this next block is part of the <code>psych</code> package. Before we can use it, I have to load the package into my current session using <code>library()</code>.</p>
 <pre class="r"><code>library(psych)
-# describe attrition by hiresource, and put it into a matrix
+# describe attrition by hiresource, and put the output into a matrix
 describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  </code></pre>
 <pre><code>##     item         group1 vars   n      mean        sd median    trimmed mad
 ## X11    1 Applied Online    1 385 0.2103896 0.4081157      0 0.13915858   0
@@ -233,10 +232,12 @@ describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  </code></pre>
 ## X13   0   1     1 1.750913 1.07278887 0.03028484
 ## X14   0   1     1 1.450279 0.10716049 0.06030227</code></pre>
 <p>I like <code>describeBy()</code> because the information is output close together, so it is easy to compare. I don’t always care about range or skew, but if I did, it’s all there. Here I’m most curious in the mean. Is the average attrition the same for each recruiting channel, or are there differences?</p>
-<p><span style="color:blue">what graphs should I be using?</span> Visually comparing the means, it looks like employees hired by a search firm have higher attrition, and referral hires have lower attrition. Is that difference significant? We can check by using a t-test, which will help us know if the difference in attrition between the two groups is real, or just due to variation in the data.</p>
+<p><span style="color:blue">what graphs should I be using?</span></p>
+<p>Visually comparing the means, it looks like employees hired by a search firm have higher attrition, and referral hires have lower attrition. Is that difference significant? We can check by using a t-test, which will help us know if the difference in attrition between the two groups is real, or just due to variation in the data.</p>
 <div id="data-will-be-fixed-so-search-firm-as-higher-attrition-and-referral-has-lower" class="section level5">
 <h5><span style="color:blue">data will be fixed so search firm as higher attrition and referral has lower</span></h5>
-<pre class="r"><code>t.test(mydata$Attrition[mydata$HireSource == &quot;Search Firm&quot;], mydata$Attrition[mydata$HireSource == &quot;Referral&quot;]) </code></pre>
+<p>Using the function <code>t.test()</code>, I can compare attrition from employees whose <code>HireSource</code> is Search Firm with employees whose <code>HireSource</code> is Referral. See if you understand how I use the <code>$</code> and <code>[</code> operators to tell R to look at those cuts of data.</p>
+<pre class="r"><code>t.test(mydata$Attrition[mydata$HireSource == &quot;Search Firm&quot;], mydata$Attrition[mydata$HireSource == &quot;Referral&quot;])</code></pre>
 <pre><code>## 
 ##  Welch Two Sample t-test
 ## 
@@ -248,6 +249,7 @@ describeBy(mydata$Attrition, mydata$HireSource, mat = TRUE)  </code></pre>
 ## sample estimates:
 ## mean of x mean of y 
 ## 0.2000000 0.1688312</code></pre>
+<p><span style="color:blue">regression</span></p>
 <pre class="r"><code>att_mod &lt;- glm(Attrition ~ HireSource + Department + BusinessTravel + OverTime + YearsAtCompany +
                 TrainingTimesLastYear + WorkLifeBalance,
                family = binomial(link = 'logit'), data = mydata)
@@ -314,7 +316,6 @@ summary(att_mod)</code></pre>
 ## YearsAtCompany                   1.000000
 ## TrainingTimesLastYear            1.081842
 ## WorkLifeBalance                  1.053733</code></pre>
-<p><span style="color:blue">t-test, regression</span></p>
 </div>
 </div>
 <div id="performance-ratings" class="section level4">
