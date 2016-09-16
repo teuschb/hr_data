@@ -58,13 +58,13 @@ wat$PerformanceRating <- ifelse(!is.na(wat$HireSource) & wat$HireSource == "Sear
 
 # Increase attrition for search firm hires ???
 
-t.test(wat$Attrition[wat$HireSource == "Search Firm"], wat$Attrition[wat$HireSource == "Referral"])
+t.test(wat$Attrition[wat$HireSource == "Applied Online"], wat$Attrition[wat$HireSource == "Referral"])
 t.test(wat$SalesRating[wat$HireSource != "Referral"], wat$SalesRating[wat$HireSource == "Referral"])
 t.test(wat$PerformanceRating[wat$HireSource != "Search Firm"], wat$PerformanceRating[wat$HireSource == "Search Firm"])
 
 describeBy(wat$SalesRating, wat$HireSource, mat=T)
 describeBy(wat$PerformanceRating, wat$HireSource, mat=T)
-
+describeBy(wat$Attrition, wat$HireSource, mat=T)
 
 
 
