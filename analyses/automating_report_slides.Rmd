@@ -13,24 +13,48 @@ No matter how mature people analytics is at your organization, at some point you
 If you've never used R before, check out Richard Rosenow's Intro to R post (https://www.linkedin.com/pulse/hr-analytics-starter-kit-part-2-intro-r-richard-rosenow-pmp?trk=mp-reader-card), and specifically you can download R (https://mirror.las.iastate.edu/CRAN/) and RStudio (https://www.rstudio.com/products/rstudio/download3/). There are lots of helpful tips online about getting started with R - I'm writing this post with the assumption that you have RStudio installed and you're able to run code that I provide.
 
 ## Code for this article
-To get the raw code and data I use here, check out my github repo at (https://github.com/teuschb/hr_data)
+The raw code for this article is found on my github repo at  (https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd).
 
 ## The ReporteRs package
 What makes this possible is the `ReporteRs` package. To learn a lot more about what the package can do, check out http://davidgohel.github.io/ReporteRs/. It allows you to use R to run your analysis, print plots, and export everything to a PowerPoint document in a repeatable, automated way.
 
-To install 
+`ReporteRs` requires `rJava` and for java to be installed on your machine. This will make sure it's installed, and will show you the version of Java (it should be at least 1.6).
+```{r}
+require(rJava)
+system("java -version")
+```
+The first time you use `ReporteRs`, you'll need to install the package from CRAN, the R package repository. 
+```{r}
+install.packages('ReporteRs')
+```
+
 
 ## Dataset
 
+The dataset is the HR Employee Attrition and Performance dataset from IBM Watson Analytics (https://www.ibm.com/communities/analytics/watson-analytics-blog/hr-employee-attrition/). I've modified it slightly and saved it to my github repository, which allows me to read in the .csv file directly from the Internet, without needing to download a file.
 
+In practice, this dataset will be your monthly HRIS report of headcount, attrition, performance, or anything else. That way, each month, you'll be able to run this same line of code, but simply insert the name of the most recent dataset that you want to work with. If all the columns are the same, the rest of the code will run without you having to make changes each month. 
 
 ```{r}
 mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/original_watson_dataset.csv")
 
-
 ```
 
+## Libraries
+Before we can get started, we have to load in a few other packages I like to use. You'll see that `ReporteRs` is on the list - running `install.packages('ReporteRs')` gets the package onto our computer, and `library(ReporteRs)` tells R that we want to use that package right now. 
 
+If you see a package name you don't recognize, make sure you run install.packages for each of them. For example, `install.packages('ggplot2')`.
+```{r}
+library(ReporteRs)
+library(ggplot2)
+```
+
+## Analysis
+Every report is based on some analysis, even if it's pretty simple. 
+```{r}
+str(mydata)
+summary(mydata$PerformanceRating)
+```
 
 
 
