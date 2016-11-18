@@ -1,6 +1,4 @@
 
-library(ggplot2)
-
 # start with real data from https://www.ibm.com/communities/analytics/watson-analytics-blog/hr-employwat-attrition/
 
 wat_raw <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/original_watson_dataset.csv")
@@ -51,8 +49,8 @@ wat$SalesRating <- ifelse(!is.na(wat$HireSource) & wat$HireSource == "Referral",
                           wat$SalesRating + .4, wat$SalesRating)
 
 # Increase performance rating for search firm hires
-wat$PerformanceRating <- ifelse(!is.na(wat$HireSource) & wat$HireSource == "Search Firm",
-                          wat$PerformanceRating + .3, wat$PerformanceRating)
+#wat$PerformanceRating <- ifelse(!is.na(wat$HireSource) & wat$HireSource == "Search Firm",
+#                          wat$PerformanceRating + .3, wat$PerformanceRating)
 
 # Decrease attrition for referral hires ???
 
@@ -90,13 +88,6 @@ wat$RandNum = NULL
 
 
 
-watCampus <- na.omit(wat)
-
-ggplot(watCampus, aes(factor(Campus), fill = factor(Gender))) +
-  geom_bar()
-
-ggplot(wat, aes(factor(HireSource), fill = factor(Attrition))) +
-  geom_bar()
 
 "
 Education	1 'Below College'
@@ -106,6 +97,6 @@ Education	1 'Below College'
 5 'Doctor'
 "
 
-write.csv(wat, "~/hr_data/datasets/recruitment_evaluation_data.csv")
+write.csv(wat, "~/hr_data/datasets/modified_watson_data.csv")
 
 

@@ -36,7 +36,7 @@ The dataset is the HR Employee Attrition and Performance dataset from IBM Watson
 In practice, this dataset will be your monthly HRIS report of headcount, attrition, performance, or anything else. That way, each month, you'll be able to run this same line of code, but simply insert the name of the most recent dataset that you want to work with. If all the columns are the same, the rest of the code will run without you having to make changes each month. 
 
 ```{r}
-mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/original_watson_dataset.csv")
+mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv")
 
 ```
 
