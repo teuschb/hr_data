@@ -48,15 +48,46 @@ If you see a package name you don't recognize, make sure you run install.package
 ```{r}
 library(ReporteRs)
 library(ggplot2)
+library(scales)
 ```
 
-## Analysis
-Every report is based on some analysis, even if it's pretty simple. 
+## Set Report Parameters
+
 ```{r}
-str(mydata)
-ggplot(mydata, aes(PerformanceRating)) +
-  geom_bar()
-summary.factor(mydata$PerformanceRating)
+month = "November"
+date = "November 2016"
+```
+
+
+## Analysis
+What analysis needs to be done for the report? HR is often guilty of producing reports and dashboards on HR processes that don't obviously help business leaders make better decision. To keep things simple, I may be joining that trend. Since I don't have a specific business problem I'm trying to solve, and because HR is used to reporting on attrition, I'll prepare some data for a basic attrition report with a few bar charts to visualize the data. 
+
+Just know that R is able to produce various types of charts and produce whatever analysis is necessary to help your business, given the correct data.
+
+The first set of analysis is attrition by job role. First, I'm going to make a plot that shows the turnover by job role, and then I will build a small dataset that I will later put into a table to show the attrition by job role.
+```{r}
+mydata$AttritionFactor <- factor(mydata$Attrition, labels = c("No", "Yes"))
+mydata$AttritionFactor <- factor(mydata$AttritionFactor, levels=rev(levels(mydata$AttritionFactor)))
+ggplot(mydata, aes(JobRole)) +
+  geom_bar(aes(fill = AttritionFactor), position = "fill") +
+  scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
+  theme_bw() +
+  guides(fill = F) +
+  scale_y_continuous(labels=percent) +
+  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role", title = paste("Attrition by Job Role, ", date, sep = ""))) +
+  coord_flip()
+
+```
+Additional things could be sorting the bars, ...
+
+Here I'm rearranging the raw data to get it into a format that goes well into a table later.
+
+```{r}
+attrition_by_jobrole <- cbind(data.frame(cbind(table(mydata$JobRole)),
+                                         data.frame(cbind(table(mydata$JobRole, mydata$Attrition))[,2])))
+names(attrition_by_jobrole) <- c("Headcount", "Attrition")
+attrition_by_jobrole$AttritionPerc <- attrition_by_jobrole$Attrition/attrition_by_jobrole$Headcount
+
 ```
 
 
