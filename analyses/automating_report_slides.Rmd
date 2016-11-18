@@ -1,0 +1,39 @@
+---
+title: "Making PowerPoint Slides with R"
+output: html_notebook
+---
+This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published earlier this year - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a background. There are already plenty of tutorials to show you how to run a regression or other predictive model, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
+
+What I'm going to do is focus on showing you how to do things that don't require too much of a data background, but would be really helpful for the HR folks I know. Those with a stronger data background can use this as a starting point to add in more complex analyses, if they want.
+
+## Making HR Reports
+No matter how mature people analytics is at your organization, at some point you're going to need to make some reports. This is especially true if you're an HRBP with limited technical support - you might even be making these reports yourself! These reports, often done monthly, can take hours of VLOOKUPs and copy-pasting in Excel, then another while to put the right numbers into a PowerPoint template. Today I'm going to show you how to automate those reports using R, so you can save a bunch of time down the road.
+
+## Getting Started with R
+If you've never used R before, check out Richard Rosenow's Intro to R post (https://www.linkedin.com/pulse/hr-analytics-starter-kit-part-2-intro-r-richard-rosenow-pmp?trk=mp-reader-card), and specifically you can download R (https://mirror.las.iastate.edu/CRAN/) and RStudio (https://www.rstudio.com/products/rstudio/download3/). There are lots of helpful tips online about getting started with R - I'm writing this post with the assumption that you have RStudio installed and you're able to run code that I provide.
+
+## Code for this article
+To get the raw code and data I use here, check out my github repo at (https://github.com/teuschb/hr_data)
+
+## The ReporteRs package
+What makes this possible is the `ReporteRs` package. To learn a lot more about what the package can do, check out http://davidgohel.github.io/ReporteRs/. It allows you to use R to run your analysis, print plots, and export everything to a PowerPoint document in a repeatable, automated way.
+
+To install 
+
+## Dataset
+
+
+
+```{r}
+mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/original_watson_dataset.csv")
+
+
+```
+
+
+
+
+
+Notes:
+https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like
+
