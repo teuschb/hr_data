@@ -25,7 +25,8 @@ system("java -version")
 ```
 The first time you use `ReporteRs`, you'll need to install the package from CRAN, the R package repository. 
 ```{r}
-install.packages('ReporteRs')
+# Only run this one time
+#install.packages('ReporteRs')
 ```
 
 
@@ -53,7 +54,9 @@ library(ggplot2)
 Every report is based on some analysis, even if it's pretty simple. 
 ```{r}
 str(mydata)
-summary(mydata$PerformanceRating)
+ggplot(mydata, aes(PerformanceRating)) +
+  geom_bar()
+summary.factor(mydata$PerformanceRating)
 ```
 
 
