@@ -97,6 +97,6 @@ Education	1 'Below College'
 5 'Doctor'
 "
 
-write.csv(wat, "~/hr_data/datasets/modified_watson_data.csv")
+write.csv(wat, "~/hr_data/datasets/modified_watson_dataset.csv")
 
 

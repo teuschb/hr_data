@@ -32,11 +32,11 @@
 "31",33,0,"Travel_Rarely",924,"Research & Development",2,3,"Medical",39,3,"Male",78,3,1,"Laboratory Technician",4,2496,6670,4,"No",11,2,4,80,0,7,3,3,1,1,0,0,NA,0.398968283552676,"Applied Online"
 "32",44,0,"Travel_Rarely",1459,"Research & Development",10,4,"Other",40,4,"Male",41,3,2,"Healthcare Representative",4,6465,19121,2,"Yes",13,3,4,80,0,9,5,4,4,2,1,3,NA,0.749019714770839,"Campus"
 "33",30,0,"Travel_Rarely",125,"Research & Development",9,2,"Medical",41,4,"Male",83,2,1,"Laboratory Technician",3,2206,16117,1,"No",13,3,1,80,0,10,5,3,10,0,1,8,NA,NA,NA
-"34",39,1,"Travel_Rarely",895,"Sales",5,3,"Technical Degree",42,4,"Male",56,3,2,"Sales Representative",4,2086,3335,3,"No",14,3,3,80,1,19,6,4,1,0,0,0,0.948123240185223,0.971831566421315,"Referral"
+"34",39,1,"Travel_Rarely",895,"Sales",5,3,"Technical Degree",42,4,"Male",56,3,2,"Sales Representative",4,2086,3335,3,"No",14,3,3,80,1,19,6,4,1,0,0,0,0.548123240185223,0.971831566421315,"Referral"
 "35",24,1,"Travel_Rarely",813,"Research & Development",1,3,"Medical",45,2,"Male",61,3,1,"Research Scientist",4,2293,3020,2,"Yes",16,2,1,80,1,6,2,2,2,0,2,0,NA,0.429624238517135,"Referral"
 "36",43,0,"Travel_Rarely",1273,"Research & Development",2,2,"Medical",46,4,"Female",72,4,1,"Research Scientist",3,2645,21923,1,"No",12,2,4,80,2,6,3,2,5,3,1,4,NA,0.546388884540647,"Campus"
 "37",50,1,"Travel_Rarely",869,"Sales",3,2,"Marketing",47,1,"Male",86,2,1,"Sales Representative",3,2683,3810,1,"Yes",14,3,3,80,0,3,2,3,3,2,0,2,0.79421347935228,0.284909048350528,"Applied Online"
-"38",35,0,"Travel_Rarely",890,"Sales",2,3,"Marketing",49,4,"Female",97,3,1,"Sales Representative",4,2014,9687,1,"No",13,2,1,80,0,2,3,3,2,2,2,2,1.40652442339031,0.98517748573795,"Referral"
+"38",35,0,"Travel_Rarely",890,"Sales",2,3,"Marketing",49,4,"Female",97,3,1,"Sales Representative",4,2014,9687,1,"No",13,2,1,80,0,2,3,3,2,2,2,2,1.00652442339031,0.98517748573795,"Referral"
 "39",36,0,"Travel_Rarely",852,"Research & Development",5,4,"Life Sciences",51,2,"Female",82,2,1,"Research Scientist",1,3419,13072,9,"Yes",14,3,4,80,1,6,3,4,1,1,0,0,NA,0.29365251143463,"Applied Online"
 "40",33,0,"Travel_Frequently",1141,"Sales",1,3,"Life Sciences",52,3,"Female",42,4,2,"Sales Executive",1,5376,3193,2,"No",19,3,1,80,2,10,3,3,5,3,1,3,1.51991728837959,0.872588895028457,"Campus"
 "41",35,0,"Travel_Rarely",464,"Research & Development",4,2,"Other",53,3,"Male",75,3,1,"Laboratory Technician",4,1951,10910,1,"No",12,4,3,80,1,1,3,3,1,0,0,0,NA,0.30484419176355,"Applied Online"
@@ -73,11 +73,11 @@
 "72",29,0,"Travel_Rarely",1328,"Research & Development",2,3,"Life Sciences",94,3,"Male",76,3,1,"Research Scientist",2,2703,4956,0,"No",23,2,4,80,1,6,3,3,5,4,0,4,NA,0.52912780479528,"Campus"
 "73",31,0,"Travel_Rarely",1082,"Research & Development",1,4,"Medical",95,3,"Male",87,3,1,"Research Scientist",2,2501,18775,1,"No",17,2,2,80,0,1,4,3,1,1,1,0,NA,0.212397096212953,"Applied Online"
 "74",32,0,"Travel_Rarely",548,"Research & Development",1,3,"Life Sciences",96,2,"Male",66,3,2,"Research Scientist",2,6220,7346,1,"No",17,3,2,80,2,10,3,3,10,4,0,9,NA,NA,NA
-"75",36,0,"Travel_Rarely",132,"Research & Development",6,3,"Life Sciences",97,2,"Female",55,4,1,"Laboratory Technician",4,3038,22002,3,"No",12,2.3,2,80,0,5,3,3,1,0,0,0,NA,0.760127394227311,"Search Firm"
+"75",36,0,"Travel_Rarely",132,"Research & Development",6,3,"Life Sciences",97,2,"Female",55,4,1,"Laboratory Technician",4,3038,22002,3,"No",12,2,2,80,0,5,3,3,1,0,0,0,NA,0.760127394227311,"Search Firm"
 "76",31,0,"Travel_Rarely",746,"Research & Development",8,4,"Life Sciences",98,3,"Female",61,3,2,"Manufacturing Director",4,4424,20682,1,"No",23,4,4,80,0,11,2,3,11,7,1,8,NA,NA,NA
 "77",35,0,"Travel_Rarely",776,"Sales",1,4,"Marketing",100,3,"Male",32,2,2,"Sales Executive",1,4312,23016,0,"No",14,2,2,80,0,16,2,3,15,13,2,8,1.88928254301117,NA,NA
 "78",45,0,"Travel_Rarely",193,"Research & Development",6,4,"Other",101,4,"Male",52,3,3,"Research Director",1,13245,15067,4,"Yes",14,3,2,80,0,17,3,4,0,0,0,0,NA,0.0666193389333785,"Applied Online"
-"79",37,0,"Travel_Rarely",397,"Research & Development",7,4,"Medical",102,1,"Male",30,3,3,"Research Director",3,13664,25258,4,"No",13,2.3,1,80,0,16,3,4,5,2,0,2,NA,0.854398138122633,"Search Firm"
+"79",37,0,"Travel_Rarely",397,"Research & Development",7,4,"Medical",102,1,"Male",30,3,3,"Research Director",3,13664,25258,4,"No",13,2,1,80,0,16,3,4,5,2,0,2,NA,0.854398138122633,"Search Firm"
 "80",46,0,"Travel_Rarely",945,"Human Resources",5,2,"Medical",103,2,"Male",80,3,2,"Human Resources",2,5021,10425,8,"Yes",22,4,4,80,1,16,2,3,4,2,0,2,NA,0.450403515482321,"Referral"
 "81",30,0,"Travel_Rarely",852,"Research & Development",1,1,"Life Sciences",104,4,"Male",55,2,2,"Laboratory Technician",4,5126,15998,1,"Yes",12,3,3,80,2,10,1,2,10,8,3,0,NA,NA,NA
 "82",35,0,"Travel_Rarely",1214,"Research & Development",1,3,"Medical",105,2,"Male",30,2,1,"Research Scientist",3,2859,26278,1,"No",18,3,1,80,0,6,3,3,6,4,0,4,NA,0.530938469339162,"Campus"
@@ -94,9 +94,9 @@
 "93",30,0,"Travel_Rarely",1334,"Sales",4,2,"Medical",121,3,"Female",63,2,2,"Sales Executive",2,5209,19760,1,"Yes",12,3,2,80,3,11,4,2,11,8,2,7,0.297146809061811,NA,NA
 "94",46,0,"Travel_Frequently",638,"Research & Development",1,3,"Medical",124,3,"Male",40,2,3,"Healthcare Representative",1,10673,3142,2,"Yes",13,4,3,80,1,21,5,2,10,9,9,5,NA,NA,NA
 "95",32,0,"Travel_Rarely",1093,"Sales",6,4,"Medical",125,2,"Male",87,3,2,"Sales Executive",3,5010,24301,1,"No",16,3,1,80,0,12,0,3,11,8,5,7,0.08981124894927,NA,NA
-"96",54,0,"Travel_Rarely",1217,"Research & Development",2,4,"Technical Degree",126,1,"Female",60,3,3,"Research Director",3,13549,24001,9,"No",12,2.3,1,80,1,16,5,1,4,3,0,3,NA,0.878602234646678,"Search Firm"
+"96",54,0,"Travel_Rarely",1217,"Research & Development",2,4,"Technical Degree",126,1,"Female",60,3,3,"Research Director",3,13549,24001,9,"No",12,2,1,80,1,16,5,1,4,3,0,3,NA,0.878602234646678,"Search Firm"
 "97",24,0,"Travel_Rarely",1353,"Sales",3,2,"Other",128,1,"Female",33,3,2,"Sales Executive",3,4999,17519,0,"No",21,2,1,80,1,4,2,2,3,2,0,2,1.94249925467926,0.21163334697485,"Applied Online"
-"98",28,0,"Non-Travel",120,"Sales",4,3,"Medical",129,2,"Male",43,3,2,"Sales Executive",3,4221,8863,1,"No",15,3,2,80,0,5,3,4,5,4,0,4,1.38887348710255,0.470791189465672,"Referral"
+"98",28,0,"Non-Travel",120,"Sales",4,3,"Medical",129,2,"Male",43,3,2,"Sales Executive",3,4221,8863,1,"No",15,3,2,80,0,5,3,4,5,4,0,4,0.988873487102549,0.470791189465672,"Referral"
 "99",58,0,"Travel_Rarely",682,"Sales",10,4,"Medical",131,4,"Male",37,3,4,"Sales Executive",3,13872,24409,0,"No",13,3,3,80,0,38,1,2,37,10,1,8,1.42618027782441,NA,NA
 "100",44,0,"Non-Travel",489,"Research & Development",23,3,"Medical",132,2,"Male",67,3,2,"Laboratory Technician",2,2042,25043,4,"No",12,4,3,80,1,17,3,4,3,2,1,2,NA,0.259575561154634,"Applied Online"
 "101",37,1,"Travel_Rarely",807,"Human Resources",6,4,"Human Resources",133,3,"Male",63,3,1,"Human Resources",1,2073,23648,4,"Yes",22,2,4,80,0,7,3,3,3,2,0,2,NA,0.149379405891523,"Applied Online"
@@ -104,11 +104,11 @@
 "103",20,1,"Travel_Frequently",871,"Research & Development",6,3,"Life Sciences",137,4,"Female",66,2,1,"Laboratory Technician",4,2926,19783,1,"Yes",18,2,2,80,0,1,5,3,1,0,1,0,NA,0.0764923782553524,"Applied Online"
 "104",34,0,"Travel_Rarely",665,"Research & Development",6,4,"Other",138,1,"Female",41,3,2,"Research Scientist",3,4809,12482,1,"No",14,3,3,80,0,16,3,3,16,13,2,10,NA,NA,NA
 "105",37,0,"Non-Travel",1040,"Research & Development",2,2,"Life Sciences",139,3,"Male",100,2,2,"Healthcare Representative",4,5163,15850,5,"No",14,3,4,80,1,17,2,4,1,0,0,0,NA,0.644914019154385,"Campus"
-"106",59,0,"Non-Travel",1420,"Human Resources",2,4,"Human Resources",140,3,"Female",32,2,5,"Manager",4,18844,21922,9,"No",21,3.3,4,80,1,30,3,3,3,2,2,2,NA,0.780450662598014,"Search Firm"
+"106",59,0,"Non-Travel",1420,"Human Resources",2,4,"Human Resources",140,3,"Female",32,2,5,"Manager",4,18844,21922,9,"No",21,3,4,80,1,30,3,3,3,2,2,2,NA,0.780450662598014,"Search Firm"
 "107",50,0,"Travel_Frequently",1115,"Research & Development",1,3,"Life Sciences",141,1,"Female",73,3,5,"Research Director",2,18172,9755,3,"Yes",19,3,1,80,0,28,1,2,8,3,0,7,NA,NA,NA
-"108",25,1,"Travel_Rarely",240,"Sales",5,3,"Marketing",142,3,"Male",46,2,2,"Sales Executive",3,5744,26959,1,"Yes",11,2.3,4,80,0,6,1,3,6,4,0,3,1.86793884863751,0.770561571931466,"Search Firm"
+"108",25,1,"Travel_Rarely",240,"Sales",5,3,"Marketing",142,3,"Male",46,2,2,"Sales Executive",3,5744,26959,1,"Yes",11,2,4,80,0,6,1,3,6,4,0,3,1.86793884863751,0.770561571931466,"Search Firm"
 "109",25,0,"Travel_Rarely",1280,"Research & Development",7,1,"Medical",143,4,"Male",64,2,1,"Research Scientist",4,2889,26897,1,"No",11,4,3,80,2,2,2,3,2,2,2,1,NA,0.147870612563565,"Applied Online"
-"110",22,0,"Travel_Rarely",534,"Research & Development",15,3,"Medical",144,2,"Female",59,3,1,"Laboratory Technician",4,2871,23785,1,"No",15,4.3,3,80,0,1,5,3,0,0,0,0,NA,0.893111802870408,"Search Firm"
+"110",22,0,"Travel_Rarely",534,"Research & Development",15,3,"Medical",144,2,"Female",59,3,1,"Laboratory Technician",4,2871,23785,1,"No",15,4,3,80,0,1,5,3,0,0,0,0,NA,0.893111802870408,"Search Firm"
 "111",51,0,"Travel_Frequently",1456,"Research & Development",1,4,"Medical",145,1,"Female",30,2,3,"Healthcare Representative",1,7484,25796,3,"No",20,2,3,80,0,23,1,2,13,12,12,8,NA,NA,NA
 "112",34,1,"Travel_Frequently",658,"Research & Development",7,3,"Life Sciences",147,1,"Male",66,1,2,"Laboratory Technician",3,6074,22887,1,"Yes",24,4,4,80,0,9,3,3,9,7,0,6,NA,NA,NA
 "113",54,0,"Non-Travel",142,"Human Resources",26,3,"Human Resources",148,4,"Female",30,4,4,"Manager",4,17328,13871,2,"Yes",12,3,3,80,0,23,3,3,5,3,4,4,NA,0.384374480228871,"Applied Online"
@@ -137,12 +137,12 @@
 "136",36,0,"Travel_Rarely",216,"Research & Development",6,2,"Medical",178,2,"Male",84,3,2,"Manufacturing Director",2,4941,2819,6,"No",20,2,4,80,2,7,0,3,3,2,0,1,NA,0.2530071742367,"Applied Online"
 "137",51,1,"Travel_Frequently",1150,"Research & Development",8,4,"Life Sciences",179,1,"Male",53,1,3,"Manufacturing Director",4,10650,25150,2,"No",15,3,4,80,0,18,2,3,4,2,0,3,NA,0.913455344736576,"Referral"
 "138",39,0,"Travel_Rarely",1329,"Sales",4,4,"Life Sciences",182,4,"Female",47,2,2,"Sales Executive",3,5902,14590,4,"No",14,3,3,80,1,17,1,4,15,11,5,9,2.36807774303163,NA,NA
-"139",25,0,"Travel_Rarely",959,"Sales",28,3,"Life Sciences",183,1,"Male",41,2,2,"Sales Executive",3,8639,24835,2,"No",18,3.3,4,80,0,6,3,3,2,2,2,2,1.29459231715446,0.852042983751744,"Search Firm"
+"139",25,0,"Travel_Rarely",959,"Sales",28,3,"Life Sciences",183,1,"Male",41,2,2,"Sales Executive",3,8639,24835,2,"No",18,3,4,80,0,6,3,3,2,2,2,2,1.29459231715446,0.852042983751744,"Search Firm"
 "140",30,0,"Travel_Rarely",1240,"Human Resources",9,3,"Human Resources",184,3,"Male",48,3,2,"Human Resources",4,6347,13982,0,"Yes",19,3,4,80,0,12,2,1,11,9,4,7,NA,NA,NA
 "141",32,1,"Travel_Rarely",1033,"Research & Development",9,3,"Medical",190,1,"Female",41,3,1,"Laboratory Technician",1,4200,10224,7,"No",22,2,1,80,0,10,2,4,5,4,0,4,NA,0.592480912338942,"Campus"
 "142",45,0,"Travel_Rarely",1316,"Research & Development",29,3,"Medical",192,3,"Male",83,3,1,"Research Scientist",4,3452,9752,5,"No",13,2,2,80,0,9,2,2,6,5,0,3,NA,0.339614828815684,"Applied Online"
 "143",38,0,"Travel_Rarely",364,"Research & Development",3,5,"Technical Degree",193,4,"Female",32,3,2,"Research Scientist",3,4317,2302,3,"Yes",20,2,2,80,0,19,2,3,3,2,2,2,NA,0.00534890196286142,"Applied Online"
-"144",30,0,"Travel_Rarely",438,"Research & Development",18,3,"Life Sciences",194,1,"Female",75,3,1,"Research Scientist",3,2632,23910,1,"No",14,4.3,3,80,0,5,4,2,5,4,0,4,NA,0.837841640226543,"Search Firm"
+"144",30,0,"Travel_Rarely",438,"Research & Development",18,3,"Life Sciences",194,1,"Female",75,3,1,"Research Scientist",3,2632,23910,1,"No",14,4,3,80,0,5,4,2,5,4,0,4,NA,0.837841640226543,"Search Firm"
 "145",32,0,"Travel_Frequently",689,"Sales",9,2,"Medical",195,4,"Male",35,1,2,"Sales Executive",4,4668,22812,0,"No",17,3,4,80,3,9,2,4,8,7,0,7,1.99802318100055,NA,NA
 "146",30,0,"Travel_Rarely",201,"Research & Development",5,3,"Technical Degree",197,4,"Female",84,3,1,"Research Scientist",1,3204,10415,5,"No",14,4,4,80,1,8,3,3,3,2,2,2,NA,0.313908137846738,"Applied Online"
 "147",30,0,"Travel_Rarely",1427,"Research & Development",2,1,"Medical",198,2,"Male",35,2,1,"Laboratory Technician",4,2720,11162,0,"No",13,3,4,80,0,6,3,3,5,3,1,2,NA,0.254764709388837,"Applied Online"
@@ -158,7 +158,7 @@
 "157",51,0,"Travel_Rarely",1169,"Research & Development",7,4,"Medical",211,2,"Male",34,2,2,"Manufacturing Director",3,6132,13983,2,"No",17,3,3,80,0,10,2,3,1,0,0,0,NA,0.000835278071463108,"Applied Online"
 "158",58,0,"Travel_Rarely",1145,"Research & Development",9,3,"Medical",214,2,"Female",75,2,1,"Research Scientist",2,3346,11873,4,"Yes",20,4,2,80,1,9,3,2,1,0,0,0,NA,0.413801438407972,"Referral"
 "159",40,0,"Travel_Rarely",630,"Sales",4,4,"Marketing",215,3,"Male",67,2,3,"Sales Executive",4,10855,8552,7,"No",11,2,1,80,1,15,2,2,12,11,2,11,2.48320377414123,NA,NA
-"160",34,0,"Travel_Frequently",303,"Sales",2,4,"Marketing",216,3,"Female",75,3,1,"Sales Representative",3,2231,11314,6,"No",18,2,4,80,1,6,3,3,4,3,1,2,1.40137164756656,0.42514494410716,"Referral"
+"160",34,0,"Travel_Frequently",303,"Sales",2,4,"Marketing",216,3,"Female",75,3,1,"Sales Representative",3,2231,11314,6,"No",18,2,4,80,1,6,3,3,4,3,1,2,1.00137164756656,0.42514494410716,"Referral"
 "161",22,0,"Travel_Rarely",1256,"Research & Development",19,1,"Medical",217,3,"Male",80,3,1,"Research Scientist",4,2323,11992,1,"No",24,3,1,80,2,2,6,3,2,2,2,2,NA,0.956879595760256,"Referral"
 "162",27,0,"Non-Travel",691,"Research & Development",9,3,"Medical",218,4,"Male",57,3,1,"Research Scientist",2,2024,5970,6,"No",18,3,4,80,1,6,1,1,2,2,2,2,NA,0.768711665645242,"Campus"
 "163",28,0,"Travel_Rarely",440,"Research & Development",21,3,"Medical",221,3,"Male",42,3,1,"Research Scientist",4,2713,6672,1,"No",11,3,3,80,1,5,2,1,5,2,0,2,NA,0.333199633285403,"Applied Online"
@@ -170,7 +170,7 @@
 "169",38,0,"Travel_Rarely",702,"Sales",1,4,"Life Sciences",230,1,"Female",59,2,2,"Sales Executive",4,8686,12930,4,"No",22,3,3,80,0,12,2,4,8,3,0,7,1.37524339899777,NA,NA
 "170",32,0,"Travel_Rarely",120,"Research & Development",6,5,"Life Sciences",231,3,"Male",43,3,1,"Research Scientist",3,3038,12430,3,"No",20,2,1,80,0,8,2,3,5,4,1,4,NA,0.879200250608847,"Campus"
 "171",27,0,"Travel_Rarely",1157,"Research & Development",17,3,"Technical Degree",233,3,"Male",51,3,1,"Research Scientist",2,3058,13364,0,"Yes",16,2,4,80,1,6,3,2,5,2,1,1,NA,0.456986932083964,"Referral"
-"172",19,1,"Travel_Frequently",602,"Sales",1,1,"Technical Degree",235,3,"Female",100,1,1,"Sales Representative",1,2325,20989,0,"No",21,3,1,80,0,1,5,4,0,0,0,0,0.595860117515627,0.843449699925259,"Referral"
+"172",19,1,"Travel_Frequently",602,"Sales",1,1,"Technical Degree",235,3,"Female",100,1,1,"Sales Representative",1,2325,20989,0,"No",21,3,1,80,0,1,5,4,0,0,0,0,0.195860117515626,0.843449699925259,"Referral"
 "173",36,0,"Travel_Frequently",1480,"Research & Development",3,2,"Medical",238,4,"Male",30,3,1,"Laboratory Technician",2,2088,15062,4,"No",12,3,3,80,0,13,3,2,8,7,7,2,NA,NA,NA
 "174",30,0,"Non-Travel",111,"Research & Development",9,3,"Medical",239,3,"Male",66,3,2,"Laboratory Technician",1,3072,11012,1,"No",11,4,3,80,2,12,4,3,12,9,6,10,NA,NA,NA
 "175",45,0,"Travel_Rarely",1268,"Sales",4,2,"Life Sciences",240,3,"Female",30,3,2,"Sales Executive",1,5006,6319,4,"Yes",11,3,1,80,1,9,3,4,5,4,0,3,0.690769357231957,0.0450120964087546,"Applied Online"
@@ -252,7 +252,7 @@
 "251",37,1,"Travel_Frequently",504,"Research & Development",10,3,"Medical",342,1,"Male",61,3,3,"Manufacturing Director",3,10048,22573,6,"No",11,4,2,80,2,17,5,3,1,0,0,0,NA,0.359840363729745,"Applied Online"
 "252",39,0,"Travel_Frequently",505,"Research & Development",2,4,"Technical Degree",343,3,"Female",64,3,3,"Healthcare Representative",3,10938,6420,0,"No",25,3,4,80,0,20,1,3,19,6,11,8,NA,NA,NA
 "253",29,0,"Travel_Rarely",665,"Research & Development",15,3,"Life Sciences",346,3,"Male",60,3,1,"Research Scientist",4,2340,22673,1,"No",19,2,1,80,0,6,1,3,6,5,1,5,NA,0.155536149861291,"Applied Online"
-"254",42,0,"Travel_Rarely",916,"Research & Development",17,2,"Life Sciences",347,4,"Female",82,4,2,"Research Scientist",1,6545,23016,3,"Yes",13,2.3,3,80,0,10,1,3,3,2,0,2,NA,0.888148061931133,"Search Firm"
+"254",42,0,"Travel_Rarely",916,"Research & Development",17,2,"Life Sciences",347,4,"Female",82,4,2,"Research Scientist",1,6545,23016,3,"Yes",13,2,3,80,0,10,1,3,3,2,0,2,NA,0.888148061931133,"Search Firm"
 "255",29,0,"Travel_Rarely",1247,"Sales",20,2,"Marketing",349,4,"Male",45,3,2,"Sales Executive",4,6931,10732,2,"No",14,2,4,80,1,10,2,3,3,2,0,2,1.42611084955505,0.0781570980325341,"Applied Online"
 "256",25,0,"Travel_Rarely",685,"Research & Development",1,3,"Life Sciences",350,1,"Female",62,3,2,"Manufacturing Director",3,4898,7505,0,"No",12,4,4,80,2,5,3,3,4,2,1,2,NA,0.431768506532535,"Referral"
 "257",42,0,"Travel_Rarely",269,"Research & Development",2,3,"Medical",351,4,"Female",56,2,1,"Laboratory Technician",1,2593,8007,0,"Yes",11,2,3,80,1,10,4,3,9,6,7,8,NA,NA,NA
@@ -322,7 +322,7 @@
 "321",27,0,"Travel_Rarely",1377,"Sales",2,3,"Life Sciences",437,4,"Male",74,3,2,"Sales Executive",3,4478,5242,1,"Yes",11,4,1,80,0,5,3,3,5,4,0,4,1.19455845531111,0.308717354433611,"Applied Online"
 "322",31,0,"Travel_Rarely",691,"Sales",7,3,"Marketing",438,4,"Male",73,3,2,"Sales Executive",4,7547,7143,4,"No",12,3,4,80,3,13,3,3,7,7,1,7,1.32307347527942,NA,NA
 "323",32,0,"Travel_Rarely",1018,"Research & Development",2,4,"Medical",439,1,"Female",74,4,2,"Research Scientist",4,5055,10557,7,"No",16,3,3,80,0,10,0,2,7,7,0,7,NA,NA,NA
-"324",28,1,"Travel_Rarely",1157,"Research & Development",2,4,"Medical",440,1,"Male",84,1,1,"Research Scientist",4,3464,24737,5,"Yes",13,3.3,4,80,0,5,4,2,3,2,2,2,NA,0.778056226205081,"Search Firm"
+"324",28,1,"Travel_Rarely",1157,"Research & Development",2,4,"Medical",440,1,"Male",84,1,1,"Research Scientist",4,3464,24737,5,"Yes",13,3,4,80,0,5,4,2,3,2,2,2,NA,0.778056226205081,"Search Firm"
 "325",30,0,"Travel_Rarely",1275,"Research & Development",28,2,"Medical",441,4,"Female",64,3,2,"Research Scientist",4,5775,11934,1,"No",13,3,4,80,2,11,2,3,10,8,1,9,NA,NA,NA
 "326",31,0,"Travel_Frequently",798,"Research & Development",7,2,"Life Sciences",442,3,"Female",48,2,3,"Manufacturing Director",3,8943,14034,1,"No",24,3,1,80,1,10,2,3,10,9,8,9,NA,NA,NA
 "327",39,0,"Travel_Frequently",672,"Research & Development",7,2,"Medical",444,3,"Male",54,2,5,"Manager",4,19272,21141,1,"No",15,3,1,80,1,21,2,3,21,9,13,3,NA,NA,NA
@@ -334,12 +334,12 @@
 "333",54,0,"Travel_Frequently",928,"Research & Development",20,4,"Life Sciences",450,4,"Female",31,3,2,"Research Scientist",3,4869,16885,3,"No",12,2,4,80,0,20,4,2,4,3,0,3,NA,0.575558711541817,"Campus"
 "334",43,0,"Travel_Rarely",1001,"Research & Development",7,3,"Life Sciences",451,3,"Female",43,3,3,"Healthcare Representative",1,9985,9262,8,"No",16,2,1,80,1,10,1,2,1,0,0,0,NA,0.757687141885981,"Campus"
 "335",45,0,"Travel_Rarely",549,"Research & Development",8,4,"Other",452,4,"Male",75,3,2,"Research Scientist",4,3697,9278,9,"No",14,3,1,80,2,12,3,3,10,9,9,8,NA,NA,NA
-"336",40,0,"Travel_Rarely",1124,"Sales",1,2,"Medical",453,2,"Male",57,1,2,"Sales Executive",4,7457,13273,2,"Yes",22,3,3,80,3,6,2,2,4,3,0,2,1.22579082300835,0.416287968866527,"Referral"
+"336",40,0,"Travel_Rarely",1124,"Sales",1,2,"Medical",453,2,"Male",57,1,2,"Sales Executive",4,7457,13273,2,"Yes",22,3,3,80,3,6,2,2,4,3,0,2,0.825790823008351,0.416287968866527,"Referral"
 "337",29,1,"Travel_Rarely",318,"Research & Development",8,4,"Other",454,2,"Male",77,1,1,"Laboratory Technician",1,2119,4759,1,"Yes",11,3,4,80,0,7,4,2,7,7,0,7,NA,NA,NA
 "338",29,0,"Travel_Rarely",738,"Research & Development",9,5,"Other",455,2,"Male",30,2,1,"Laboratory Technician",4,3983,7621,0,"No",17,3,3,80,0,4,2,3,3,2,2,2,NA,0.312136791646481,"Applied Online"
 "339",30,0,"Travel_Rarely",570,"Sales",5,3,"Marketing",456,4,"Female",30,2,2,"Sales Executive",3,6118,5431,1,"No",13,3,3,80,3,10,2,3,10,9,1,2,2.23274433762379,NA,NA
 "340",27,0,"Travel_Rarely",1130,"Sales",8,4,"Marketing",458,2,"Female",56,3,2,"Sales Executive",2,6214,3415,1,"No",18,3,1,80,1,8,3,3,8,7,0,7,0.728991327794557,NA,NA
-"341",37,0,"Travel_Rarely",1192,"Research & Development",5,2,"Medical",460,4,"Male",61,3,2,"Manufacturing Director",4,6347,23177,7,"No",16,4.3,3,80,2,8,2,2,6,2,0,4,NA,0.824877409264445,"Search Firm"
+"341",37,0,"Travel_Rarely",1192,"Research & Development",5,2,"Medical",460,4,"Male",61,3,2,"Manufacturing Director",4,6347,23177,7,"No",16,4,3,80,2,8,2,2,6,2,0,4,NA,0.824877409264445,"Search Firm"
 "342",38,0,"Travel_Rarely",343,"Research & Development",15,2,"Life Sciences",461,3,"Male",92,2,3,"Research Director",4,11510,15682,0,"Yes",14,3,2,80,1,12,3,3,11,10,2,9,NA,NA,NA
 "343",31,0,"Travel_Rarely",1232,"Research & Development",7,4,"Medical",462,3,"Female",39,3,3,"Manufacturing Director",4,7143,25713,1,"Yes",14,3,3,80,0,11,2,2,11,9,4,10,NA,NA,NA
 "344",29,0,"Travel_Rarely",144,"Sales",10,1,"Marketing",463,4,"Female",39,2,2,"Sales Executive",2,8268,11866,1,"Yes",14,3,1,80,2,7,2,3,7,7,1,7,1.62521486162257,NA,NA
@@ -348,7 +348,7 @@
 "347",41,0,"Travel_Rarely",483,"Research & Development",6,3,"Medical",466,4,"Male",95,2,2,"Manufacturing Director",2,6032,10110,6,"Yes",15,3,4,80,0,8,3,3,5,4,1,2,NA,0.0379825565032661,"Applied Online"
 "348",47,0,"Travel_Frequently",1309,"Sales",4,1,"Medical",467,2,"Male",99,3,2,"Sales Representative",3,2976,25751,3,"No",19,3,1,80,0,5,3,3,0,0,0,0,-0.627667242124615,0.442028027493507,"Applied Online"
 "349",42,0,"Travel_Rarely",810,"Research & Development",23,5,"Life Sciences",468,1,"Female",44,3,4,"Research Director",4,15992,15901,2,"No",14,4,2,80,0,16,2,3,1,0,0,0,NA,0.567152353702113,"Campus"
-"350",29,0,"Non-Travel",746,"Sales",2,3,"Life Sciences",469,4,"Male",61,3,2,"Sales Executive",3,4649,16928,1,"No",14,2,1,80,1,4,3,2,4,3,0,2,1.72700290234098,0.928528212243691,"Referral"
+"350",29,0,"Non-Travel",746,"Sales",2,3,"Life Sciences",469,4,"Male",61,3,2,"Sales Executive",3,4649,16928,1,"No",14,2,1,80,1,4,3,2,4,3,0,2,1.32700290234098,0.928528212243691,"Referral"
 "351",42,0,"Travel_Rarely",544,"Human Resources",2,1,"Technical Degree",470,3,"Male",52,3,1,"Human Resources",3,2696,24017,0,"Yes",11,2,3,80,1,4,5,3,3,2,1,0,NA,0.500989456893876,"Applied Online"
 "352",32,0,"Travel_Rarely",1062,"Research & Development",2,3,"Medical",471,3,"Female",75,3,1,"Laboratory Technician",2,2370,3956,1,"No",13,4,3,80,1,8,4,3,8,0,0,7,NA,NA,NA
 "353",48,0,"Travel_Rarely",530,"Sales",29,1,"Medical",473,1,"Female",91,3,3,"Manager",3,12504,23978,3,"No",21,2,2,80,1,15,3,1,0,0,0,0,1.10837549020266,0.272711776429787,"Applied Online"
@@ -357,7 +357,7 @@
 "356",26,0,"Travel_Rarely",933,"Sales",1,3,"Life Sciences",476,3,"Male",57,3,2,"Sales Executive",3,5296,20156,1,"No",17,3,2,80,1,8,3,3,8,7,7,7,0.841712569480345,NA,NA
 "357",42,0,"Travel_Rarely",1332,"Research & Development",2,4,"Other",477,1,"Male",98,2,2,"Healthcare Representative",4,6781,17078,3,"No",23,4,2,80,0,14,6,3,1,0,0,0,NA,0.9983189268969,"Referral"
 "358",21,1,"Travel_Frequently",756,"Sales",1,1,"Technical Degree",478,1,"Female",99,2,1,"Sales Representative",2,2174,9150,1,"Yes",11,4,3,80,0,3,3,3,3,2,1,2,2.01382767925976,0.754918580176309,"Applied Online"
-"359",36,0,"Non-Travel",845,"Sales",1,5,"Medical",479,4,"Female",45,3,2,"Sales Executive",4,6653,15276,4,"No",15,3,2,80,0,7,6,3,1,0,0,0,2.88345870195971,0.4541089925915,"Referral"
+"359",36,0,"Non-Travel",845,"Sales",1,5,"Medical",479,4,"Female",45,3,2,"Sales Executive",4,6653,15276,4,"No",15,3,2,80,0,7,6,3,1,0,0,0,2.48345870195971,0.4541089925915,"Referral"
 "360",36,0,"Travel_Frequently",541,"Sales",3,4,"Medical",481,1,"Male",48,2,3,"Sales Executive",4,9699,7246,4,"No",11,4,1,80,1,16,2,3,13,9,1,12,0.949398001585665,NA,NA
 "361",57,0,"Travel_Rarely",593,"Research & Development",1,4,"Medical",482,4,"Male",88,3,2,"Healthcare Representative",3,6755,2967,2,"No",11,4,3,80,0,15,2,3,3,2,1,2,NA,0.166004854487255,"Applied Online"
 "362",40,0,"Travel_Rarely",1171,"Research & Development",10,4,"Life Sciences",483,4,"Female",46,4,1,"Laboratory Technician",3,2213,22495,3,"Yes",13,3,3,80,1,10,3,3,7,7,1,7,NA,NA,NA
@@ -369,7 +369,7 @@
 "368",50,0,"Travel_Rarely",1046,"Research & Development",10,3,"Technical Degree",491,4,"Male",100,2,3,"Healthcare Representative",4,10496,2755,6,"No",15,2,4,80,0,20,2,3,4,3,1,3,NA,0.245924395974725,"Applied Online"
 "369",40,1,"Travel_Rarely",575,"Sales",22,2,"Marketing",492,3,"Male",68,2,2,"Sales Executive",3,6380,6110,2,"Yes",12,4,1,80,2,8,6,3,6,4,1,0,3.03033982015156,0.661079538753256,"Campus"
 "370",31,0,"Travel_Rarely",408,"Research & Development",9,4,"Life Sciences",493,3,"Male",42,2,1,"Research Scientist",2,2657,7551,0,"Yes",16,3,4,80,0,3,5,3,2,2,2,2,NA,0.165524085983634,"Applied Online"
-"371",21,1,"Travel_Rarely",156,"Sales",12,3,"Life Sciences",494,3,"Female",90,4,1,"Sales Representative",2,2716,25422,1,"No",15,3.3,4,80,0,1,0,3,1,0,0,0,1.25893331695714,0.820916265714914,"Search Firm"
+"371",21,1,"Travel_Rarely",156,"Sales",12,3,"Life Sciences",494,3,"Female",90,4,1,"Sales Representative",2,2716,25422,1,"No",15,3,4,80,0,1,0,3,1,0,0,0,1.25893331695714,0.820916265714914,"Search Firm"
 "372",29,0,"Travel_Rarely",1283,"Research & Development",23,3,"Life Sciences",495,4,"Male",54,3,1,"Research Scientist",4,2201,18168,9,"No",16,3,4,80,0,6,4,3,3,2,1,2,NA,0.773881620261818,"Campus"
 "373",35,0,"Travel_Rarely",755,"Research & Development",9,4,"Life Sciences",496,3,"Male",97,2,2,"Healthcare Representative",2,6540,19394,9,"No",19,3,3,80,0,10,5,3,1,1,0,0,NA,0.582542878109962,"Campus"
 "374",27,0,"Travel_Rarely",1469,"Research & Development",1,2,"Medical",497,4,"Male",82,3,1,"Laboratory Technician",2,3816,17881,1,"No",11,3,2,80,1,5,2,3,5,2,0,4,NA,0.639113169396296,"Campus"
@@ -386,7 +386,7 @@
 "385",36,0,"Travel_Rarely",164,"Sales",2,2,"Medical",513,2,"Male",61,2,3,"Sales Executive",3,7596,3809,1,"No",13,2,2,80,2,10,2,3,10,9,9,0,0.77068587713573,NA,NA
 "386",30,1,"Travel_Frequently",464,"Research & Development",4,3,"Technical Degree",514,3,"Male",40,3,1,"Research Scientist",4,2285,3427,9,"Yes",23,2,3,80,0,3,4,3,1,0,0,0,NA,0.656163764419034,"Campus"
 "387",37,0,"Travel_Rarely",1107,"Research & Development",14,3,"Life Sciences",515,4,"Female",95,3,1,"Laboratory Technician",1,3034,26914,1,"No",12,2,3,80,1,18,2,2,18,7,12,17,NA,NA,NA
-"388",40,0,"Travel_Rarely",759,"Sales",2,2,"Marketing",516,4,"Female",46,3,2,"Sales Executive",2,5715,22553,7,"No",12,3,3,80,2,8,5,3,5,4,1,3,1.1932273550455,0.41296655847691,"Referral"
+"388",40,0,"Travel_Rarely",759,"Sales",2,2,"Marketing",516,4,"Female",46,3,2,"Sales Executive",2,5715,22553,7,"No",12,3,3,80,2,8,5,3,5,4,1,3,0.793227355045503,0.41296655847691,"Referral"
 "389",42,0,"Travel_Rarely",201,"Research & Development",1,4,"Life Sciences",517,2,"Female",95,3,1,"Laboratory Technician",1,2576,20490,3,"No",16,4,2,80,1,8,5,3,5,2,1,2,NA,0.350840494735166,"Applied Online"
 "390",37,0,"Travel_Rarely",1305,"Research & Development",10,4,"Life Sciences",518,3,"Male",49,3,2,"Manufacturing Director",2,4197,21123,2,"Yes",12,3,4,80,0,18,2,2,1,0,0,1,NA,0.213409971445799,"Applied Online"
 "391",43,0,"Travel_Rarely",982,"Research & Development",12,3,"Life Sciences",520,1,"Male",59,2,4,"Research Director",2,14336,4345,1,"No",11,3,3,80,1,25,3,3,25,10,3,9,NA,NA,NA
@@ -414,7 +414,7 @@
 "413",46,0,"Travel_Rarely",1485,"Research & Development",18,3,"Medical",550,3,"Female",87,3,2,"Manufacturing Director",3,4810,26314,2,"No",14,3,3,80,1,19,5,2,10,7,0,8,NA,NA,NA
 "414",42,0,"Travel_Frequently",1368,"Research & Development",28,4,"Technical Degree",551,4,"Female",88,2,2,"Healthcare Representative",4,4523,4386,0,"No",11,4,4,80,3,7,4,4,6,5,0,4,NA,0.457183214137331,"Referral"
 "415",24,1,"Travel_Rarely",1448,"Sales",1,1,"Technical Degree",554,1,"Female",62,3,1,"Sales Representative",2,3202,21972,1,"Yes",16,4,2,80,0,6,4,3,5,3,1,4,0.0354662353335042,0.265298781450838,"Applied Online"
-"416",34,1,"Travel_Frequently",296,"Sales",6,2,"Marketing",555,4,"Female",33,1,1,"Sales Representative",3,2351,12253,0,"No",16,1,4,80,1,3,3,2,2,2,1,0,2.52018037613213,0.47688927478157,"Referral"
+"416",34,1,"Travel_Frequently",296,"Sales",6,2,"Marketing",555,4,"Female",33,1,1,"Sales Representative",3,2351,12253,0,"No",16,1,4,80,1,3,3,2,2,2,1,0,2.12018037613213,0.47688927478157,"Referral"
 "417",38,0,"Travel_Frequently",1490,"Research & Development",2,2,"Life Sciences",556,4,"Male",42,3,1,"Laboratory Technician",4,1702,12106,1,"Yes",23,2,3,80,1,1,3,3,1,0,0,0,NA,0.334415380610153,"Applied Online"
 "418",40,0,"Travel_Rarely",1398,"Sales",2,4,"Life Sciences",558,3,"Female",79,3,5,"Manager",3,18041,13022,0,"No",14,3,4,80,0,21,2,3,20,15,1,12,0.185892116763667,NA,NA
 "419",26,0,"Travel_Rarely",1349,"Research & Development",23,3,"Life Sciences",560,1,"Female",90,3,1,"Research Scientist",4,2886,3032,1,"No",22,3,2,80,2,3,3,1,3,2,0,2,NA,0.987911072093993,"Referral"
@@ -423,7 +423,7 @@
 "422",29,1,"Travel_Rarely",408,"Research & Development",25,5,"Technical Degree",565,3,"Female",71,2,1,"Research Scientist",2,2546,18300,5,"No",16,4,2,80,0,6,2,4,2,2,1,1,NA,0.956899401731789,"Referral"
 "423",19,1,"Travel_Rarely",489,"Human Resources",2,2,"Technical Degree",566,1,"Male",52,2,1,"Human Resources",4,2564,18437,1,"No",12,3,3,80,0,1,3,4,1,0,0,0,NA,0.449371560709551,"Referral"
 "424",30,0,"Non-Travel",1398,"Sales",22,4,"Other",567,3,"Female",69,3,3,"Sales Executive",1,8412,2890,0,"No",11,3,3,80,0,10,3,3,9,8,7,8,0.339706837055953,NA,NA
-"425",57,0,"Travel_Rarely",210,"Sales",29,3,"Marketing",568,1,"Male",56,2,4,"Manager",4,14118,22102,3,"No",12,3.3,3,80,1,32,3,2,1,0,0,0,-0.0649480411143148,0.861448928480968,"Search Firm"
+"425",57,0,"Travel_Rarely",210,"Sales",29,3,"Marketing",568,1,"Male",56,2,4,"Manager",4,14118,22102,3,"No",12,3,3,80,1,32,3,2,1,0,0,0,-0.0649480411143148,0.861448928480968,"Search Firm"
 "426",50,0,"Travel_Rarely",1099,"Research & Development",29,4,"Life Sciences",569,2,"Male",88,2,4,"Manager",3,17046,9314,0,"No",15,3,2,80,1,28,2,3,27,10,15,7,NA,NA,NA
 "427",30,0,"Non-Travel",1116,"Research & Development",2,3,"Medical",571,3,"Female",49,3,1,"Laboratory Technician",4,2564,7181,0,"No",14,2,3,80,0,12,2,2,11,7,6,7,NA,NA,NA
 "428",60,0,"Travel_Frequently",1499,"Sales",28,3,"Marketing",573,3,"Female",80,2,3,"Sales Executive",1,10266,2845,4,"No",19,4,4,80,0,22,5,4,18,13,13,11,1.38569687114141,NA,NA
@@ -432,7 +432,7 @@
 "431",35,0,"Travel_Rarely",144,"Research & Development",22,3,"Life Sciences",577,4,"Male",46,1,1,"Laboratory Technician",3,4230,19225,0,"No",15,3,3,80,0,6,2,3,5,4,4,3,NA,0.519810415804386,"Campus"
 "432",54,0,"Travel_Rarely",548,"Research & Development",8,4,"Life Sciences",578,3,"Female",42,3,2,"Laboratory Technician",3,3780,23428,7,"No",11,3,3,80,0,19,3,3,1,0,0,0,NA,0.0462719032075256,"Applied Online"
 "433",34,0,"Travel_Rarely",1303,"Research & Development",2,4,"Life Sciences",579,4,"Male",62,2,1,"Research Scientist",3,2768,8416,3,"No",12,3,3,80,1,14,3,3,7,3,5,7,NA,NA,NA
-"434",46,0,"Travel_Rarely",1125,"Sales",10,3,"Marketing",580,3,"Female",94,2,3,"Sales Executive",4,9071,11563,2,"Yes",19,3,3,80,1,15,3,3,3,2,1,2,2.0488292613438,0.459650141652673,"Referral"
+"434",46,0,"Travel_Rarely",1125,"Sales",10,3,"Marketing",580,3,"Female",94,2,3,"Sales Executive",4,9071,11563,2,"Yes",19,3,3,80,1,15,3,3,3,2,1,2,1.6488292613438,0.459650141652673,"Referral"
 "435",31,0,"Travel_Rarely",1274,"Research & Development",9,1,"Life Sciences",581,3,"Male",33,3,3,"Manufacturing Director",2,10648,14394,1,"No",25,3,4,80,1,13,6,4,13,8,0,8,NA,NA,NA
 "436",33,1,"Travel_Rarely",1277,"Research & Development",15,1,"Medical",582,2,"Male",56,3,3,"Manager",3,13610,24619,7,"Yes",12,3,4,80,0,15,2,4,7,6,7,7,NA,NA,NA
 "437",33,1,"Travel_Rarely",587,"Research & Development",10,1,"Medical",584,1,"Male",38,1,1,"Laboratory Technician",4,3408,6705,7,"No",13,4,1,80,3,8,2,3,4,3,1,3,NA,0.990553342970088,"Referral"
@@ -449,20 +449,20 @@
 "448",35,0,"Travel_Rarely",619,"Sales",1,3,"Marketing",600,2,"Male",85,3,2,"Sales Executive",3,4717,18659,9,"No",11,4,3,80,0,15,2,3,11,9,6,9,1.73897372685774,NA,NA
 "449",40,0,"Travel_Rarely",302,"Research & Development",6,3,"Life Sciences",601,2,"Female",75,3,4,"Manufacturing Director",3,13237,20364,7,"No",15,3,3,80,0,22,3,3,20,6,5,13,NA,NA,NA
 "450",39,0,"Travel_Frequently",443,"Research & Development",8,1,"Life Sciences",602,3,"Female",48,3,1,"Laboratory Technician",3,3755,17872,1,"No",11,2,1,80,1,8,3,3,8,3,0,7,NA,NA,NA
-"451",31,0,"Travel_Rarely",828,"Sales",2,1,"Life Sciences",604,2,"Male",77,3,2,"Sales Executive",4,6582,8346,4,"Yes",13,4,3,80,0,10,2,4,6,5,0,5,1.38200928962697,0.87563409586437,"Referral"
+"451",31,0,"Travel_Rarely",828,"Sales",2,1,"Life Sciences",604,2,"Male",77,3,2,"Sales Executive",4,6582,8346,4,"Yes",13,4,3,80,0,10,2,4,6,5,0,5,0.982009289626967,0.87563409586437,"Referral"
 "452",42,0,"Travel_Rarely",319,"Research & Development",24,3,"Medical",605,4,"Male",56,3,3,"Manufacturing Director",1,7406,6950,1,"Yes",21,2,4,80,1,10,5,2,10,9,5,8,NA,NA,NA
 "453",45,0,"Travel_Rarely",561,"Sales",2,3,"Other",606,4,"Male",61,3,2,"Sales Executive",2,4805,16177,0,"No",19,1,2,80,1,9,3,4,8,7,3,7,1.23149868718208,NA,NA
 "454",26,1,"Travel_Frequently",426,"Human Resources",17,4,"Life Sciences",608,2,"Female",58,3,1,"Human Resources",3,2741,22808,0,"Yes",11,2,2,80,1,8,2,2,7,7,1,0,NA,NA,NA
 "455",29,0,"Travel_Rarely",232,"Research & Development",19,3,"Technical Degree",611,4,"Male",34,3,2,"Manufacturing Director",4,4262,22645,4,"No",12,3,2,80,2,8,2,4,3,2,1,2,NA,0.370249080704525,"Applied Online"
 "456",33,0,"Travel_Rarely",922,"Research & Development",1,5,"Medical",612,1,"Female",95,4,4,"Research Director",3,16184,22578,4,"No",19,3,3,80,1,10,2,3,6,1,0,5,NA,0.220282326452434,"Applied Online"
 "457",31,0,"Travel_Rarely",688,"Sales",7,3,"Life Sciences",613,3,"Male",44,2,3,"Manager",4,11557,25291,9,"No",21,3,3,80,1,10,3,2,5,4,0,1,0.49347593805064,0.690487529151142,"Campus"
-"458",18,1,"Travel_Frequently",1306,"Sales",5,3,"Marketing",614,2,"Male",69,3,1,"Sales Representative",2,1878,8059,1,"Yes",14,3,4,80,0,0,3,3,0,0,0,0,1.0607289437804,0.981798128923401,"Referral"
+"458",18,1,"Travel_Frequently",1306,"Sales",5,3,"Marketing",614,2,"Male",69,3,1,"Sales Representative",2,1878,8059,1,"Yes",14,3,4,80,0,0,3,3,0,0,0,0,0.660728943780402,0.981798128923401,"Referral"
 "459",40,0,"Non-Travel",1094,"Sales",28,3,"Other",615,3,"Male",58,1,3,"Sales Executive",1,10932,11373,3,"No",15,3,3,80,1,20,2,3,1,0,0,1,1.10428197388851,0.354876836761832,"Applied Online"
 "460",41,0,"Non-Travel",509,"Research & Development",2,4,"Other",616,1,"Female",62,2,2,"Healthcare Representative",3,6811,2112,2,"Yes",17,3,1,80,0,10,3,3,8,7,0,7,NA,NA,NA
 "461",26,0,"Travel_Rarely",775,"Sales",29,2,"Medical",618,1,"Male",45,3,2,"Sales Executive",3,4306,4267,5,"No",12,2,1,80,2,8,5,3,0,0,0,0,2.17689962110926,0.0428286602254957,"Applied Online"
 "462",35,0,"Travel_Rarely",195,"Sales",1,3,"Medical",620,1,"Female",80,3,2,"Sales Executive",3,4859,6698,1,"No",16,4,4,80,0,5,3,3,5,4,0,3,0.216156753854101,0.729700040305033,"Campus"
 "463",34,0,"Travel_Rarely",258,"Sales",21,4,"Life Sciences",621,4,"Male",74,4,2,"Sales Executive",4,5337,19921,1,"No",12,3,4,80,0,10,3,3,10,7,5,7,1.07061397365454,NA,NA
-"464",26,1,"Travel_Rarely",471,"Research & Development",24,3,"Technical Degree",622,3,"Male",66,1,1,"Laboratory Technician",4,2340,23213,1,"Yes",18,4.3,2,80,0,1,3,1,1,0,0,0,NA,0.882823811145499,"Search Firm"
+"464",26,1,"Travel_Rarely",471,"Research & Development",24,3,"Technical Degree",622,3,"Male",66,1,1,"Laboratory Technician",4,2340,23213,1,"Yes",18,4,2,80,0,1,3,1,1,0,0,0,NA,0.882823811145499,"Search Firm"
 "465",37,0,"Travel_Rarely",799,"Research & Development",1,3,"Technical Degree",623,2,"Female",59,3,3,"Manufacturing Director",4,7491,23848,4,"No",17,3,4,80,0,12,3,4,6,5,1,2,NA,0.666443058056757,"Campus"
 "466",46,0,"Travel_Frequently",1034,"Research & Development",18,1,"Medical",624,1,"Female",86,3,3,"Healthcare Representative",3,10527,8984,5,"No",11,2,4,80,0,28,3,2,2,2,1,2,NA,0.438919984269887,"Applied Online"
 "467",41,0,"Travel_Rarely",1276,"Sales",2,5,"Life Sciences",625,2,"Female",91,3,4,"Manager",1,16595,5626,7,"No",16,5,2,80,1,22,2,3,18,16,11,8,1.17720772812414,NA,NA
@@ -503,7 +503,7 @@
 "502",30,0,"Travel_Frequently",160,"Research & Development",3,3,"Medical",680,3,"Female",71,3,1,"Research Scientist",3,2083,22653,1,"No",20,2,3,80,1,1,2,3,1,0,0,0,NA,0.196597029455006,"Applied Online"
 "503",53,0,"Travel_Rarely",238,"Sales",1,1,"Medical",682,4,"Female",34,3,2,"Sales Executive",1,8381,7507,7,"No",20,3,4,80,0,18,2,4,14,7,8,10,0.343975910019516,NA,NA
 "504",34,0,"Travel_Rarely",1397,"Research & Development",1,5,"Life Sciences",683,2,"Male",42,3,1,"Research Scientist",4,2691,7660,1,"No",12,3,4,80,1,10,4,2,10,9,8,8,NA,NA,NA
-"505",45,1,"Travel_Frequently",306,"Sales",26,4,"Life Sciences",684,1,"Female",100,3,2,"Sales Executive",1,4286,5630,2,"No",14,3,4,80,2,5,4,3,1,1,0,0,0.70550789090828,0.941663881530985,"Referral"
+"505",45,1,"Travel_Frequently",306,"Sales",26,4,"Life Sciences",684,1,"Female",100,3,2,"Sales Executive",1,4286,5630,2,"No",14,3,4,80,2,5,4,3,1,1,0,0,0.30550789090828,0.941663881530985,"Referral"
 "506",26,0,"Travel_Rarely",991,"Research & Development",6,3,"Life Sciences",686,3,"Female",71,3,1,"Laboratory Technician",4,2659,17759,1,"Yes",13,4,3,80,1,3,2,3,3,2,0,2,NA,0.826737243914977,"Campus"
 "507",37,0,"Travel_Rarely",482,"Research & Development",3,3,"Other",689,3,"Male",36,3,3,"Manufacturing Director",3,9434,9606,1,"No",15,4,3,80,1,10,2,3,10,7,7,8,NA,NA,NA
 "508",29,0,"Travel_Rarely",1176,"Sales",3,2,"Medical",690,2,"Female",62,3,2,"Sales Executive",3,5561,3487,1,"No",14,3,1,80,1,6,5,2,6,0,1,2,1.73534442229407,0.688975232187659,"Campus"
@@ -527,7 +527,7 @@
 "526",24,1,"Travel_Rarely",693,"Sales",3,2,"Life Sciences",720,1,"Female",65,3,2,"Sales Executive",3,4577,24785,9,"No",14,3,1,80,0,4,3,3,2,2,2,0,0.862315623332226,0.359164718771353,"Applied Online"
 "527",39,0,"Travel_Rarely",408,"Research & Development",2,4,"Technical Degree",721,4,"Female",80,2,2,"Healthcare Representative",3,4553,20978,1,"No",11,4,1,80,0,20,4,3,20,7,11,10,NA,NA,NA
 "528",32,0,"Travel_Rarely",929,"Sales",10,3,"Marketing",722,4,"Male",55,3,2,"Sales Executive",4,5396,21703,1,"No",12,1,4,80,0,10,2,2,10,7,0,8,1.83001241955026,NA,NA
-"529",50,1,"Travel_Frequently",562,"Sales",8,2,"Technical Degree",723,2,"Male",50,3,2,"Sales Executive",3,6796,23452,3,"Yes",14,2.3,1,80,1,18,4,3,4,3,1,3,-0.628092240646187,0.863290455192327,"Search Firm"
+"529",50,1,"Travel_Frequently",562,"Sales",8,2,"Technical Degree",723,2,"Male",50,3,2,"Sales Executive",3,6796,23452,3,"Yes",14,2,1,80,1,18,4,3,4,3,1,3,-0.628092240646187,0.863290455192327,"Search Firm"
 "530",38,0,"Travel_Rarely",827,"Research & Development",1,4,"Life Sciences",724,2,"Female",33,4,2,"Healthcare Representative",4,7625,19383,0,"No",13,4,3,80,0,10,4,2,9,7,1,8,NA,NA,NA
 "531",27,0,"Travel_Rarely",608,"Research & Development",1,2,"Life Sciences",725,3,"Female",68,3,3,"Manufacturing Director",1,7412,6009,1,"No",11,4,4,80,0,9,3,3,9,7,0,7,NA,NA,NA
 "532",32,0,"Travel_Rarely",1018,"Research & Development",3,2,"Life Sciences",727,3,"Female",39,3,3,"Research Director",4,11159,19373,3,"No",15,3,4,80,0,10,6,3,7,7,7,7,NA,NA,NA
@@ -535,10 +535,10 @@
 "534",40,0,"Travel_Frequently",580,"Sales",5,4,"Life Sciences",729,4,"Male",48,2,3,"Sales Executive",1,10475,23772,5,"Yes",21,2,3,80,1,20,2,3,18,13,1,12,0.442878875717582,NA,NA
 "535",53,0,"Travel_Rarely",970,"Research & Development",7,3,"Life Sciences",730,3,"Male",59,4,4,"Research Director",3,14814,13514,3,"No",19,4,3,80,0,32,3,3,5,1,1,3,NA,0.488567579304799,"Referral"
 "536",41,0,"Travel_Rarely",427,"Human Resources",10,4,"Human Resources",731,2,"Male",73,2,5,"Manager",4,19141,8861,3,"No",15,4,2,80,3,23,2,2,21,6,12,6,NA,NA,NA
-"537",60,0,"Travel_Rarely",1179,"Sales",16,4,"Marketing",732,1,"Male",84,3,2,"Sales Executive",1,5405,11924,8,"No",14,3,4,80,0,10,1,3,2,2,2,2,0.554740784064378,0.498684725956991,"Referral"
+"537",60,0,"Travel_Rarely",1179,"Sales",16,4,"Marketing",732,1,"Male",84,3,2,"Sales Executive",1,5405,11924,8,"No",14,3,4,80,0,10,1,3,2,2,2,2,0.154740784064378,0.498684725956991,"Referral"
 "538",27,0,"Travel_Frequently",294,"Research & Development",10,2,"Life Sciences",733,4,"Male",32,3,3,"Manufacturing Director",1,8793,4809,1,"No",21,2,3,80,2,9,4,2,9,7,1,7,NA,NA,NA
 "539",41,0,"Travel_Rarely",314,"Human Resources",1,3,"Human Resources",734,4,"Male",59,2,5,"Manager",3,19189,19562,1,"No",12,2,2,80,1,22,3,3,22,7,2,10,NA,NA,NA
-"540",50,0,"Travel_Rarely",316,"Sales",8,4,"Marketing",738,4,"Male",54,3,1,"Sales Representative",2,3875,9983,7,"No",15,2,4,80,1,4,2,3,2,2,2,2,4.06673969616416,0.905027595814317,"Referral"
+"540",50,0,"Travel_Rarely",316,"Sales",8,4,"Marketing",738,4,"Male",54,3,1,"Sales Representative",2,3875,9983,7,"No",15,2,4,80,1,4,2,3,2,2,2,2,3.66673969616416,0.905027595814317,"Referral"
 "541",28,1,"Travel_Rarely",654,"Research & Development",1,2,"Life Sciences",741,1,"Female",67,1,1,"Research Scientist",2,2216,3872,7,"Yes",13,2,4,80,0,10,4,3,7,7,3,7,NA,NA,NA
 "542",36,0,"Non-Travel",427,"Research & Development",8,3,"Life Sciences",742,1,"Female",63,4,3,"Research Director",1,11713,20335,9,"No",14,2,1,80,1,10,2,3,8,7,0,5,NA,NA,NA
 "543",38,0,"Travel_Rarely",168,"Research & Development",1,3,"Life Sciences",743,3,"Female",81,3,3,"Manufacturing Director",3,7861,15397,4,"Yes",14,3,4,80,0,10,4,4,1,0,0,0,NA,0.15173403872177,"Applied Online"
@@ -582,7 +582,7 @@
 "581",35,0,"Travel_Rarely",384,"Sales",8,4,"Life Sciences",805,1,"Female",72,3,1,"Sales Representative",4,2572,20317,1,"No",16,2,2,80,1,3,1,2,3,2,0,2,1.47057942883465,0.23328603268601,"Applied Online"
 "582",30,0,"Travel_Rarely",921,"Research & Development",1,3,"Life Sciences",806,4,"Male",38,1,1,"Laboratory Technician",3,3833,24375,3,"No",21,3,3,80,2,7,2,3,2,2,0,2,NA,0.455388004658744,"Referral"
 "583",40,0,"Travel_Frequently",791,"Research & Development",2,2,"Medical",807,3,"Female",38,4,2,"Healthcare Representative",2,4244,9931,1,"No",24,2,4,80,1,8,2,3,8,7,3,7,NA,NA,NA
-"584",34,0,"Travel_Rarely",1111,"Sales",8,2,"Life Sciences",808,3,"Female",93,3,2,"Sales Executive",1,6500,13305,5,"No",17,3,2,80,1,6,1,3,3,2,1,2,1.08182617760224,0.989765302278101,"Referral"
+"584",34,0,"Travel_Rarely",1111,"Sales",8,2,"Life Sciences",808,3,"Female",93,3,2,"Sales Executive",1,6500,13305,5,"No",17,3,2,80,1,6,1,3,3,2,1,2,0.681826177602244,0.989765302278101,"Referral"
 "585",42,0,"Travel_Frequently",570,"Research & Development",8,3,"Life Sciences",809,2,"Male",66,3,5,"Manager",4,18430,16225,1,"No",13,3,2,80,1,24,4,2,24,7,14,9,NA,NA,NA
 "586",23,1,"Travel_Rarely",1243,"Research & Development",6,3,"Life Sciences",811,3,"Male",63,4,1,"Laboratory Technician",1,1601,3445,1,"Yes",21,3,3,80,2,1,2,3,0,0,0,0,NA,0.202799463178962,"Applied Online"
 "587",24,0,"Non-Travel",1092,"Research & Development",9,3,"Life Sciences",812,3,"Male",60,2,1,"Laboratory Technician",2,2694,26551,1,"No",11,3,3,80,3,1,4,3,1,0,0,0,NA,0.285999182146043,"Applied Online"
@@ -590,7 +590,7 @@
 "589",50,0,"Travel_Rarely",691,"Research & Development",2,3,"Medical",815,3,"Male",64,3,4,"Research Director",3,17639,6881,5,"No",16,3,4,80,0,30,3,3,4,3,0,3,NA,0.972135947784409,"Referral"
 "590",29,1,"Travel_Rarely",805,"Research & Development",1,2,"Life Sciences",816,2,"Female",36,2,1,"Laboratory Technician",1,2319,6689,1,"Yes",11,3,4,80,1,1,1,3,1,0,0,0,NA,0.513883208623156,"Campus"
 "591",33,0,"Travel_Rarely",213,"Research & Development",7,3,"Medical",817,3,"Male",49,3,3,"Research Director",3,11691,25995,0,"No",11,3,4,80,0,14,3,4,13,9,3,7,NA,NA,NA
-"592",33,1,"Travel_Rarely",118,"Sales",16,3,"Marketing",819,1,"Female",69,3,2,"Sales Executive",1,5324,26507,5,"No",15,3,3,80,0,6,3,3,3,2,0,2,0.853488880020471,0.423174569150433,"Referral"
+"592",33,1,"Travel_Rarely",118,"Sales",16,3,"Marketing",819,1,"Female",69,3,2,"Sales Executive",1,5324,26507,5,"No",15,3,3,80,0,6,3,3,3,2,0,2,0.453488880020471,0.423174569150433,"Referral"
 "593",47,0,"Travel_Rarely",202,"Research & Development",2,2,"Other",820,3,"Female",33,3,4,"Manager",4,16752,12982,1,"Yes",11,3,3,80,1,26,3,2,26,14,3,0,NA,NA,NA
 "594",36,0,"Travel_Rarely",676,"Research & Development",1,3,"Other",823,3,"Female",35,3,2,"Manufacturing Director",2,5228,23361,0,"No",15,3,1,80,1,10,2,3,9,7,0,5,NA,NA,NA
 "595",29,0,"Travel_Rarely",1252,"Research & Development",23,2,"Life Sciences",824,3,"Male",81,4,1,"Research Scientist",3,2700,23779,1,"No",24,4,3,80,1,10,3,3,10,7,0,7,NA,NA,NA
@@ -621,9 +621,9 @@
 "620",33,0,"Travel_Rarely",586,"Sales",1,3,"Medical",855,1,"Male",48,4,2,"Sales Executive",1,4037,21816,1,"No",22,3,1,80,1,9,5,3,9,8,0,8,0.362492261254387,NA,NA
 "621",35,0,"Travel_Rarely",1343,"Research & Development",27,1,"Medical",856,3,"Female",53,2,1,"Research Scientist",1,2559,17852,1,"No",11,3,4,80,0,6,3,2,6,5,1,1,NA,0.980106504401192,"Referral"
 "622",36,0,"Travel_Rarely",928,"Sales",1,2,"Life Sciences",857,2,"Male",56,3,2,"Sales Executive",4,6201,2823,1,"Yes",14,3,4,80,1,18,1,2,18,14,4,11,1.20164588152311,NA,NA
-"623",32,0,"Travel_Rarely",117,"Sales",13,4,"Life Sciences",859,2,"Male",73,3,2,"Sales Executive",4,4403,9250,2,"No",11,2,3,80,1,8,3,2,5,2,0,3,0.717765084309148,0.957736641634256,"Referral"
+"623",32,0,"Travel_Rarely",117,"Sales",13,4,"Life Sciences",859,2,"Male",73,3,2,"Sales Executive",4,4403,9250,2,"No",11,2,3,80,1,8,3,2,5,2,0,3,0.317765084309148,0.957736641634256,"Referral"
 "624",30,0,"Travel_Frequently",1012,"Research & Development",5,4,"Life Sciences",861,2,"Male",75,2,1,"Research Scientist",4,3761,2373,9,"No",12,3,2,80,1,10,3,2,5,4,0,3,NA,0.813835520297289,"Campus"
-"625",53,0,"Travel_Rarely",661,"Sales",7,2,"Marketing",862,1,"Female",78,2,3,"Sales Executive",4,10934,20715,7,"Yes",18,3,4,80,1,35,3,3,5,2,0,4,0.681994797622928,0.402517062611878,"Referral"
+"625",53,0,"Travel_Rarely",661,"Sales",7,2,"Marketing",862,1,"Female",78,2,3,"Sales Executive",4,10934,20715,7,"Yes",18,3,4,80,1,35,3,3,5,2,0,4,0.281994797622928,0.402517062611878,"Referral"
 "626",45,0,"Travel_Rarely",930,"Sales",9,3,"Marketing",864,4,"Male",74,3,3,"Sales Executive",1,10761,19239,4,"Yes",12,4,3,80,1,18,2,3,5,4,0,2,0.490143879754419,0.613227328518406,"Campus"
 "627",32,0,"Travel_Rarely",638,"Research & Development",8,2,"Medical",865,3,"Female",91,4,2,"Research Scientist",3,5175,22162,5,"No",12,3,3,80,1,9,3,2,5,3,1,3,NA,0.534336761571467,"Campus"
 "628",52,0,"Travel_Frequently",890,"Research & Development",25,4,"Medical",867,3,"Female",81,2,4,"Manufacturing Director",4,13826,19028,3,"No",22,2,3,80,0,31,3,3,9,8,0,0,NA,NA,NA
@@ -644,7 +644,7 @@
 "643",38,0,"Travel_Rarely",395,"Sales",9,3,"Marketing",893,2,"Male",98,2,1,"Sales Representative",2,2899,12102,0,"No",19,3,4,80,1,3,3,3,2,2,1,2,1.31508214970259,0.510274294530973,"Campus"
 "644",42,0,"Travel_Rarely",1265,"Research & Development",3,3,"Life Sciences",894,3,"Female",95,4,2,"Laboratory Technician",4,5231,23726,2,"Yes",13,2,2,80,1,17,1,2,5,3,1,3,NA,0.0156015197280794,"Applied Online"
 "645",31,0,"Travel_Rarely",1222,"Research & Development",11,4,"Life Sciences",895,4,"Male",48,3,1,"Research Scientist",4,2356,14871,3,"Yes",19,3,2,80,1,8,2,3,6,4,0,2,NA,0.0148658528923988,"Applied Online"
-"646",29,1,"Travel_Rarely",341,"Sales",1,3,"Medical",896,2,"Female",48,2,1,"Sales Representative",3,2800,23522,6,"Yes",19,3,3,80,3,5,3,3,3,2,0,2,0.658704509821745,0.998063035309315,"Referral"
+"646",29,1,"Travel_Rarely",341,"Sales",1,3,"Medical",896,2,"Female",48,2,1,"Sales Representative",3,2800,23522,6,"Yes",19,3,3,80,3,5,3,3,3,2,0,2,0.258704509821745,0.998063035309315,"Referral"
 "647",53,0,"Travel_Rarely",868,"Sales",8,3,"Marketing",897,1,"Male",73,3,4,"Sales Executive",4,11836,22789,5,"No",14,2,3,80,1,28,3,3,2,0,2,2,1.08197657671866,0.704920513788238,"Campus"
 "648",35,0,"Travel_Rarely",672,"Research & Development",25,3,"Technical Degree",899,4,"Male",78,2,3,"Manufacturing Director",2,10903,9129,3,"No",16,3,1,80,0,16,2,3,13,10,4,8,NA,NA,NA
 "649",37,0,"Travel_Frequently",1231,"Sales",21,2,"Medical",900,3,"Female",54,3,1,"Sales Representative",4,2973,21222,5,"No",15,2,2,80,1,10,3,3,5,4,0,0,-0.239220234279782,0.739407876972109,"Campus"
@@ -682,12 +682,12 @@
 "681",36,0,"Travel_Rarely",188,"Research & Development",7,4,"Other",949,2,"Male",65,3,1,"Research Scientist",4,4678,23293,2,"No",18,3,3,80,0,8,6,3,6,2,0,1,NA,0.468158962205052,"Referral"
 "682",38,0,"Travel_Rarely",1333,"Research & Development",1,3,"Technical Degree",950,4,"Female",80,3,3,"Research Director",1,13582,16292,1,"No",13,2,2,80,1,15,3,3,15,12,5,11,NA,NA,NA
 "683",32,0,"Non-Travel",1184,"Research & Development",1,3,"Life Sciences",951,3,"Female",70,2,1,"Laboratory Technician",2,2332,3974,6,"No",20,4,3,80,0,5,3,3,3,0,0,2,NA,0.973554193973541,"Referral"
-"684",25,1,"Travel_Rarely",867,"Sales",19,2,"Marketing",952,3,"Male",36,2,1,"Sales Representative",2,2413,18798,1,"Yes",18,3,3,80,3,1,2,3,1,0,0,0,1.20993764412395,0.467938244808465,"Referral"
+"684",25,1,"Travel_Rarely",867,"Sales",19,2,"Marketing",952,3,"Male",36,2,1,"Sales Representative",2,2413,18798,1,"Yes",18,3,3,80,3,1,2,3,1,0,0,0,0.809937644123947,0.467938244808465,"Referral"
 "685",40,0,"Travel_Rarely",658,"Sales",10,4,"Marketing",954,1,"Male",67,2,3,"Sales Executive",2,9705,20652,2,"No",12,3,2,80,1,11,2,2,1,0,0,0,1.10502736841904,0.197424895595759,"Applied Online"
 "686",26,0,"Travel_Frequently",1283,"Sales",1,3,"Medical",956,3,"Male",52,2,2,"Sales Executive",1,4294,11148,1,"No",12,2,2,80,0,7,2,3,7,7,0,7,0.720152091103716,NA,NA
 "687",41,0,"Travel_Rarely",263,"Research & Development",6,3,"Medical",957,4,"Male",59,3,1,"Laboratory Technician",1,4721,3119,2,"Yes",13,3,3,80,0,20,3,3,18,13,2,17,NA,NA,NA
 "688",36,0,"Travel_Rarely",938,"Research & Development",2,4,"Medical",958,3,"Male",79,3,1,"Laboratory Technician",3,2519,12287,4,"No",21,2,3,80,0,16,6,3,11,8,3,9,NA,NA,NA
-"689",19,1,"Travel_Rarely",419,"Sales",21,3,"Other",959,4,"Male",37,2,1,"Sales Representative",2,2121,9947,1,"Yes",13,4,2,80,0,1,3,4,1,0,0,0,0.509309834023816,0.980666602961719,"Referral"
+"689",19,1,"Travel_Rarely",419,"Sales",21,3,"Other",959,4,"Male",37,2,1,"Sales Representative",2,2121,9947,1,"Yes",13,4,2,80,0,1,3,4,1,0,0,0,0.109309834023816,0.980666602961719,"Referral"
 "690",20,1,"Travel_Rarely",129,"Research & Development",4,3,"Technical Degree",960,1,"Male",84,3,1,"Laboratory Technician",1,2973,13008,1,"No",19,2,2,80,0,1,2,3,1,0,0,0,NA,0.135653176810592,"Applied Online"
 "691",31,0,"Travel_Rarely",616,"Research & Development",12,3,"Medical",961,4,"Female",41,3,2,"Healthcare Representative",4,5855,17369,0,"Yes",11,3,3,80,2,10,2,1,9,7,8,5,NA,NA,NA
 "692",40,0,"Travel_Frequently",1469,"Research & Development",9,4,"Medical",964,4,"Male",35,3,1,"Research Scientist",2,3617,25063,8,"Yes",14,2,4,80,1,3,2,3,1,1,0,0,NA,0.45212218305096,"Referral"
@@ -697,7 +697,7 @@
 "696",37,1,"Travel_Rarely",625,"Sales",1,4,"Life Sciences",970,1,"Male",46,2,3,"Sales Executive",3,10609,14922,5,"No",11,2,3,80,0,17,2,1,14,1,11,7,2.79388351729213,NA,NA
 "697",45,0,"Non-Travel",805,"Research & Development",4,2,"Life Sciences",972,3,"Male",57,3,2,"Laboratory Technician",2,4447,23163,1,"No",12,2,2,80,0,9,5,2,9,7,0,8,NA,NA,NA
 "698",29,0,"Travel_Frequently",1404,"Sales",20,3,"Technical Degree",974,3,"Female",84,3,1,"Sales Representative",4,2157,18203,1,"No",15,3,2,80,1,3,5,3,3,1,0,2,0.957395105190917,0.353825272293761,"Applied Online"
-"699",35,0,"Travel_Rarely",1219,"Sales",18,3,"Medical",975,3,"Female",86,3,2,"Sales Executive",3,4601,6179,1,"No",16,3,2,80,0,5,3,3,5,2,1,0,1.89140454270084,0.916529962094501,"Referral"
+"699",35,0,"Travel_Rarely",1219,"Sales",18,3,"Medical",975,3,"Female",86,3,2,"Sales Executive",3,4601,6179,1,"No",16,3,2,80,0,5,3,3,5,2,1,0,1.49140454270084,0.916529962094501,"Referral"
 "700",52,0,"Travel_Rarely",1053,"Research & Development",1,2,"Life Sciences",976,4,"Male",70,3,4,"Manager",4,17099,13829,2,"No",15,3,2,80,1,26,2,2,9,8,7,8,NA,NA,NA
 "701",58,1,"Travel_Rarely",289,"Research & Development",2,3,"Technical Degree",977,4,"Male",51,3,1,"Research Scientist",3,2479,26227,4,"No",24,3,1,80,0,7,4,3,1,0,0,0,NA,0.576272202655673,"Campus"
 "702",53,0,"Travel_Rarely",1376,"Sales",2,2,"Medical",981,3,"Male",45,3,4,"Manager",3,14852,13938,6,"No",13,2,3,80,1,22,3,4,17,13,15,2,0.66542210313233,NA,NA
@@ -747,7 +747,7 @@
 "746",55,0,"Travel_Frequently",135,"Research & Development",18,4,"Medical",1034,3,"Male",62,3,2,"Healthcare Representative",2,6385,12992,3,"Yes",14,4,4,80,2,17,3,3,8,7,6,7,NA,NA,NA
 "747",41,0,"Non-Travel",247,"Research & Development",7,1,"Life Sciences",1035,2,"Female",55,1,5,"Research Director",3,19973,20284,1,"No",22,3,2,80,2,21,3,3,21,16,5,10,NA,NA,NA
 "748",38,0,"Travel_Rarely",1035,"Sales",3,4,"Life Sciences",1036,2,"Male",42,3,2,"Sales Executive",4,6861,4981,8,"Yes",12,4,3,80,0,19,1,3,1,0,0,0,0.357512114569392,0.772177567705512,"Campus"
-"749",26,1,"Non-Travel",265,"Sales",29,2,"Medical",1037,2,"Male",79,1,2,"Sales Executive",1,4969,21813,8,"No",18,3.3,4,80,0,7,6,3,2,2,2,2,1.59586755915925,0.756662883795798,"Search Firm"
+"749",26,1,"Non-Travel",265,"Sales",29,2,"Medical",1037,2,"Male",79,1,2,"Sales Executive",1,4969,21813,8,"No",18,3,4,80,0,7,6,3,2,2,2,2,1.59586755915925,0.756662883795798,"Search Firm"
 "750",52,1,"Travel_Rarely",266,"Sales",2,1,"Marketing",1038,1,"Female",57,1,5,"Manager",4,19845,25846,1,"No",15,3,4,80,1,33,3,3,32,14,6,9,1.91521523093217,NA,NA
 "751",44,0,"Travel_Rarely",1448,"Sales",28,3,"Medical",1039,4,"Female",53,4,4,"Sales Executive",4,13320,11737,3,"Yes",18,2,3,80,1,23,2,3,12,11,11,11,-0.119204359843886,NA,NA
 "752",50,0,"Non-Travel",145,"Sales",1,3,"Life Sciences",1040,4,"Female",95,3,2,"Sales Executive",3,6347,24920,0,"No",12,3,1,80,1,19,3,3,18,7,0,13,1.48611856662264,NA,NA
@@ -763,7 +763,7 @@
 "762",36,1,"Travel_Rarely",660,"Research & Development",15,3,"Other",1052,1,"Male",81,3,2,"Laboratory Technician",3,4834,7858,7,"No",14,3,2,80,1,9,3,2,1,0,0,0,NA,0.79383603297174,"Campus"
 "763",26,1,"Travel_Frequently",342,"Research & Development",2,3,"Life Sciences",1053,1,"Male",57,3,1,"Research Scientist",1,2042,15346,6,"Yes",14,3,2,80,1,6,2,3,3,2,1,2,NA,0.624150661285967,"Campus"
 "764",34,0,"Travel_Rarely",1333,"Sales",10,4,"Life Sciences",1055,3,"Female",87,3,1,"Sales Representative",3,2220,18410,1,"Yes",19,3,4,80,1,1,2,3,1,1,0,0,1.85796349943092,0.325850235065445,"Applied Online"
-"765",28,0,"Travel_Rarely",1144,"Sales",10,1,"Medical",1056,4,"Male",74,3,1,"Sales Representative",2,1052,23384,1,"No",22,4,2,80,0,1,5,3,1,0,0,0,0.642411829102211,0.842911759391427,"Referral"
+"765",28,0,"Travel_Rarely",1144,"Sales",10,1,"Medical",1056,4,"Male",74,3,1,"Sales Representative",2,1052,23384,1,"No",22,4,2,80,0,1,5,3,1,0,0,0,0.242411829102211,0.842911759391427,"Referral"
 "766",38,0,"Travel_Frequently",1186,"Research & Development",3,4,"Other",1060,3,"Male",44,3,1,"Research Scientist",3,2821,2997,3,"No",16,3,1,80,1,8,2,3,2,2,2,2,NA,0.470762796001509,"Referral"
 "767",50,0,"Travel_Rarely",1464,"Research & Development",2,4,"Medical",1061,2,"Male",62,3,5,"Research Director",3,19237,12853,2,"Yes",11,3,4,80,1,29,2,2,8,1,7,7,NA,NA,NA
 "768",37,0,"Travel_Rarely",124,"Research & Development",3,3,"Other",1062,4,"Female",35,3,2,"Healthcare Representative",2,4107,13848,3,"No",15,3,1,80,0,8,3,2,4,3,0,1,NA,0.665703641716391,"Campus"
@@ -775,7 +775,7 @@
 "774",36,0,"Travel_Rarely",796,"Research & Development",12,5,"Medical",1073,4,"Female",51,2,3,"Manufacturing Director",4,8858,15669,0,"No",11,2,2,80,0,15,2,2,14,8,7,8,NA,NA,NA
 "775",55,0,"Non-Travel",444,"Research & Development",2,1,"Medical",1074,3,"Male",40,2,4,"Manager",1,16756,17323,7,"No",15,3,2,80,0,31,3,4,9,7,6,2,NA,NA,NA
 "776",43,0,"Travel_Rarely",415,"Sales",25,3,"Medical",1076,3,"Male",79,2,3,"Sales Executive",4,10798,5268,5,"No",13,3,3,80,1,18,5,3,1,0,0,0,0.618811780743767,0.6475202832371,"Campus"
-"777",20,1,"Travel_Frequently",769,"Sales",9,3,"Marketing",1077,4,"Female",54,3,1,"Sales Representative",4,2323,17205,1,"Yes",14,4,2,80,0,2,3,3,2,2,0,2,1.66257415717661,0.972872271668166,"Referral"
+"777",20,1,"Travel_Frequently",769,"Sales",9,3,"Marketing",1077,4,"Female",54,3,1,"Sales Representative",4,2323,17205,1,"Yes",14,4,2,80,0,2,3,3,2,2,0,2,1.26257415717661,0.972872271668166,"Referral"
 "778",21,1,"Travel_Rarely",1334,"Research & Development",10,3,"Life Sciences",1079,3,"Female",36,2,1,"Laboratory Technician",1,1416,17258,1,"No",13,4,1,80,0,1,6,2,1,0,1,0,NA,0.556795455515385,"Campus"
 "779",46,0,"Travel_Rarely",1003,"Research & Development",8,4,"Life Sciences",1080,4,"Female",74,2,2,"Research Scientist",1,4615,21029,8,"Yes",23,3,1,80,3,19,2,3,16,13,1,7,NA,NA,NA
 "780",51,1,"Travel_Rarely",1323,"Research & Development",4,4,"Life Sciences",1081,1,"Male",34,3,1,"Research Scientist",3,2461,10332,9,"Yes",12,3,3,80,3,18,2,4,10,0,2,7,NA,NA,NA
@@ -792,9 +792,9 @@
 "791",33,0,"Travel_Rarely",654,"Research & Development",5,3,"Life Sciences",1099,4,"Male",34,2,3,"Healthcare Representative",4,7119,21214,4,"No",15,3,3,80,1,9,2,3,3,2,1,2,NA,0.0561286637093872,"Applied Online"
 "792",35,1,"Travel_Rarely",1204,"Sales",4,3,"Technical Degree",1100,4,"Male",86,3,3,"Sales Executive",1,9582,10333,0,"Yes",22,3,1,80,0,9,2,3,8,7,4,7,1.62658275007175,NA,NA
 "793",33,1,"Travel_Frequently",827,"Research & Development",29,4,"Medical",1101,1,"Female",54,2,2,"Research Scientist",3,4508,3129,1,"No",22,3,2,80,0,14,4,3,13,7,3,8,NA,NA,NA
-"794",28,0,"Travel_Rarely",895,"Research & Development",15,2,"Life Sciences",1102,1,"Male",50,3,1,"Laboratory Technician",3,2207,22482,1,"No",16,3.3,4,80,1,4,5,2,4,2,2,2,NA,0.818379383068532,"Search Firm"
+"794",28,0,"Travel_Rarely",895,"Research & Development",15,2,"Life Sciences",1102,1,"Male",50,3,1,"Laboratory Technician",3,2207,22482,1,"No",16,3,4,80,1,4,5,2,4,2,2,2,NA,0.818379383068532,"Search Firm"
 "795",34,0,"Travel_Frequently",618,"Research & Development",3,1,"Life Sciences",1103,1,"Male",45,3,2,"Healthcare Representative",4,7756,22266,0,"No",17,2,3,80,0,7,1,2,6,2,0,4,NA,0.282448579324409,"Applied Online"
-"796",37,0,"Travel_Rarely",309,"Sales",10,4,"Life Sciences",1105,4,"Female",88,2,2,"Sales Executive",4,6694,24223,2,"Yes",14,2,3,80,3,8,5,3,1,0,0,0,1.13178932961461,0.994232720928267,"Referral"
+"796",37,0,"Travel_Rarely",309,"Sales",10,4,"Life Sciences",1105,4,"Female",88,2,2,"Sales Executive",4,6694,24223,2,"Yes",14,2,3,80,3,8,5,3,1,0,0,0,0.73178932961461,0.994232720928267,"Referral"
 "797",25,1,"Travel_Rarely",1219,"Research & Development",4,1,"Technical Degree",1106,4,"Male",32,3,1,"Laboratory Technician",4,3691,4605,1,"Yes",15,4,2,80,1,7,3,4,7,7,5,6,NA,NA,NA
 "798",26,1,"Travel_Rarely",1330,"Research & Development",21,3,"Medical",1107,1,"Male",37,3,1,"Laboratory Technician",3,2377,19373,1,"No",20,1,3,80,1,1,0,2,1,1,0,0,NA,0.0314193265512586,"Applied Online"
 "799",33,1,"Travel_Rarely",1017,"Research & Development",25,3,"Medical",1108,1,"Male",55,2,1,"Research Scientist",2,2313,2993,4,"Yes",20,3,2,80,0,5,0,3,2,2,2,2,NA,0.130857034819201,"Applied Online"
@@ -802,7 +802,7 @@
 "801",28,1,"Travel_Frequently",1009,"Research & Development",1,3,"Medical",1111,1,"Male",45,2,1,"Laboratory Technician",2,2596,7160,1,"No",15,2,1,80,2,1,2,3,1,0,0,0,NA,0.378686421783641,"Applied Online"
 "802",50,1,"Travel_Frequently",959,"Sales",1,4,"Other",1113,4,"Male",81,3,2,"Sales Executive",3,4728,17251,3,"Yes",14,3,4,80,0,5,4,3,0,0,0,0,0.0747010783515429,0.360602862434462,"Applied Online"
 "803",33,0,"Travel_Frequently",970,"Sales",7,3,"Life Sciences",1114,4,"Female",30,3,2,"Sales Executive",2,4302,13401,0,"No",17,3,3,80,1,4,3,3,3,2,0,2,1.68268109909919,0.258546488359571,"Applied Online"
-"804",34,0,"Non-Travel",697,"Research & Development",3,4,"Life Sciences",1115,3,"Male",40,2,1,"Research Scientist",4,2979,22478,3,"No",17,2.3,4,80,3,6,2,3,0,0,0,0,NA,0.86867670272477,"Search Firm"
+"804",34,0,"Non-Travel",697,"Research & Development",3,4,"Life Sciences",1115,3,"Male",40,2,1,"Research Scientist",4,2979,22478,3,"No",17,2,4,80,3,6,2,3,0,0,0,0,NA,0.86867670272477,"Search Firm"
 "805",48,0,"Non-Travel",1262,"Research & Development",1,4,"Medical",1116,1,"Male",35,4,4,"Manager",4,16885,16154,2,"No",22,3,3,80,0,27,3,2,5,4,2,1,NA,0.771739229792729,"Campus"
 "806",45,0,"Non-Travel",1050,"Sales",9,4,"Life Sciences",1117,2,"Female",65,2,2,"Sales Executive",3,5593,17970,1,"No",13,2,4,80,1,15,2,3,15,10,4,12,0.352317827709994,NA,NA
 "807",52,0,"Travel_Rarely",994,"Research & Development",7,4,"Life Sciences",1118,2,"Male",87,3,3,"Healthcare Representative",2,10445,15322,7,"No",19,3,4,80,0,18,4,3,8,6,4,0,NA,NA,NA
@@ -847,9 +847,9 @@
 "846",40,0,"Travel_Frequently",902,"Research & Development",26,2,"Medical",1180,3,"Female",92,2,2,"Research Scientist",4,4422,21203,3,"Yes",13,3,4,80,1,16,3,1,1,1,0,0,NA,0.57236240664497,"Campus"
 "847",35,0,"Travel_Rarely",819,"Research & Development",2,3,"Life Sciences",1182,3,"Male",44,2,3,"Manufacturing Director",2,10274,19588,2,"No",18,2,2,80,1,15,2,4,7,7,6,4,NA,NA,NA
 "848",34,0,"Travel_Frequently",669,"Research & Development",1,3,"Medical",1184,4,"Male",97,2,2,"Healthcare Representative",1,5343,25755,0,"No",20,3,3,80,0,14,3,3,13,9,4,9,NA,NA,NA
-"849",35,0,"Travel_Frequently",636,"Research & Development",4,4,"Other",1185,4,"Male",47,2,1,"Laboratory Technician",4,2376,26537,1,"No",13,2.3,2,80,1,2,2,4,2,2,2,2,NA,0.832162815146148,"Search Firm"
+"849",35,0,"Travel_Frequently",636,"Research & Development",4,4,"Other",1185,4,"Male",47,2,1,"Laboratory Technician",4,2376,26537,1,"No",13,2,2,80,1,2,2,4,2,2,2,2,NA,0.832162815146148,"Search Firm"
 "850",43,1,"Travel_Rarely",1372,"Sales",9,3,"Marketing",1188,1,"Female",85,1,2,"Sales Executive",3,5346,9489,8,"No",13,3,2,80,0,7,2,2,4,3,1,3,1.47710284937957,0.278277967358008,"Applied Online"
-"851",32,0,"Non-Travel",862,"Sales",2,1,"Life Sciences",1190,3,"Female",76,3,1,"Sales Representative",1,2827,14947,1,"No",12,3,3,80,3,1,3,3,1,0,0,0,0.821961082230155,0.877376998774707,"Referral"
+"851",32,0,"Non-Travel",862,"Sales",2,1,"Life Sciences",1190,3,"Female",76,3,1,"Sales Representative",1,2827,14947,1,"No",12,3,3,80,3,1,3,3,1,0,0,0,0.421961082230155,0.877376998774707,"Referral"
 "852",56,0,"Travel_Rarely",718,"Research & Development",4,4,"Technical Degree",1191,4,"Female",92,3,5,"Manager",1,19943,18575,4,"No",13,3,4,80,1,28,2,3,5,2,4,2,NA,0.368991172173992,"Applied Online"
 "853",29,0,"Travel_Rarely",1401,"Research & Development",6,1,"Medical",1192,2,"Female",54,3,1,"Laboratory Technician",4,3131,26342,1,"No",13,3,1,80,1,10,5,3,10,8,0,8,NA,NA,NA
 "854",19,0,"Travel_Rarely",645,"Research & Development",9,2,"Life Sciences",1193,3,"Male",54,3,1,"Research Scientist",1,2552,7172,1,"No",25,2,3,80,0,1,4,3,1,1,0,0,NA,0.925462584476918,"Referral"
@@ -864,7 +864,7 @@
 "863",44,0,"Non-Travel",111,"Research & Development",17,3,"Life Sciences",1206,4,"Male",74,1,1,"Research Scientist",3,2290,4279,2,"No",13,3,4,80,0,6,3,3,0,0,0,0,NA,0.480582403484732,"Referral"
 "864",33,0,"Travel_Rarely",147,"Human Resources",2,3,"Human Resources",1207,2,"Male",99,3,1,"Human Resources",3,3600,8429,1,"No",13,4,4,80,1,5,2,3,5,4,1,4,NA,0.802533427253366,"Campus"
 "865",41,1,"Non-Travel",906,"Research & Development",5,2,"Life Sciences",1210,1,"Male",95,2,1,"Research Scientist",1,2107,20293,6,"No",17,3,1,80,1,5,2,1,1,0,0,0,NA,0.958377957809716,"Referral"
-"866",30,0,"Travel_Rarely",1329,"Sales",29,4,"Life Sciences",1211,3,"Male",61,3,2,"Sales Executive",1,4115,13192,8,"No",19,3,3,80,3,8,3,3,4,3,0,3,1.71826919481784,0.988709668628871,"Referral"
+"866",30,0,"Travel_Rarely",1329,"Sales",29,4,"Life Sciences",1211,3,"Male",61,3,2,"Sales Executive",1,4115,13192,8,"No",19,3,3,80,3,8,3,3,4,3,0,3,1.31826919481784,0.988709668628871,"Referral"
 "867",40,0,"Travel_Frequently",1184,"Sales",2,4,"Medical",1212,2,"Male",62,3,2,"Sales Executive",2,4327,25440,5,"No",12,4,4,80,3,5,2,3,0,0,0,0,-0.343168791430632,0.342190291266888,"Applied Online"
 "868",50,0,"Travel_Frequently",1421,"Research & Development",2,3,"Medical",1215,4,"Female",30,3,4,"Manager",1,17856,9490,2,"No",22,3,3,80,1,32,3,3,2,2,2,2,NA,0.570676347473636,"Campus"
 "869",28,0,"Travel_Rarely",1179,"Research & Development",19,4,"Medical",1216,4,"Male",78,2,1,"Laboratory Technician",1,3196,12449,1,"No",12,3,3,80,3,6,2,3,6,5,3,3,NA,0.156018011271954,"Applied Online"
@@ -937,7 +937,7 @@
 "936",32,0,"Travel_Rarely",604,"Sales",8,3,"Medical",1304,3,"Male",56,4,2,"Sales Executive",4,6209,11693,1,"No",15,3,3,80,2,10,4,4,10,7,0,8,0.437884570865709,NA,NA
 "937",45,0,"Travel_Frequently",364,"Research & Development",25,3,"Medical",1306,2,"Female",83,3,5,"Manager",2,18061,13035,3,"No",22,3,3,80,0,22,4,3,0,0,0,0,NA,0.479006138630211,"Referral"
 "938",39,0,"Travel_Rarely",412,"Research & Development",13,4,"Medical",1307,3,"Female",94,2,4,"Manager",2,17123,17334,6,"Yes",13,4,4,80,2,21,4,3,19,9,15,2,NA,NA,NA
-"939",58,0,"Travel_Rarely",848,"Research & Development",23,4,"Life Sciences",1308,1,"Male",88,3,1,"Research Scientist",3,2372,26076,1,"No",12,3.3,4,80,2,2,3,3,2,2,2,2,NA,0.890194891719148,"Search Firm"
+"939",58,0,"Travel_Rarely",848,"Research & Development",23,4,"Life Sciences",1308,1,"Male",88,3,1,"Research Scientist",3,2372,26076,1,"No",12,3,4,80,2,2,3,3,2,2,2,2,NA,0.890194891719148,"Search Firm"
 "940",32,1,"Travel_Rarely",1089,"Research & Development",7,2,"Life Sciences",1309,4,"Male",79,3,2,"Laboratory Technician",3,4883,22845,1,"No",18,2,1,80,1,10,3,3,10,4,1,1,NA,NA,NA
 "941",39,1,"Travel_Rarely",360,"Research & Development",23,3,"Medical",1310,3,"Male",93,3,1,"Research Scientist",1,3904,22154,0,"No",13,3,1,80,0,6,2,3,5,2,0,3,NA,0.385543309384957,"Applied Online"
 "942",30,0,"Travel_Rarely",1138,"Research & Development",6,3,"Technical Degree",1311,1,"Female",48,2,2,"Laboratory Technician",4,4627,23631,0,"No",12,4,1,80,1,10,6,3,9,2,6,7,NA,NA,NA
@@ -1025,7 +1025,7 @@
 "1024",56,0,"Travel_Rarely",1255,"Research & Development",1,2,"Life Sciences",1441,1,"Female",90,3,1,"Research Scientist",1,2066,10494,2,"No",22,3,4,80,1,5,3,4,3,2,1,0,NA,0.0835032046306878,"Applied Online"
 "1025",47,0,"Travel_Rarely",359,"Research & Development",2,4,"Medical",1443,1,"Female",82,3,4,"Research Director",3,17169,26703,3,"No",19,3,2,80,2,26,2,4,20,17,5,6,NA,NA,NA
 "1026",24,0,"Travel_Rarely",1476,"Sales",4,1,"Medical",1445,4,"Female",42,3,2,"Sales Executive",3,4162,15211,1,"Yes",12,3,3,80,2,5,3,3,5,4,0,3,0.862524227221105,0.58085810369812,"Applied Online"
-"1027",32,0,"Travel_Rarely",601,"Sales",7,5,"Marketing",1446,4,"Male",97,3,2,"Sales Executive",4,9204,23343,4,"No",12,2,3,80,1,7,3,2,4,3,0,3,2.27008196352797,0.999205813277513,"Referral"
+"1027",32,0,"Travel_Rarely",601,"Sales",7,5,"Marketing",1446,4,"Male",97,3,2,"Sales Executive",4,9204,23343,4,"No",12,2,3,80,1,7,3,2,4,3,0,3,1.87008196352797,0.999205813277513,"Referral"
 "1028",34,0,"Travel_Rarely",401,"Research & Development",1,3,"Life Sciences",1447,4,"Female",86,2,1,"Laboratory Technician",2,3294,3708,5,"No",17,4,1,80,1,7,2,2,5,4,0,2,NA,0.091113475849852,"Applied Online"
 "1029",41,0,"Travel_Rarely",1283,"Research & Development",5,5,"Medical",1448,2,"Male",90,4,1,"Research Scientist",3,2127,5561,2,"Yes",12,2,1,80,0,7,5,2,4,2,0,3,NA,0.777001865906641,"Campus"
 "1030",40,0,"Non-Travel",663,"Research & Development",9,4,"Other",1449,3,"Male",81,3,2,"Laboratory Technician",3,3975,23099,3,"No",11,2,3,80,2,11,2,4,8,7,0,7,NA,NA,NA
@@ -1035,12 +1035,12 @@
 "1034",31,1,"Travel_Frequently",1445,"Research & Development",1,5,"Life Sciences",1459,3,"Female",100,4,3,"Manufacturing Director",2,7446,8931,1,"No",11,2,1,80,0,10,2,3,10,8,4,7,NA,NA,NA
 "1035",45,0,"Travel_Rarely",1038,"Research & Development",20,3,"Medical",1460,2,"Male",95,1,3,"Healthcare Representative",1,10851,19863,2,"Yes",18,2,2,80,1,24,2,3,7,7,0,7,NA,NA,NA
 "1036",31,0,"Travel_Rarely",1398,"Human Resources",8,2,"Medical",1461,4,"Female",96,4,1,"Human Resources",2,2109,24609,9,"No",18,2,4,80,0,8,3,3,3,2,0,2,NA,0.904054302023724,"Referral"
-"1037",31,1,"Travel_Frequently",523,"Research & Development",2,3,"Life Sciences",1464,2,"Male",94,3,1,"Laboratory Technician",4,3722,21081,6,"Yes",13,3.3,3,80,1,7,2,1,2,2,2,2,NA,0.763137059984729,"Search Firm"
+"1037",31,1,"Travel_Frequently",523,"Research & Development",2,3,"Life Sciences",1464,2,"Male",94,3,1,"Laboratory Technician",4,3722,21081,6,"Yes",13,3,3,80,1,7,2,1,2,2,2,2,NA,0.763137059984729,"Search Firm"
 "1038",45,0,"Travel_Rarely",1448,"Research & Development",29,3,"Technical Degree",1465,2,"Male",55,3,3,"Manufacturing Director",4,9380,14720,4,"Yes",18,4,4,80,2,10,4,4,3,1,1,2,NA,0.16276913578622,"Applied Online"
-"1039",48,0,"Travel_Rarely",1221,"Sales",7,3,"Marketing",1466,3,"Male",96,3,2,"Sales Executive",1,5486,24795,4,"No",11,3.3,1,80,3,15,3,3,2,2,2,2,1.32547642457415,0.798324768664315,"Search Firm"
+"1039",48,0,"Travel_Rarely",1221,"Sales",7,3,"Marketing",1466,3,"Male",96,3,2,"Sales Executive",1,5486,24795,4,"No",11,3,1,80,3,15,3,3,2,2,2,2,1.32547642457415,0.798324768664315,"Search Firm"
 "1040",34,1,"Travel_Rarely",1107,"Human Resources",9,4,"Technical Degree",1467,1,"Female",52,3,1,"Human Resources",3,2742,3072,1,"No",15,3,4,80,0,2,0,3,2,2,2,2,NA,0.223279520403594,"Applied Online"
 "1041",40,0,"Non-Travel",218,"Research & Development",8,1,"Medical",1468,4,"Male",55,2,3,"Research Director",2,13757,25178,2,"No",11,4,3,80,1,16,5,3,9,8,4,8,NA,NA,NA
-"1042",28,0,"Travel_Rarely",866,"Sales",5,3,"Medical",1469,4,"Male",84,3,2,"Sales Executive",1,8463,23490,0,"No",18,3,4,80,0,6,4,3,5,4,1,3,1.49519894047522,0.937004616484046,"Referral"
+"1042",28,0,"Travel_Rarely",866,"Sales",5,3,"Medical",1469,4,"Male",84,3,2,"Sales Executive",1,8463,23490,0,"No",18,3,4,80,0,6,4,3,5,4,1,3,1.09519894047522,0.937004616484046,"Referral"
 "1043",44,0,"Non-Travel",981,"Research & Development",5,3,"Life Sciences",1471,3,"Male",90,2,1,"Laboratory Technician",3,3162,7973,3,"No",14,3,4,80,0,7,5,3,5,2,0,3,NA,0.727188376942649,"Campus"
 "1044",53,0,"Travel_Rarely",447,"Research & Development",2,3,"Medical",1472,4,"Male",39,4,4,"Research Director",2,16598,19764,4,"No",12,2,2,80,0,35,2,2,9,8,8,8,NA,NA,NA
 "1045",49,0,"Travel_Rarely",1495,"Research & Development",5,4,"Technical Degree",1473,1,"Male",96,3,2,"Healthcare Representative",3,6651,21534,2,"No",14,4,2,80,1,20,0,2,3,2,1,2,NA,0.415551472920924,"Referral"
@@ -1060,7 +1060,7 @@
 "1059",34,1,"Travel_Rarely",790,"Sales",24,4,"Medical",1489,1,"Female",40,2,2,"Sales Executive",2,4599,7815,0,"Yes",23,4,3,80,0,16,2,4,15,9,10,10,1.83904587515715,NA,NA
 "1060",35,0,"Travel_Rarely",660,"Sales",7,1,"Life Sciences",1492,4,"Male",76,3,1,"Sales Representative",3,2404,16192,1,"No",13,2,1,80,1,1,3,3,1,0,0,0,0.81648767458866,0.291154292644933,"Applied Online"
 "1061",24,1,"Travel_Frequently",381,"Research & Development",9,3,"Medical",1494,2,"Male",89,3,1,"Laboratory Technician",1,3172,16998,2,"Yes",11,3,3,80,0,4,2,2,0,0,0,0,NA,0.66289947531186,"Campus"
-"1062",24,0,"Non-Travel",830,"Sales",13,2,"Life Sciences",1495,4,"Female",78,3,1,"Sales Representative",2,2033,7103,1,"No",13,4,3,80,1,1,2,3,1,0,0,0,1.45403410209971,0.953906179405749,"Referral"
+"1062",24,0,"Non-Travel",830,"Sales",13,2,"Life Sciences",1495,4,"Female",78,3,1,"Sales Representative",2,2033,7103,1,"No",13,4,3,80,1,1,2,3,1,0,0,0,1.05403410209971,0.953906179405749,"Referral"
 "1063",44,0,"Travel_Frequently",1193,"Research & Development",2,1,"Medical",1496,2,"Male",86,3,3,"Manufacturing Director",3,10209,19719,5,"Yes",18,3,2,80,0,16,2,2,2,2,2,2,NA,0.138575949938968,"Applied Online"
 "1064",29,0,"Travel_Rarely",1246,"Sales",19,3,"Life Sciences",1497,3,"Male",77,2,2,"Sales Executive",3,8620,23757,1,"No",14,3,3,80,2,10,3,3,10,7,0,4,2.41756461663016,NA,NA
 "1065",30,0,"Travel_Rarely",330,"Human Resources",1,3,"Life Sciences",1499,3,"Male",46,3,1,"Human Resources",3,2064,15428,0,"No",21,2,1,80,1,6,3,4,5,3,1,3,NA,0.14411936653778,"Applied Online"
@@ -1069,7 +1069,7 @@
 "1068",47,0,"Travel_Rarely",571,"Sales",14,3,"Medical",1503,3,"Female",78,3,2,"Sales Executive",3,4591,24200,3,"Yes",17,3,3,80,1,11,4,2,5,4,1,2,1.16702332285126,0.227408324368298,"Applied Online"
 "1069",28,1,"Travel_Frequently",289,"Research & Development",2,2,"Medical",1504,3,"Male",38,2,1,"Laboratory Technician",1,2561,5355,7,"No",11,4,3,80,0,8,2,2,0,0,0,0,NA,0.816237448481843,"Campus"
 "1070",28,0,"Travel_Rarely",1423,"Research & Development",1,3,"Life Sciences",1506,1,"Male",72,2,1,"Research Scientist",3,1563,12530,1,"No",14,3,4,80,1,1,2,1,1,0,0,0,NA,0.677930361125618,"Campus"
-"1071",28,0,"Travel_Frequently",467,"Sales",7,3,"Life Sciences",1507,3,"Male",55,3,2,"Sales Executive",1,4898,11827,0,"No",14,2,4,80,0,5,5,3,4,2,1,3,0.821217114500507,0.400992426089942,"Referral"
+"1071",28,0,"Travel_Frequently",467,"Sales",7,3,"Life Sciences",1507,3,"Male",55,3,2,"Sales Executive",1,4898,11827,0,"No",14,2,4,80,0,5,5,3,4,2,1,3,0.421217114500507,0.400992426089942,"Referral"
 "1072",49,0,"Travel_Rarely",271,"Research & Development",3,2,"Medical",1509,3,"Female",43,2,2,"Laboratory Technician",1,4789,23070,4,"No",25,4,1,80,1,10,3,3,3,2,1,2,NA,0.571725270012394,"Campus"
 "1073",29,0,"Travel_Frequently",410,"Research & Development",2,1,"Life Sciences",1513,4,"Female",97,3,1,"Laboratory Technician",2,3180,4668,0,"No",13,2,3,80,3,4,3,3,3,2,0,2,NA,0.410867580678314,"Applied Online"
 "1074",28,0,"Travel_Rarely",1083,"Research & Development",29,1,"Life Sciences",1514,3,"Male",96,1,2,"Manufacturing Director",2,6549,3173,1,"No",14,3,2,80,2,8,2,2,8,6,1,7,NA,NA,NA
@@ -1090,7 +1090,7 @@
 "1089",42,0,"Travel_Rarely",1210,"Research & Development",2,3,"Medical",1542,3,"Male",68,2,1,"Laboratory Technician",2,4841,24052,4,"No",14,2,2,80,1,4,3,3,1,0,0,0,NA,0.552692537195981,"Campus"
 "1090",37,0,"Travel_Rarely",674,"Research & Development",13,3,"Medical",1543,1,"Male",47,3,2,"Research Scientist",4,4285,3031,1,"No",17,3,1,80,0,10,2,3,10,8,3,7,NA,NA,NA
 "1091",29,0,"Travel_Rarely",441,"Research & Development",8,1,"Other",1544,3,"Female",39,1,2,"Healthcare Representative",1,9715,7288,3,"No",13,3,3,80,1,9,3,3,7,7,0,7,NA,NA,NA
-"1092",33,0,"Travel_Rarely",575,"Research & Development",25,3,"Life Sciences",1545,4,"Male",44,2,2,"Manufacturing Director",2,4320,24152,1,"No",13,3.3,4,80,0,5,2,3,5,3,0,2,NA,0.768537797499448,"Search Firm"
+"1092",33,0,"Travel_Rarely",575,"Research & Development",25,3,"Life Sciences",1545,4,"Male",44,2,2,"Manufacturing Director",2,4320,24152,1,"No",13,3,4,80,0,5,2,3,5,3,0,2,NA,0.768537797499448,"Search Firm"
 "1093",45,0,"Travel_Rarely",950,"Research & Development",28,3,"Technical Degree",1546,4,"Male",97,3,1,"Research Scientist",4,2132,4585,4,"No",20,3,4,80,1,8,3,3,5,4,0,3,NA,0.0757575533352792,"Applied Online"
 "1094",42,0,"Travel_Frequently",288,"Research & Development",2,3,"Life Sciences",1547,4,"Male",40,3,3,"Healthcare Representative",4,10124,18611,2,"Yes",14,3,3,80,1,24,3,1,20,8,13,9,NA,NA,NA
 "1095",40,0,"Travel_Rarely",1342,"Sales",9,2,"Medical",1548,1,"Male",47,3,2,"Sales Executive",1,5473,19345,0,"No",12,2,4,80,0,9,5,4,8,4,7,1,2.89871164701892,NA,NA
@@ -1099,11 +1099,11 @@
 "1098",24,0,"Travel_Rarely",350,"Research & Development",21,2,"Technical Degree",1551,3,"Male",57,2,1,"Laboratory Technician",1,2296,10036,0,"No",14,3,2,80,3,2,3,3,1,1,0,0,NA,0.80451929429546,"Campus"
 "1099",40,0,"Non-Travel",1142,"Research & Development",8,2,"Life Sciences",1552,4,"Male",72,3,2,"Healthcare Representative",4,4069,8841,3,"Yes",18,3,3,80,0,8,2,3,2,2,2,2,NA,0.0358879219274968,"Applied Online"
 "1100",45,0,"Travel_Rarely",538,"Research & Development",1,4,"Technical Degree",1553,1,"Male",66,3,3,"Healthcare Representative",2,7441,20933,1,"No",12,3,1,80,3,10,4,3,10,8,7,7,NA,NA,NA
-"1101",35,0,"Travel_Rarely",1402,"Sales",28,4,"Life Sciences",1554,2,"Female",98,2,1,"Sales Representative",3,2430,26204,0,"No",23,2.3,1,80,2,6,5,3,5,3,4,2,0.678046205059824,0.801185101969168,"Search Firm"
+"1101",35,0,"Travel_Rarely",1402,"Sales",28,4,"Life Sciences",1554,2,"Female",98,2,1,"Sales Representative",3,2430,26204,0,"No",23,2,1,80,2,6,5,3,5,3,4,2,0.678046205059824,0.801185101969168,"Search Firm"
 "1102",32,0,"Travel_Rarely",824,"Research & Development",5,2,"Life Sciences",1555,4,"Female",67,2,2,"Research Scientist",2,5878,15624,3,"No",12,3,1,80,1,12,2,3,7,1,2,5,NA,NA,NA
-"1103",36,0,"Travel_Rarely",1157,"Sales",2,4,"Life Sciences",1556,3,"Male",70,3,1,"Sales Representative",4,2644,17001,3,"Yes",21,3,4,80,0,7,3,2,3,2,1,2,2.54273593623042,0.918871482135728,"Referral"
+"1103",36,0,"Travel_Rarely",1157,"Sales",2,4,"Life Sciences",1556,3,"Male",70,3,1,"Sales Representative",4,2644,17001,3,"Yes",21,3,4,80,0,7,3,2,3,2,1,2,2.14273593623042,0.918871482135728,"Referral"
 "1104",48,0,"Travel_Rarely",492,"Sales",16,4,"Life Sciences",1557,3,"Female",96,3,2,"Sales Executive",3,6439,13693,8,"No",14,2,3,80,1,18,2,3,8,7,7,7,1.65086333662389,NA,NA
-"1105",29,0,"Travel_Rarely",598,"Research & Development",9,3,"Life Sciences",1558,3,"Male",91,4,1,"Research Scientist",3,2451,22376,6,"No",18,4.3,1,80,2,5,2,2,1,0,0,0,NA,0.887198579031974,"Search Firm"
+"1105",29,0,"Travel_Rarely",598,"Research & Development",9,3,"Life Sciences",1558,3,"Male",91,4,1,"Research Scientist",3,2451,22376,6,"No",18,4,1,80,2,5,2,2,1,0,0,0,NA,0.887198579031974,"Search Firm"
 "1106",33,0,"Travel_Rarely",1242,"Sales",8,4,"Life Sciences",1560,1,"Male",46,3,2,"Sales Executive",1,6392,10589,2,"No",13,3,4,80,1,8,6,1,2,2,2,2,0.307372253139522,0.166988054290414,"Applied Online"
 "1107",30,1,"Travel_Rarely",740,"Sales",1,3,"Life Sciences",1562,2,"Male",64,2,2,"Sales Executive",1,9714,5323,1,"No",11,4,4,80,1,10,4,3,10,8,6,7,1.48748215372459,NA,NA
 "1108",38,0,"Travel_Frequently",888,"Human Resources",10,4,"Human Resources",1563,3,"Male",71,3,2,"Human Resources",3,6077,14814,3,"No",11,3,3,80,0,10,2,3,6,3,1,2,NA,0.123256441671401,"Applied Online"
@@ -1128,7 +1128,7 @@
 "1127",50,0,"Travel_Rarely",264,"Sales",9,3,"Marketing",1591,3,"Male",59,3,5,"Manager",3,19331,19519,4,"Yes",16,2,3,80,1,27,2,3,1,0,0,0,2.14297017889215,0.553340662037954,"Campus"
 "1128",23,0,"Travel_Rarely",977,"Research & Development",10,3,"Technical Degree",1592,4,"Male",45,4,1,"Research Scientist",3,2073,12826,2,"No",16,3,4,80,1,4,2,3,2,2,2,2,NA,0.132526244735345,"Applied Online"
 "1129",36,0,"Travel_Frequently",1302,"Research & Development",6,4,"Life Sciences",1594,1,"Male",80,4,2,"Laboratory Technician",1,5562,19711,3,"Yes",13,3,4,80,1,9,3,3,3,2,0,2,NA,0.445709960535169,"Referral"
-"1130",42,0,"Travel_Rarely",1059,"Research & Development",9,2,"Other",1595,4,"Male",93,2,5,"Manager",4,19613,26362,8,"No",22,4.3,4,80,0,24,2,3,1,0,0,1,NA,0.85431615752168,"Search Firm"
+"1130",42,0,"Travel_Rarely",1059,"Research & Development",9,2,"Other",1595,4,"Male",93,2,5,"Manager",4,19613,26362,8,"No",22,4,4,80,0,24,2,3,1,0,0,1,NA,0.85431615752168,"Search Firm"
 "1131",35,0,"Travel_Rarely",750,"Research & Development",28,3,"Life Sciences",1596,2,"Male",46,4,2,"Laboratory Technician",3,3407,25348,1,"No",17,3,4,80,2,10,3,2,10,9,6,8,NA,NA,NA
 "1132",34,0,"Travel_Frequently",653,"Research & Development",10,4,"Technical Degree",1597,4,"Male",92,2,2,"Healthcare Representative",3,5063,15332,1,"No",14,3,2,80,1,8,3,2,8,2,7,7,NA,NA,NA
 "1133",40,0,"Travel_Rarely",118,"Sales",14,2,"Life Sciences",1598,4,"Female",84,3,2,"Sales Executive",1,4639,11262,1,"No",15,2,3,80,1,5,2,3,5,4,1,2,0.778561530821022,0.848177570151165,"Campus"
@@ -1150,9 +1150,9 @@
 "1149",39,0,"Travel_Rarely",1387,"Research & Development",10,5,"Medical",1618,2,"Male",76,3,2,"Manufacturing Director",1,5377,3835,2,"No",13,2,4,80,3,10,3,3,7,7,7,7,NA,NA,NA
 "1150",27,0,"Travel_Rarely",1302,"Research & Development",19,3,"Other",1619,4,"Male",67,2,1,"Laboratory Technician",1,4066,16290,1,"No",11,2,1,80,2,7,3,3,7,7,0,7,NA,NA,NA
 "1151",35,0,"Travel_Rarely",819,"Research & Development",18,5,"Life Sciences",1621,2,"Male",48,4,2,"Research Scientist",1,5208,26312,1,"No",11,3,4,80,0,16,2,3,16,15,1,10,NA,NA,NA
-"1152",28,0,"Travel_Rarely",580,"Research & Development",27,3,"Medical",1622,2,"Female",39,1,2,"Manufacturing Director",1,4877,20460,0,"No",21,2.3,2,80,1,6,5,2,5,3,0,0,NA,0.883809915976599,"Search Firm"
+"1152",28,0,"Travel_Rarely",580,"Research & Development",27,3,"Medical",1622,2,"Female",39,1,2,"Manufacturing Director",1,4877,20460,0,"No",21,2,2,80,1,6,5,2,5,3,0,0,NA,0.883809915976599,"Search Firm"
 "1153",21,0,"Travel_Rarely",546,"Research & Development",5,1,"Medical",1623,3,"Male",97,3,1,"Research Scientist",4,3117,26009,1,"No",18,3,3,80,0,3,2,3,2,2,2,2,NA,0.17235036380589,"Applied Online"
-"1154",18,1,"Travel_Frequently",544,"Sales",3,2,"Medical",1624,2,"Female",70,3,1,"Sales Representative",4,1569,18420,1,"Yes",12,3,3,80,0,0,2,4,0,0,0,0,1.18822760545797,0.464875099482015,"Referral"
+"1154",18,1,"Travel_Frequently",544,"Sales",3,2,"Medical",1624,2,"Female",70,3,1,"Sales Representative",4,1569,18420,1,"Yes",12,3,3,80,0,0,2,4,0,0,0,0,0.788227605457974,0.464875099482015,"Referral"
 "1155",47,0,"Travel_Rarely",1176,"Human Resources",26,4,"Life Sciences",1625,4,"Female",98,3,5,"Manager",3,19658,5220,3,"No",11,3,3,80,1,27,2,3,5,2,1,0,NA,0.933766802540049,"Referral"
 "1156",39,0,"Travel_Rarely",170,"Research & Development",3,2,"Medical",1627,3,"Male",76,2,2,"Laboratory Technician",3,3069,10302,0,"No",15,3,4,80,1,11,3,3,10,8,0,7,NA,NA,NA
 "1157",40,0,"Travel_Rarely",884,"Research & Development",15,3,"Life Sciences",1628,1,"Female",80,2,3,"Manufacturing Director",3,10435,25800,1,"No",13,3,4,80,2,18,2,3,18,15,14,12,NA,NA,NA
@@ -1166,7 +1166,7 @@
 "1165",40,0,"Travel_Rarely",448,"Research & Development",16,3,"Life Sciences",1641,3,"Female",84,3,3,"Manufacturing Director",4,7945,19948,6,"Yes",15,2,4,80,0,18,2,2,4,2,3,3,NA,0.779036187101156,"Campus"
 "1166",44,0,"Travel_Frequently",602,"Human Resources",1,5,"Human Resources",1642,1,"Male",37,3,2,"Human Resources",4,5743,10503,4,"Yes",11,3,3,80,0,14,3,3,10,7,0,2,NA,NA,NA
 "1167",48,0,"Travel_Frequently",365,"Research & Development",4,5,"Medical",1644,3,"Male",89,2,4,"Manager",4,15202,5602,2,"No",25,3,2,80,1,23,3,3,2,2,2,2,NA,0.369627353968099,"Applied Online"
-"1168",35,1,"Travel_Rarely",763,"Sales",15,2,"Medical",1645,1,"Male",59,1,2,"Sales Executive",4,5440,22098,6,"Yes",14,3,4,80,2,7,2,2,2,2,2,2,1.53075829630392,0.464909683447331,"Referral"
+"1168",35,1,"Travel_Rarely",763,"Sales",15,2,"Medical",1645,1,"Male",59,1,2,"Sales Executive",4,5440,22098,6,"Yes",14,3,4,80,2,7,2,2,2,2,2,2,1.13075829630392,0.464909683447331,"Referral"
 "1169",24,0,"Travel_Frequently",567,"Research & Development",2,1,"Technical Degree",1646,1,"Female",32,3,1,"Research Scientist",4,3760,17218,1,"Yes",13,4,3,80,0,6,2,3,6,3,1,3,NA,0.196063688956201,"Applied Online"
 "1170",27,0,"Travel_Rarely",486,"Research & Development",8,3,"Medical",1647,2,"Female",86,4,1,"Research Scientist",3,3517,22490,7,"No",17,2,1,80,0,5,0,3,3,2,0,2,NA,0.0845405850559473,"Applied Online"
 "1171",27,0,"Travel_Frequently",591,"Research & Development",2,3,"Medical",1648,4,"Male",87,3,1,"Research Scientist",4,2580,6297,2,"No",13,3,3,80,0,6,0,2,4,2,1,2,NA,0.381100591504946,"Applied Online"
@@ -1188,7 +1188,7 @@
 "1187",35,1,"Travel_Frequently",880,"Sales",12,4,"Other",1667,4,"Male",36,3,2,"Sales Executive",4,4581,10414,3,"Yes",24,3,1,80,0,13,2,4,11,9,6,7,1.22132678562616,NA,NA
 "1188",38,0,"Travel_Frequently",1189,"Research & Development",1,3,"Life Sciences",1668,4,"Male",90,3,2,"Research Scientist",4,4735,9867,7,"No",15,3,4,80,2,19,4,4,13,11,2,9,NA,NA,NA
 "1189",29,0,"Travel_Rarely",991,"Sales",5,3,"Medical",1669,1,"Male",43,2,2,"Sales Executive",2,4187,3356,1,"Yes",13,3,2,80,1,10,3,2,10,0,0,9,1.5430761332763,NA,NA
-"1190",33,0,"Travel_Rarely",392,"Sales",2,4,"Medical",1670,4,"Male",93,3,2,"Sales Executive",4,5505,3921,1,"No",14,3,3,80,2,6,5,3,6,2,0,4,1.18037289022086,0.49843143648468,"Referral"
+"1190",33,0,"Travel_Rarely",392,"Sales",2,4,"Medical",1670,4,"Male",93,3,2,"Sales Executive",4,5505,3921,1,"No",14,3,3,80,2,6,5,3,6,2,0,4,0.780372890220859,0.49843143648468,"Referral"
 "1191",32,0,"Travel_Rarely",977,"Research & Development",2,3,"Medical",1671,4,"Male",45,3,2,"Research Scientist",2,5470,25518,0,"No",13,3,3,80,2,10,4,2,9,5,1,6,NA,NA,NA
 "1192",31,0,"Travel_Rarely",1112,"Sales",5,4,"Life Sciences",1673,1,"Female",67,3,2,"Sales Executive",4,5476,22589,1,"No",11,3,1,80,2,10,2,3,10,0,0,2,1.05696197609878,NA,NA
 "1193",49,0,"Travel_Rarely",464,"Research & Development",16,3,"Medical",1674,4,"Female",74,3,1,"Laboratory Technician",1,2587,24941,4,"Yes",16,3,2,80,1,17,2,2,2,2,2,2,NA,0.483233214356005,"Referral"
@@ -1206,11 +1206,11 @@
 "1205",48,1,"Travel_Frequently",708,"Sales",7,2,"Medical",1691,4,"Female",95,3,1,"Sales Representative",3,2655,11740,2,"Yes",11,3,3,80,2,19,3,3,9,7,7,7,0.974838740886992,NA,NA
 "1206",32,1,"Travel_Rarely",1259,"Research & Development",2,4,"Life Sciences",1692,4,"Male",95,3,1,"Laboratory Technician",2,1393,24852,1,"No",12,3,1,80,0,1,2,3,1,0,0,0,NA,0.733182293828577,"Campus"
 "1207",26,0,"Non-Travel",786,"Research & Development",7,3,"Medical",1693,4,"Male",76,3,1,"Laboratory Technician",4,2570,11925,1,"No",20,3,3,80,0,7,5,3,7,7,5,7,NA,NA,NA
-"1208",55,0,"Travel_Rarely",1441,"Research & Development",22,3,"Technical Degree",1694,1,"Male",94,2,1,"Research Scientist",2,3537,23737,5,"No",12,4.3,4,80,1,8,1,3,4,2,1,2,NA,0.84339778800495,"Search Firm"
+"1208",55,0,"Travel_Rarely",1441,"Research & Development",22,3,"Technical Degree",1694,1,"Male",94,2,1,"Research Scientist",2,3537,23737,5,"No",12,4,4,80,1,8,1,3,4,2,1,2,NA,0.84339778800495,"Search Firm"
 "1209",34,0,"Travel_Rarely",1157,"Research & Development",5,2,"Medical",1696,2,"Male",57,2,2,"Laboratory Technician",4,3986,11912,1,"No",14,2,3,80,1,15,3,4,15,10,4,13,NA,NA,NA
 "1210",60,0,"Travel_Rarely",370,"Research & Development",1,4,"Medical",1697,3,"Male",92,1,3,"Healthcare Representative",4,10883,20467,3,"No",20,3,3,80,1,19,2,4,1,0,0,0,NA,0.53869353979826,"Campus"
 "1211",33,0,"Travel_Rarely",267,"Research & Development",21,3,"Medical",1698,2,"Male",79,4,1,"Laboratory Technician",2,2028,13637,1,"No",18,3,4,80,3,14,6,3,14,11,2,13,NA,NA,NA
-"1212",37,0,"Travel_Frequently",1278,"Sales",1,4,"Medical",1700,3,"Male",31,1,2,"Sales Executive",4,9525,7677,1,"No",14,3,3,80,2,6,2,2,6,3,1,3,1.82394952401289,0.452331227250397,"Referral"
+"1212",37,0,"Travel_Frequently",1278,"Sales",1,4,"Medical",1700,3,"Male",31,1,2,"Sales Executive",4,9525,7677,1,"No",14,3,3,80,2,6,2,2,6,3,1,3,1.42394952401289,0.452331227250397,"Referral"
 "1213",34,0,"Travel_Rarely",678,"Research & Development",19,3,"Life Sciences",1701,2,"Female",35,2,1,"Research Scientist",4,2929,20338,1,"No",12,4,2,80,0,10,3,3,10,9,8,7,NA,NA,NA
 "1214",23,1,"Travel_Rarely",427,"Sales",7,3,"Life Sciences",1702,3,"Male",99,3,1,"Sales Representative",4,2275,25103,1,"Yes",21,3,2,80,1,3,2,3,3,2,0,2,0.483354792442702,0.198648174759001,"Applied Online"
 "1215",44,0,"Travel_Rarely",921,"Research & Development",2,3,"Life Sciences",1703,3,"Female",96,4,3,"Healthcare Representative",4,7879,14810,1,"Yes",19,4,2,80,1,9,2,3,8,7,6,7,NA,NA,NA
@@ -1218,7 +1218,7 @@
 "1217",43,0,"Travel_Rarely",1179,"Sales",2,3,"Medical",1706,4,"Male",73,3,2,"Sales Executive",4,7847,6069,1,"Yes",17,2,1,80,1,10,3,3,10,9,8,8,1.18987517261144,NA,NA
 "1218",24,0,"Travel_Rarely",581,"Research & Development",9,3,"Medical",1707,3,"Male",62,4,1,"Research Scientist",3,4401,17616,1,"No",16,3,4,80,1,5,1,3,5,3,0,4,NA,0.834880355978385,"Campus"
 "1219",41,0,"Travel_Rarely",918,"Sales",6,3,"Marketing",1708,4,"Male",35,3,3,"Sales Executive",3,9241,15869,1,"No",12,3,2,80,0,10,3,3,10,8,8,7,0.768436685915812,NA,NA
-"1220",29,0,"Travel_Rarely",1082,"Research & Development",9,4,"Medical",1709,4,"Female",43,3,1,"Laboratory Technician",3,2974,25412,9,"No",17,4.3,3,80,1,9,2,3,5,3,1,2,NA,0.765819629887119,"Search Firm"
+"1220",29,0,"Travel_Rarely",1082,"Research & Development",9,4,"Medical",1709,4,"Female",43,3,1,"Laboratory Technician",3,2974,25412,9,"No",17,4,3,80,1,9,2,3,5,3,1,2,NA,0.765819629887119,"Search Firm"
 "1221",36,0,"Travel_Rarely",530,"Sales",2,4,"Life Sciences",1710,3,"Female",51,3,2,"Sales Representative",4,4502,7439,3,"No",15,2,3,80,0,17,2,2,13,7,6,7,1.84989006103289,NA,NA
 "1222",45,0,"Non-Travel",1238,"Research & Development",1,1,"Life Sciences",1712,3,"Male",74,2,3,"Healthcare Representative",3,10748,3395,3,"No",23,2,4,80,1,25,3,2,23,15,14,4,NA,NA,NA
 "1223",24,1,"Travel_Rarely",240,"Human Resources",22,1,"Human Resources",1714,4,"Male",58,1,1,"Human Resources",3,1555,11585,1,"No",11,3,3,80,1,1,2,3,1,0,0,0,NA,0.69864409789443,"Applied Online"
@@ -1270,7 +1270,7 @@
 "1269",53,0,"Non-Travel",661,"Research & Development",1,4,"Medical",1775,1,"Female",60,2,4,"Manufacturing Director",3,12965,22308,4,"Yes",20,4,4,80,3,27,2,2,3,2,0,2,NA,0.737073967698961,"Campus"
 "1270",43,0,"Travel_Rarely",244,"Human Resources",2,3,"Life Sciences",1778,2,"Male",97,3,1,"Human Resources",4,3539,5033,0,"No",13,3,2,80,0,10,5,3,9,7,1,8,NA,NA,NA
 "1271",34,0,"Travel_Rarely",511,"Sales",3,2,"Life Sciences",1779,4,"Female",32,1,2,"Sales Executive",4,6029,25353,5,"No",12,3,1,80,0,6,3,3,2,2,2,2,0.990032763500102,0.128499192884192,"Applied Online"
-"1272",21,1,"Travel_Rarely",337,"Sales",7,1,"Marketing",1780,2,"Male",31,3,1,"Sales Representative",2,2679,4567,1,"No",13,2,2,80,0,1,3,3,1,0,1,0,1.46652662388177,0.868601674214005,"Referral"
+"1272",21,1,"Travel_Rarely",337,"Sales",7,1,"Marketing",1780,2,"Male",31,3,1,"Sales Representative",2,2679,4567,1,"No",13,2,2,80,0,1,3,3,1,0,1,0,1.06652662388177,0.868601674214005,"Referral"
 "1273",38,0,"Travel_Rarely",1153,"Research & Development",6,2,"Other",1782,4,"Female",40,2,1,"Laboratory Technician",3,3702,16376,1,"No",11,3,2,80,1,5,3,3,5,4,0,4,NA,0.646554364357144,"Campus"
 "1274",22,1,"Travel_Rarely",1294,"Research & Development",8,1,"Medical",1783,3,"Female",79,3,1,"Laboratory Technician",1,2398,15999,1,"Yes",17,2,3,80,0,1,6,3,1,0,0,0,NA,0.431706247851253,"Applied Online"
 "1275",31,0,"Travel_Rarely",196,"Sales",29,4,"Marketing",1784,1,"Female",91,2,2,"Sales Executive",4,5468,13402,1,"No",14,3,1,80,2,13,3,3,12,7,5,7,1.55118402219792,NA,NA
@@ -1325,7 +1325,7 @@
 "1324",28,0,"Non-Travel",280,"Human Resources",1,2,"Life Sciences",1858,3,"Male",43,3,1,"Human Resources",4,2706,10494,1,"No",15,3,2,80,1,3,2,3,3,2,2,2,NA,0.511256596073508,"Campus"
 "1325",29,0,"Travel_Rarely",726,"Research & Development",29,1,"Life Sciences",1859,4,"Male",93,1,2,"Healthcare Representative",3,6384,21143,8,"No",17,3,4,80,2,11,3,3,7,0,1,6,NA,NA,NA
 "1326",42,0,"Travel_Rarely",1142,"Research & Development",8,3,"Life Sciences",1860,4,"Male",81,3,1,"Laboratory Technician",3,3968,13624,4,"No",13,2,4,80,0,8,3,3,0,0,0,0,NA,0.1995884263888,"Applied Online"
-"1327",32,1,"Travel_Rarely",414,"Sales",2,4,"Marketing",1862,3,"Male",82,2,2,"Sales Executive",2,9907,26186,7,"Yes",12,3.3,3,80,0,7,3,2,2,2,2,2,1.35278436814522,0.830822893884033,"Search Firm"
+"1327",32,1,"Travel_Rarely",414,"Sales",2,4,"Marketing",1862,3,"Male",82,2,2,"Sales Executive",2,9907,26186,7,"Yes",12,3,3,80,0,7,3,2,2,2,2,2,1.35278436814522,0.830822893884033,"Search Firm"
 "1328",46,0,"Travel_Rarely",1319,"Sales",3,3,"Technical Degree",1863,1,"Female",45,4,4,"Sales Executive",1,13225,7739,2,"No",12,2,4,80,1,25,5,3,19,17,2,8,0.75737057254462,NA,NA
 "1329",27,0,"Travel_Rarely",728,"Sales",23,1,"Medical",1864,2,"Female",36,2,2,"Sales Representative",3,3540,7018,1,"No",21,3,4,80,1,9,5,3,9,8,5,8,1.86468240442753,NA,NA
 "1330",29,0,"Travel_Rarely",352,"Human Resources",6,1,"Medical",1865,4,"Male",87,2,1,"Human Resources",2,2804,15434,1,"No",11,3,4,80,0,1,3,3,1,0,0,0,NA,0.777626611990854,"Applied Online"
@@ -1357,8 +1357,8 @@
 "1356",36,0,"Travel_Rarely",335,"Sales",17,2,"Marketing",1908,3,"Male",33,2,2,"Sales Executive",2,5507,16822,2,"No",16,4,3,80,2,12,1,1,4,2,1,3,1.22402384667487,0.295297071104869,"Applied Online"
 "1357",41,0,"Travel_Rarely",337,"Sales",8,3,"Marketing",1909,3,"Female",54,3,2,"Sales Executive",2,4393,26841,5,"No",21,2,3,80,1,14,3,3,5,4,1,4,1.59627890300302,0.280058262404054,"Applied Online"
 "1358",42,0,"Travel_Rarely",1396,"Research & Development",6,3,"Medical",1911,3,"Male",83,3,3,"Research Director",1,13348,14842,9,"No",13,3,2,80,1,18,3,4,13,7,5,7,NA,NA,NA
-"1359",31,0,"Travel_Rarely",1079,"Sales",10,2,"Medical",1912,3,"Female",86,3,2,"Sales Executive",4,6583,20115,2,"Yes",11,3.3,4,80,1,8,2,3,5,2,1,4,0.189004418049999,0.770999546162784,"Search Firm"
-"1360",34,0,"Travel_Rarely",735,"Sales",3,1,"Medical",1915,4,"Female",75,2,2,"Sales Executive",4,8103,16495,3,"Yes",12,4,3,80,0,9,3,2,4,2,0,1,1.50719161139146,0.897185371257365,"Referral"
+"1359",31,0,"Travel_Rarely",1079,"Sales",10,2,"Medical",1912,3,"Female",86,3,2,"Sales Executive",4,6583,20115,2,"Yes",11,3,4,80,1,8,2,3,5,2,1,4,0.189004418049999,0.770999546162784,"Search Firm"
+"1360",34,0,"Travel_Rarely",735,"Sales",3,1,"Medical",1915,4,"Female",75,2,2,"Sales Executive",4,8103,16495,3,"Yes",12,4,3,80,0,9,3,2,4,2,0,1,1.10719161139146,0.897185371257365,"Referral"
 "1361",31,0,"Travel_Rarely",471,"Research & Development",4,3,"Medical",1916,1,"Female",62,4,1,"Laboratory Technician",3,3978,16031,8,"No",12,3,2,80,1,4,0,2,2,2,2,2,NA,0.354186620330438,"Applied Online"
 "1362",26,0,"Travel_Frequently",1096,"Research & Development",6,3,"Other",1918,3,"Male",61,4,1,"Laboratory Technician",4,2544,7102,0,"No",18,4,1,80,1,8,3,3,7,7,7,7,NA,NA,NA
 "1363",45,0,"Travel_Frequently",1297,"Research & Development",1,4,"Medical",1922,2,"Male",44,3,2,"Healthcare Representative",3,5399,14511,4,"No",12,3,3,80,0,12,3,3,4,2,0,3,NA,0.433827207190916,"Referral"
@@ -1390,12 +1390,12 @@
 "1389",32,0,"Non-Travel",1146,"Research & Development",15,4,"Medical",1955,3,"Female",34,3,2,"Healthcare Representative",4,6667,16542,5,"No",18,3,2,80,1,9,6,3,5,1,1,2,NA,0.116312727332115,"Applied Online"
 "1390",31,0,"Travel_Frequently",1125,"Research & Development",1,3,"Life Sciences",1956,4,"Male",48,1,2,"Research Scientist",1,5003,5771,1,"No",21,3,2,80,0,10,6,3,10,8,8,7,NA,NA,NA
 "1391",28,1,"Travel_Rarely",1404,"Research & Development",17,3,"Technical Degree",1960,3,"Male",32,2,1,"Laboratory Technician",4,2367,18779,5,"No",12,3,1,80,1,6,2,2,4,1,0,3,NA,0.346228934358805,"Applied Online"
-"1392",38,0,"Travel_Rarely",1404,"Sales",1,3,"Life Sciences",1961,1,"Male",59,2,1,"Sales Representative",1,2858,11473,4,"No",14,3,1,80,0,20,3,2,1,0,0,0,1.42324250756371,0.417203003307804,"Referral"
+"1392",38,0,"Travel_Rarely",1404,"Sales",1,3,"Life Sciences",1961,1,"Male",59,2,1,"Sales Representative",1,2858,11473,4,"No",14,3,1,80,0,20,3,2,1,0,0,0,1.02324250756371,0.417203003307804,"Referral"
 "1393",35,0,"Travel_Rarely",1224,"Sales",7,4,"Life Sciences",1962,3,"Female",55,3,2,"Sales Executive",4,5204,13586,1,"Yes",11,3,4,80,0,10,2,3,10,8,0,9,0.895039339350171,NA,NA
 "1394",27,0,"Travel_Rarely",954,"Sales",9,3,"Marketing",1965,4,"Male",44,3,2,"Sales Executive",4,4105,5099,1,"No",14,4,1,80,0,7,5,3,7,7,0,7,1.22680060687586,NA,NA
 "1395",32,0,"Travel_Rarely",1373,"Research & Development",5,4,"Life Sciences",1966,4,"Male",56,2,2,"Manufacturing Director",4,9679,10138,8,"No",24,3,2,80,0,8,1,3,1,0,0,0,NA,0.454809330636635,"Referral"
 "1396",31,1,"Travel_Frequently",754,"Sales",26,4,"Marketing",1967,1,"Male",63,3,2,"Sales Executive",4,5617,21075,1,"Yes",11,4,3,80,0,10,4,3,10,7,0,8,0.524139017305027,NA,NA
-"1397",53,1,"Travel_Rarely",1168,"Sales",24,4,"Life Sciences",1968,1,"Male",66,3,3,"Sales Executive",1,10448,5843,6,"Yes",13,1,2,80,0,15,2,2,2,2,2,2,2.42542478831118,0.933618779527023,"Referral"
+"1397",53,1,"Travel_Rarely",1168,"Sales",24,4,"Life Sciences",1968,1,"Male",66,3,3,"Sales Executive",1,10448,5843,6,"Yes",13,1,2,80,0,15,2,2,2,2,2,2,2.02542478831118,0.933618779527023,"Referral"
 "1398",54,0,"Travel_Rarely",155,"Research & Development",9,2,"Life Sciences",1969,1,"Female",67,3,2,"Research Scientist",3,2897,22474,3,"No",11,4,3,80,2,9,6,2,4,3,2,3,NA,0.15001238277182,"Applied Online"
 "1399",33,0,"Travel_Frequently",1303,"Research & Development",7,2,"Life Sciences",1970,4,"Male",36,3,2,"Healthcare Representative",3,5968,18079,1,"No",20,3,3,80,3,9,2,3,9,7,2,8,NA,NA,NA
 "1400",43,0,"Travel_Rarely",574,"Research & Development",11,3,"Life Sciences",1971,1,"Male",30,3,3,"Healthcare Representative",3,7510,16873,1,"No",17,3,2,80,1,10,1,3,10,9,0,9,NA,NA,NA
@@ -1427,12 +1427,12 @@
 "1426",33,0,"Travel_Rarely",501,"Research & Development",15,2,"Medical",2009,2,"Female",95,3,2,"Healthcare Representative",4,4878,21653,0,"Yes",13,2,1,80,1,10,6,3,9,7,8,1,NA,NA,NA
 "1427",32,0,"Travel_Rarely",267,"Research & Development",29,4,"Life Sciences",2010,3,"Female",49,2,1,"Laboratory Technician",2,2837,15919,1,"No",13,2,3,80,0,6,3,3,6,2,4,1,NA,0.21816620673053,"Applied Online"
 "1428",40,0,"Travel_Rarely",543,"Research & Development",1,4,"Life Sciences",2012,1,"Male",83,3,1,"Laboratory Technician",4,2406,4060,8,"No",19,4,3,80,2,8,3,2,1,0,0,0,NA,0.878278064075857,"Campus"
-"1429",32,0,"Travel_Rarely",234,"Sales",1,4,"Medical",2013,2,"Male",68,2,1,"Sales Representative",2,2269,18024,0,"No",14,3,2,80,1,3,2,3,2,2,2,2,1.33909532552889,0.437765194801614,"Referral"
+"1429",32,0,"Travel_Rarely",234,"Sales",1,4,"Medical",2013,2,"Male",68,2,1,"Sales Representative",2,2269,18024,0,"No",14,3,2,80,1,3,2,3,2,2,2,2,0.939095325528888,0.437765194801614,"Referral"
 "1430",39,0,"Travel_Rarely",116,"Research & Development",24,1,"Life Sciences",2014,1,"Male",52,3,2,"Research Scientist",4,4108,5340,7,"No",13,2,1,80,0,18,2,3,7,7,1,7,NA,NA,NA
 "1431",38,0,"Travel_Rarely",201,"Research & Development",10,3,"Medical",2015,2,"Female",99,1,3,"Research Director",3,13206,3376,3,"No",12,3,1,80,1,20,3,3,18,16,1,11,NA,NA,NA
 "1432",32,0,"Travel_Rarely",801,"Sales",1,4,"Marketing",2016,3,"Female",48,3,3,"Sales Executive",4,10422,24032,1,"No",19,3,3,80,2,14,3,3,14,10,5,7,0.323882229771548,NA,NA
 "1433",37,0,"Travel_Rarely",161,"Research & Development",10,3,"Life Sciences",2017,3,"Female",42,4,3,"Research Director",4,13744,15471,1,"Yes",25,3,1,80,1,16,2,3,16,11,6,8,NA,NA,NA
-"1434",25,0,"Travel_Rarely",1382,"Sales",8,2,"Other",2018,1,"Female",85,3,2,"Sales Executive",3,4907,13684,0,"Yes",22,2,2,80,1,6,3,2,5,3,0,4,1.79577205627252,0.931864850921556,"Referral"
+"1434",25,0,"Travel_Rarely",1382,"Sales",8,2,"Other",2018,1,"Female",85,3,2,"Sales Executive",3,4907,13684,0,"Yes",22,2,2,80,1,6,3,2,5,3,0,4,1.39577205627252,0.931864850921556,"Referral"
 "1435",52,0,"Non-Travel",585,"Sales",29,4,"Life Sciences",2019,1,"Male",40,3,1,"Sales Representative",4,3482,19788,2,"No",15,3,2,80,2,16,3,2,9,8,0,0,0.931555168188871,NA,NA
 "1436",44,0,"Travel_Rarely",1037,"Research & Development",1,3,"Medical",2020,2,"Male",42,3,1,"Research Scientist",4,2436,13422,6,"Yes",12,4,3,80,0,6,2,3,4,3,1,2,NA,0.662295994115993,"Campus"
 "1437",21,0,"Travel_Rarely",501,"Sales",5,1,"Medical",2021,3,"Male",58,3,1,"Sales Representative",1,2380,25479,1,"Yes",11,5,4,80,0,2,6,3,2,2,1,2,1.39301545730299,0.261676559224725,"Applied Online"
@@ -1458,9 +1458,9 @@
 "1457",35,0,"Travel_Frequently",1199,"Research & Development",18,4,"Life Sciences",2049,3,"Male",80,3,2,"Healthcare Representative",3,5689,24594,1,"Yes",14,2,4,80,2,10,2,4,10,2,0,2,NA,NA,NA
 "1458",40,0,"Travel_Rarely",1194,"Research & Development",2,4,"Medical",2051,3,"Female",98,3,1,"Research Scientist",3,2001,12549,2,"No",14,4,2,80,3,20,2,3,5,3,0,2,NA,0.598703014664352,"Campus"
 "1459",35,0,"Travel_Rarely",287,"Research & Development",1,4,"Life Sciences",2052,3,"Female",62,1,1,"Research Scientist",4,2977,8952,1,"No",12,3,4,80,1,4,5,3,4,3,1,1,NA,0.938052002340555,"Referral"
-"1460",29,0,"Travel_Rarely",1378,"Research & Development",13,2,"Other",2053,4,"Male",46,2,2,"Laboratory Technician",2,4025,23679,4,"Yes",13,2.3,1,80,1,10,2,3,4,3,0,3,NA,0.775131200673059,"Search Firm"
+"1460",29,0,"Travel_Rarely",1378,"Research & Development",13,2,"Other",2053,4,"Male",46,2,2,"Laboratory Technician",2,4025,23679,4,"Yes",13,2,1,80,1,10,2,3,4,3,0,3,NA,0.775131200673059,"Search Firm"
 "1461",29,0,"Travel_Rarely",468,"Research & Development",28,4,"Medical",2054,4,"Female",73,2,1,"Research Scientist",1,3785,8489,1,"No",14,2,2,80,0,5,3,1,5,4,0,4,NA,0.431613998720422,"Referral"
-"1462",50,1,"Travel_Rarely",410,"Sales",28,3,"Marketing",2055,4,"Male",39,2,3,"Sales Executive",1,10854,16586,4,"Yes",13,4,2,80,1,20,3,3,3,2,2,0,1.08968231887398,0.430055896285921,"Referral"
+"1462",50,1,"Travel_Rarely",410,"Sales",28,3,"Marketing",2055,4,"Male",39,2,3,"Sales Executive",1,10854,16586,4,"Yes",13,4,2,80,1,20,3,3,3,2,2,0,0.689682318873978,0.430055896285921,"Referral"
 "1463",39,0,"Travel_Rarely",722,"Sales",24,1,"Marketing",2056,2,"Female",60,2,4,"Sales Executive",4,12031,8828,0,"No",11,4,1,80,1,21,2,2,20,9,9,6,1.19619803830585,NA,NA
 "1464",31,0,"Non-Travel",325,"Research & Development",5,3,"Medical",2057,2,"Male",74,3,2,"Manufacturing Director",1,9936,3787,0,"No",19,3,2,80,0,10,2,3,9,4,1,7,NA,NA,NA
 "1465",26,0,"Travel_Rarely",1167,"Sales",5,3,"Other",2060,4,"Female",30,2,1,"Sales Representative",3,2966,21378,0,"No",18,4,4,80,0,5,2,3,4,2,0,0,1.59821305535744,0.213519659591839,"Applied Online"
