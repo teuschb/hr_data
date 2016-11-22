@@ -13,7 +13,7 @@ No matter how mature people analytics is at your organization, at some point you
 If you've never used R before, check out Richard Rosenow's Intro to R post (https://www.linkedin.com/pulse/hr-analytics-starter-kit-part-2-intro-r-richard-rosenow-pmp?trk=mp-reader-card), and specifically you can download R (https://mirror.las.iastate.edu/CRAN/) and RStudio (https://www.rstudio.com/products/rstudio/download3/). There are lots of helpful tips online about getting started with R - I'm writing this post with the assumption that you have RStudio installed and you're able to run code that I provide.
 
 ## Code for this article
-The raw code for this article is found on my github repo at  (https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd).
+The raw code for this article is found on my github repository at  (https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd).
 
 ## The ReporteRs package
 What makes this possible is the `ReporteRs` package. To learn a lot more about what the package can do, check out http://davidgohel.github.io/ReporteRs/. It allows you to use R to run your analysis, print plots, and export everything to a PowerPoint document in a repeatable, automated way.
@@ -25,8 +25,14 @@ system("java -version")
 ```
 The first time you use `ReporteRs`, you'll need to install the package from CRAN, the R package repository. 
 ```{r}
-# Only run this one time
+# Only run this the first time
 #install.packages('ReporteRs')
+
+#install.packages("extrafont")
+#library(extrafont)
+#font_import()
+dput(gdtools::sys_fonts())
+
 ```
 
 
@@ -44,7 +50,7 @@ mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/dat
 ## Libraries
 Before we can get started, we have to load in a few other packages I like to use. You'll see that `ReporteRs` is on the list - running `install.packages('ReporteRs')` gets the package onto our computer, and `library(ReporteRs)` tells R that we want to use that package right now. 
 
-If you see a package name you don't recognize, make sure you run install.packages for each of them. For example, `install.packages('ggplot2')`.
+If you see a package name you don't recognize, make sure you run install.packages for it. For example, `install.packages('ggplot2')`.
 ```{r}
 library(ReporteRs)
 library(ggplot2)
@@ -60,7 +66,7 @@ date = "November 2016"
 
 
 ## Analysis
-What analysis needs to be done for the report? HR is often guilty of producing reports and dashboards on HR processes that don't obviously help business leaders make better decision. To keep things simple, I may be joining that trend. Since I don't have a specific business problem I'm trying to solve, and because HR is used to reporting on attrition, I'll prepare some data for a basic attrition report with a few bar charts to visualize the data. 
+What analysis needs to be done for the report? HR is often guilty of producing reports and dashboards on HR processes that don't directly help business leaders make better decisions. To keep things simple, I may be joining that trend. Since I don't have a specific business problem I'm trying to solve, and because HR is used to reporting on attrition, I'll prepare some data for a basic attrition report with a few bar charts to visualize the data. 
 
 Just know that R is able to produce various types of charts and produce whatever analysis is necessary to help your business, given the correct data.
 
@@ -68,13 +74,15 @@ The first set of analysis is attrition by job role. First, I'm going to make a p
 ```{r}
 mydata$AttritionFactor <- factor(mydata$Attrition, labels = c("No", "Yes"))
 mydata$AttritionFactor <- factor(mydata$AttritionFactor, levels=rev(levels(mydata$AttritionFactor)))
+
 ggplot(mydata, aes(JobRole)) +
   geom_bar(aes(fill = AttritionFactor), position = "fill") +
   scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
   theme_bw() +
   guides(fill = F) +
   scale_y_continuous(labels=percent) +
-  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role", title = paste("Attrition by Job Role, ", date, sep = ""))) +
+  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role",
+            title = paste("Attrition by Job Role, ", date, sep = ""))) +
   coord_flip()
 
 ```
@@ -87,11 +95,33 @@ attrition_by_jobrole <- cbind(data.frame(cbind(table(mydata$JobRole)),
                                          data.frame(cbind(table(mydata$JobRole, mydata$Attrition))[,2])))
 names(attrition_by_jobrole) <- c("Headcount", "Attrition")
 attrition_by_jobrole$AttritionPerc <- attrition_by_jobrole$Attrition/attrition_by_jobrole$Headcount
-
+attrition_by_jobrole <- attrition_by_jobrole[order(attrition_by_jobrole$AttritionPerc, decreasing = TRUE),]
+FlexTable(attrition_by_jobrole)
+sessionInfo()
 ```
 
+Now I'm going to do the same thing for the other two attrition things I already decided on.
 
+```{r}
+ggplot(mydata, aes(PerformanceRating)) +
+  geom_bar(aes(fill = AttritionFactor), position = "fill") +
+  scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
+  theme_bw() +
+  guides(fill = F) +
+  scale_y_continuous(labels=percent) +
+  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role",
+            title = paste("Attrition by Performance Rating, ", date, sep = ""))) +
+  coord_flip()
 
+attrition_by_perf <- cbind(data.frame(cbind(table(mydata$PerformanceRating)),
+                                         data.frame(cbind(table(mydata$PerformanceRating, mydata$Attrition))[,2])))
+names(attrition_by_perf) <- c("Headcount", "Attrition")
+attrition_by_perf$AttritionPerc <- attrition_by_perf$Attrition/attrition_by_perf$Headcount
+attrition_by_perf <- attrition_by_perf[order(attrition_by_perf$AttritionPerc, decreasing = TRUE),]
+FlexTable(attrition_by_perf)
+```
+
+s mkeki49,lool,5l
 Notes:
 https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like
 
