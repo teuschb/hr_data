@@ -96,8 +96,8 @@ attrition_by_jobrole <- cbind(data.frame(cbind(table(mydata$JobRole)),
 names(attrition_by_jobrole) <- c("Headcount", "Attrition")
 attrition_by_jobrole$AttritionPerc <- attrition_by_jobrole$Attrition/attrition_by_jobrole$Headcount
 attrition_by_jobrole <- attrition_by_jobrole[order(attrition_by_jobrole$AttritionPerc, decreasing = TRUE),]
-FlexTable(attrition_by_jobrole)
-sessionInfo()
+#FlexTable(attrition_by_jobrole)
+
 ```
 
 Now I'm going to do the same thing for the other two attrition things I already decided on.
@@ -109,7 +109,7 @@ ggplot(mydata, aes(PerformanceRating)) +
   theme_bw() +
   guides(fill = F) +
   scale_y_continuous(labels=percent) +
-  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role",
+  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Performance Rating",
             title = paste("Attrition by Performance Rating, ", date, sep = ""))) +
   coord_flip()
 
@@ -118,10 +118,36 @@ attrition_by_perf <- cbind(data.frame(cbind(table(mydata$PerformanceRating)),
 names(attrition_by_perf) <- c("Headcount", "Attrition")
 attrition_by_perf$AttritionPerc <- attrition_by_perf$Attrition/attrition_by_perf$Headcount
 attrition_by_perf <- attrition_by_perf[order(attrition_by_perf$AttritionPerc, decreasing = TRUE),]
-FlexTable(attrition_by_perf)
 ```
 
-s mkeki49,lool,5l
+```{r}
+ggplot(mydata, aes(JobLevel)) +
+  geom_bar(aes(fill = AttritionFactor), position = "fill") +
+  scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
+  theme_bw() +
+  guides(fill = F) +
+  scale_y_continuous(labels=percent) +
+  labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Level",
+            title = paste("Attrition by Job Level, ", date, sep = ""))) +
+  coord_flip()
+
+attrition_by_joblevel <- cbind(data.frame(cbind(table(mydata$PerformanceRating)),
+                                         data.frame(cbind(table(mydata$PerformanceRating, mydata$Attrition))[,2])))
+names(attrition_by_joblevel) <- c("Headcount", "Attrition")
+attrition_by_joblevel$AttritionPerc <- attrition_by_joblevel$Attrition/attrition_by_joblevel$Headcount
+attrition_by_joblevel <- attrition_by_joblevel[order(attrition_by_joblevel$AttritionPerc, decreasing = TRUE),]
+
+vanilla.table(attrition_by_joblevel)
+```
+
+What's great about using R to do the graphs is that next month, when the new data comes in, all I have to do is change the date, and the rest happens automatically. It takes a little more investment at first, but now all that dreaded Excel work will take almost no time at all! 
+
+## Creating the Report
+
+Once the charts and tables are finished, I need to put them into PowerPoint. I've done this by copy-pasting the graphs from R into the report, but it's tedious and allows room to make mistakes with where I place them, or what size they are.
+
+
+
 Notes:
 https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like
 
