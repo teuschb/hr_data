@@ -23,16 +23,11 @@ What makes this possible is the `ReporteRs` package. To learn a lot more about w
 require(rJava)
 system("java -version")
 ```
-The first time you use `ReporteRs`, you'll need to install the package from CRAN, the R package repository. 
+The first time you use `ReporteRs`, you'll need to install the package from CRAN, the R package repository. This code checks whether it's already installed, and installs it if it isn't.
 ```{r}
-# Only run this the first time
-#install.packages('ReporteRs')
-
-#install.packages("extrafont")
-#library(extrafont)
-#font_import()
-dput(gdtools::sys_fonts())
-
+if (!require('ReporteRs')) {
+  install.packages("ReporteRs")
+}
 ```
 
 
@@ -70,74 +65,180 @@ What analysis needs to be done for the report? HR is often guilty of producing r
 
 Just know that R is able to produce various types of charts and produce whatever analysis is necessary to help your business, given the correct data.
 
-The first set of analysis is attrition by job role. First, I'm going to make a plot that shows the turnover by job role, and then I will build a small dataset that I will later put into a table to show the attrition by job role.
-```{r}
-mydata$AttritionFactor <- factor(mydata$Attrition, labels = c("No", "Yes"))
-mydata$AttritionFactor <- factor(mydata$AttritionFactor, levels=rev(levels(mydata$AttritionFactor)))
+In this case, the first slide will be an overview of attrition overall.
 
-ggplot(mydata, aes(JobRole)) +
-  geom_bar(aes(fill = AttritionFactor), position = "fill") +
-  scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
-  theme_bw() +
+```{r}
+overall_attrition <- as.data.frame(as.list(aggregate(Attrition ~ Department, data = mydata,
+                                     FUN = function(x) c(n = length(x),
+                                                         s = sum(x, na.rm = T),
+                                                         mn = mean(x, na.rm = T)) )))
+overall_attrition$Department <- as.character(overall_attrition$Department)
+overall_attrition <- rbind(overall_attrition, c(0,
+                           sum(overall_attrition$Attrition.n),
+                           sum(overall_attrition$Attrition.s),
+                           mean(overall_attrition$Attrition.mn)))
+overall_attrition[nrow(overall_attrition),1] <- 'Total'
+
+
+
+# final formatting
+overall_attrition$Attrition.mn <- percent(as.numeric(overall_attrition$Attrition.mn))
+names(overall_attrition) <- c('Department', 'Headcount', 'Attrition', 'Attrition %')
+
+# Put data into a table
+options("ReporteRs-fontsize"=24) #font size for tables
+overall_attrition_table <- vanilla.table(overall_attrition) %>%
+  setZebraStyle(odd = '#eeeeee', even = 'white' ) %>%
+  setFlexTableWidths(widths = c(4.5, 2.5, 2, 2.5)) 
+
+
+
+overall_attrition_table[,1] = parLeft()
+overall_attrition_table[,2:4] = parCenter()
+overall_attrition_table[,,to='header'] = parCenter()
+overall_attrition_table[4,] = textProperties(font.weight = 'bold' )
+
+overall_attrition_table
+```
+
+
+The first set of actual analysis is attrition by job role. First, I'm going to make a plot that shows the turnover by job role, and then I will build a small dataset that I will later put into a table to show the attrition by job role.
+```{r}
+
+jobrole_attrition <- as.data.frame(as.list(aggregate(Attrition ~ JobRole, data = mydata,
+                                     FUN = function(x) c(n = length(x),
+                                                         s = sum(x, na.rm = T),
+                                                         mn = mean(x, na.rm = T)) )))
+
+names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionPerc')
+
+(jobrole_attrition_plot <- ggplot(jobrole_attrition, aes(reorder(JobRole, AttritionPerc), AttritionPerc)) +
+  geom_bar(stat = "identity", aes(fill = '')) +
+  scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
+  theme_minimal() +
   guides(fill = F) +
   scale_y_continuous(labels=percent) +
   labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role",
             title = paste("Attrition by Job Role, ", date, sep = ""))) +
-  coord_flip()
+  theme(panel.grid.minor = element_blank()) +
+  coord_flip())
 
 ```
 Additional things could be sorting the bars, ...
 
-Here I'm rearranging the raw data to get it into a format that goes well into a table later.
+Here I'm formatting the data to get it into a format that goes well into a table later.
 
 ```{r}
-attrition_by_jobrole <- cbind(data.frame(cbind(table(mydata$JobRole)),
-                                         data.frame(cbind(table(mydata$JobRole, mydata$Attrition))[,2])))
-names(attrition_by_jobrole) <- c("Headcount", "Attrition")
-attrition_by_jobrole$AttritionPerc <- attrition_by_jobrole$Attrition/attrition_by_jobrole$Headcount
-attrition_by_jobrole <- attrition_by_jobrole[order(attrition_by_jobrole$AttritionPerc, decreasing = TRUE),]
-#FlexTable(attrition_by_jobrole)
+
+jobrole_attrition <- jobrole_attrition[order(jobrole_attrition$AttritionPerc, decreasing = TRUE),]
+
+
+# Impact of reducing attrition
+reduction = .02
+replacement_cost = 1
+top_role <- as.character(jobrole_attrition$JobRole[1])
+top_attrition <- jobrole_attrition$AttritionPerc[1]
+salary_lost = sum(mydata$MonthlyIncome[mydata$JobRole == top_role & mydata$Attrition == 1])*12*replacement_cost
+impact = salary_lost - (salary_lost/top_attrition) * (top_attrition - reduction)
+
+# final formatting
+jobrole_attrition$AttritionPerc <- percent(jobrole_attrition$AttritionPerc)
+names(jobrole_attrition) = c('Job Role', 'Headcount', 'Attrition', 'Attrition %')
+
+#create the table object
+
+#settings for all tables:
+options("ReporteRs-fontsize"=16) #font size for tables
+table_widths = c(2.8, 1.2, 1, 1.5) 
+
+jobrole_attrition_table <- vanilla.table(jobrole_attrition) %>%
+  setZebraStyle(odd = '#eeeeee', even = 'white' ) %>%
+  setFlexTableWidths(widths = table_widths) 
+jobrole_attrition_table[,2:4] = parCenter()
+jobrole_attrition_table[,1] = parLeft()
+jobrole_attrition_table[,,to='header'] = parCenter()
+
+jobrole_attrition_table
+
+
+
 
 ```
 
 Now I'm going to do the same thing for the other two attrition things I already decided on.
 
 ```{r}
-ggplot(mydata, aes(PerformanceRating)) +
-  geom_bar(aes(fill = AttritionFactor), position = "fill") +
-  scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
-  theme_bw() +
+
+performance_attrition <- as.data.frame(as.list(aggregate(Attrition ~ PerformanceRating, data = mydata,
+                                     FUN = function(x) c(n = length(x),
+                                                         s = sum(x, na.rm = T),
+                                                         mn = mean(x, na.rm = T)) )))
+
+names(performance_attrition) = c('PerformanceRating', 'Headcount', 'Attrition', 'AttritionPerc')
+
+(performance_attrition_plot <- ggplot(performance_attrition, aes(PerformanceRating, AttritionPerc)) +
+  geom_bar(stat = "identity", aes(fill = '')) +
+  scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
+  theme_minimal() +
   guides(fill = F) +
   scale_y_continuous(labels=percent) +
+  scale_x_reverse() +
   labs(list(y = paste("Attrition in ",month,sep = ""), x = "Performance Rating",
             title = paste("Attrition by Performance Rating, ", date, sep = ""))) +
-  coord_flip()
+  theme(panel.grid.minor = element_blank()) +
+  coord_flip())
 
-attrition_by_perf <- cbind(data.frame(cbind(table(mydata$PerformanceRating)),
-                                         data.frame(cbind(table(mydata$PerformanceRating, mydata$Attrition))[,2])))
-names(attrition_by_perf) <- c("Headcount", "Attrition")
-attrition_by_perf$AttritionPerc <- attrition_by_perf$Attrition/attrition_by_perf$Headcount
-attrition_by_perf <- attrition_by_perf[order(attrition_by_perf$AttritionPerc, decreasing = TRUE),]
+# final formatting
+performance_attrition$AttritionPerc <- percent(performance_attrition$AttritionPerc)
+names(performance_attrition) = c('Performance Rating', 'Headcount', 'Attrition', 'Attrition %')
+
+#create the table object
+performance_attrition_table <- vanilla.table(performance_attrition) %>%
+  setZebraStyle(odd = '#eeeeee', even = 'white' ) %>%
+  setFlexTableWidths(widths = table_widths) 
+performance_attrition_table[,1:4] = parCenter()
+performance_attrition_table[,,to='header'] = parCenter()
+
+performance_attrition_table
+
+
 ```
 
+
 ```{r}
-ggplot(mydata, aes(JobLevel)) +
-  geom_bar(aes(fill = AttritionFactor), position = "fill") +
-  scale_fill_manual(values = c("blue", "white"),guide=FALSE) +
-  theme_bw() +
+hiresource_attrition <- as.data.frame(as.list(aggregate(Attrition ~ HireSource, data = mydata,
+                                     FUN = function(x) c(n = length(x),
+                                                         s = sum(x, na.rm = T),
+                                                         mn = mean(x, na.rm = T)) )))
+
+names(hiresource_attrition) = c('HireSource', 'Headcount', 'Attrition', 'AttritionPerc')
+
+(hiresource_attrition_plot <- ggplot(hiresource_attrition, aes(reorder(HireSource, AttritionPerc), AttritionPerc)) +
+  geom_bar(stat = "identity", aes(fill = '')) +
+  scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
+  theme_minimal() +
   guides(fill = F) +
   scale_y_continuous(labels=percent) +
   labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Level",
-            title = paste("Attrition by Job Level, ", date, sep = ""))) +
-  coord_flip()
+            title = paste("Attrition by Recruiting Channel, ", date, sep = ""))) +
+  theme(panel.grid.minor = element_blank()) +
+  coord_flip())
 
-attrition_by_joblevel <- cbind(data.frame(cbind(table(mydata$PerformanceRating)),
-                                         data.frame(cbind(table(mydata$PerformanceRating, mydata$Attrition))[,2])))
-names(attrition_by_joblevel) <- c("Headcount", "Attrition")
-attrition_by_joblevel$AttritionPerc <- attrition_by_joblevel$Attrition/attrition_by_joblevel$Headcount
-attrition_by_joblevel <- attrition_by_joblevel[order(attrition_by_joblevel$AttritionPerc, decreasing = TRUE),]
+# final formatting
+hiresource_attrition <- hiresource_attrition[order(hiresource_attrition$AttritionPerc, decreasing = TRUE),]
+hiresource_attrition$AttritionPerc <- percent(hiresource_attrition$AttritionPerc)
+names(hiresource_attrition) = c('Recruiting Channel', 'Headcount', 'Attrition', 'Attrition %')
 
-vanilla.table(attrition_by_joblevel)
+
+#create the table object
+hiresource_attrition_table <- vanilla.table(hiresource_attrition) %>%
+  setZebraStyle(odd = '#eeeeee', even = 'white' ) %>%
+  setFlexTableWidths(widths = table_widths) 
+hiresource_attrition_table[,1] = parLeft()
+hiresource_attrition_table[,2:4] = parCenter()
+hiresource_attrition_table[,,to='header'] = parCenter()
+
+hiresource_attrition_table
 ```
 
 What's great about using R to do the graphs is that next month, when the new data comes in, all I have to do is change the date, and the rest happens automatically. It takes a little more investment at first, but now all that dreaded Excel work will take almost no time at all! 
@@ -146,8 +247,92 @@ What's great about using R to do the graphs is that next month, when the new dat
 
 Once the charts and tables are finished, I need to put them into PowerPoint. I've done this by copy-pasting the graphs from R into the report, but it's tedious and allows room to make mistakes with where I place them, or what size they are.
 
+```{r ppt_print}
+mydoc <- pptx(title = paste(date, "Acme Co. \nAttrition Report"),
+              template = '~/hr_data/example_corporate_template.pptx')
+options("ReporteRs-fontsize"=24) #font size for text
+slide.layouts(mydoc)
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Title Slide") %>%
+  addTitle(paste(date, "Acme Co. Attrition Report"))
+
+
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Title and Content") %>%
+  addTitle("Table of Contents") %>%
+  addParagraph( c("Overall Attrition Statistics"), 
+                par.properties = parProperties(list.style = "unordered", level = 1)) %>%
+  addParagraph( c("Attrition by Subgroups"), append = T,
+                par.properties = parProperties(list.style = "unordered", level = 1)) %>%
+  addParagraph( set_of_paragraphs("by Job Role",
+                                  "by Performance Rating",
+                                  "by Job Level"),
+                append = T,
+                par.properties = parProperties(list.style = "unordered", level = 2) )%>%
+  addParagraph( c("Recommendations"), append = T,
+                par.properties = parProperties(list.style = "unordered", level = 1))
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Section Header") %>%
+  addTitle("Overall Attrition Statistics")
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Title and Content") %>%
+  addTitle(paste0("Summary of Attrition in ", date)) %>%
+  addFlexTable(overall_attrition_table)
+
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Section Header") %>%
+  addTitle("Attrition by Subgroup")
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Two Content") %>%
+  addTitle("Which Jobs have the Highest Attrition?") %>%
+  addPlot(function() print(jobrole_attrition_plot)) %>%
+  addFlexTable(jobrole_attrition_table)
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Two Content") %>%
+  addTitle("Are we Keeping Our Top Performers?") %>%
+  addPlot(function() print(performance_attrition_plot)) %>%
+  addFlexTable(performance_attrition_table) 
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Two Content") %>%
+  addTitle("Which Hiring Channels have High Turnover?") %>%
+  addPlot(function() print(hiresource_attrition_plot)) %>%
+  addFlexTable(hiresource_attrition_table)
+
+mydoc <- mydoc %>%
+  addSlide(slide.layout = "Title and Content") %>%
+  addTitle("Key Insights") %>%
+  addParagraph( c(paste0("The job group with the highest attrition was ", top_role,
+                        " with an attrition rate of ",as.character(jobrole_attrition$`Attrition %`[1]),".")), 
+                par.properties = parProperties(list.style = "unordered", level = 1)) %>%
+  addParagraph( c(paste0("Additional focus should be placed on retaining ", top_role,
+                        "s.")),
+                append = T,
+                par.properties = parProperties(list.style = "unordered", level = 2)) %>%
+  addParagraph( c(paste0("We estimate that replacing an employee costs ", replacement_cost,
+                         "x their annual salary. Reducing attrition by ", percent(reduction),
+                         " in ", month, " could have saved ", dollar(round(impact,0)), ".")),
+                append = T,
+                par.properties = parProperties(list.style = "unordered", level = 2)) %>%
+  addParagraph( c(paste0("Our ", hiresource_attrition$`Recruiting Channel`[1],
+                         " hires have the highest attrition rate. The channel with the lowest attrition rate in ",
+                         month, " was the ",
+                         hiresource_attrition$`Recruiting Channel`[nrow(hiresource_attrition)], " channel.")), 
+                append = T,
+                par.properties = parProperties(list.style = "unordered", level = 1)) 
+
+writeDoc(mydoc, paste0("~/Desktop/",date," Attrition Report.pptx"))
+```
 
 
 Notes:
 https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like
+https://www.linkedin.com/pulse/hr-attrition-dashboard-shiny-ggplot2-rstats-rohit-dhankar
 
