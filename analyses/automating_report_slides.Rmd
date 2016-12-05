@@ -335,4 +335,5 @@ writeDoc(mydoc, paste0("~/Desktop/",date," Attrition Report.pptx"))
 Notes:
 https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like
 https://www.linkedin.com/pulse/hr-attrition-dashboard-shiny-ggplot2-rstats-rohit-dhankar
+http://www.hranalytics101.com/
 
