@@ -116,7 +116,6 @@ names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionPerc
   geom_bar(stat = "identity", aes(fill = '')) +
   scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
   theme_minimal() +
-  guides(fill = F) +
   scale_y_continuous(labels=percent) +
   labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Role",
             title = paste("Attrition by Job Role, ", date, sep = ""))) +
@@ -128,18 +127,29 @@ Additional things could be sorting the bars, ...
 
 Here I'm formatting the data to get it into a format that goes well into a table later.
 
+
+
 ```{r}
 
 jobrole_attrition <- jobrole_attrition[order(jobrole_attrition$AttritionPerc, decreasing = TRUE),]
 
+```
 
-# Impact of reducing attrition
+Another thing I report is the impact of reducing attrition for the job role with the highest attrition.  
+
+```{r}
+# Impact of reducing attrition (this needs to be moved to a separate block)
 reduction = .02
 replacement_cost = 1
 top_role <- as.character(jobrole_attrition$JobRole[1])
 top_attrition <- jobrole_attrition$AttritionPerc[1]
 salary_lost = sum(mydata$MonthlyIncome[mydata$JobRole == top_role & mydata$Attrition == 1])*12*replacement_cost
 impact = salary_lost - (salary_lost/top_attrition) * (top_attrition - reduction)
+```
+
+Now back to the table. 
+
+```{r} 
 
 # final formatting
 jobrole_attrition$AttritionPerc <- percent(jobrole_attrition$AttritionPerc)
@@ -165,6 +175,7 @@ jobrole_attrition_table
 
 ```
 
+
 Now I'm going to do the same thing for the other two attrition things I already decided on.
 
 ```{r}
@@ -180,7 +191,6 @@ names(performance_attrition) = c('PerformanceRating', 'Headcount', 'Attrition', 
   geom_bar(stat = "identity", aes(fill = '')) +
   scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
   theme_minimal() +
-  guides(fill = F) +
   scale_y_continuous(labels=percent) +
   scale_x_reverse() +
   labs(list(y = paste("Attrition in ",month,sep = ""), x = "Performance Rating",
@@ -217,7 +227,6 @@ names(hiresource_attrition) = c('HireSource', 'Headcount', 'Attrition', 'Attriti
   geom_bar(stat = "identity", aes(fill = '')) +
   scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
   theme_minimal() +
-  guides(fill = F) +
   scale_y_continuous(labels=percent) +
   labs(list(y = paste("Attrition in ",month,sep = ""), x = "Job Level",
             title = paste("Attrition by Recruiting Channel, ", date, sep = ""))) +
