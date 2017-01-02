@@ -2,23 +2,25 @@
 title: "Making PowerPoint Slides with R"
 output: html_notebook
 ---
-This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published earlier this year - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a background. There are already plenty of tutorials to show you how to run a regression or other predictive model, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
+This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published earlier this year (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a background. There are already plenty of tutorials to show you how to run a regression or other predictive model, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
 
 What I'm going to do is focus on showing you how to do things that don't require too much of a data background, but would be really helpful for the HR folks I know. Those with a stronger data background can use this as a starting point to add in more complex analyses, if they want.
 
 ## Making HR Reports
-No matter how mature people analytics is at your organization, at some point you're going to need to make some reports. This is especially true if you're an HRBP with limited technical support - you might even be making these reports yourself! These reports, often done monthly, can take hours of VLOOKUPs and copy-pasting in Excel, then another while to put the right numbers into a PowerPoint template. Today I'm going to show you how to automate those reports using R, so you can save a bunch of time down the road. It's a timely topic - Andrew Marritt recently wrote about his process for automating quality reports (https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like), and his advice is great. I'll be showing you less strategy and more tactics about how to actually get it done in R.
+No matter how mature people analytics is at your organization, at some point you're going to need to make some reports. This is especially true if you're an HRBP with limited technical support - you might even be making these reports yourself! These reports, often done monthly, can take hours of VLOOKUPs and copy-pasting in Excel, then another while to put the right numbers into a PowerPoint template. Today I'm going to show you how to automate those reports using R, so you can save a bunch of time down the road. It's a timely topic - Andrew Marritt recently wrote about his process for automating quality reports (https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt), and his advice is great. I'll be showing you less strategy and more tactics about how to actually get it done in R.
 
 ## Getting Started with R
-If you've never used R before, check out Richard Rosenow's Intro to R post (https://www.linkedin.com/pulse/hr-analytics-starter-kit-part-2-intro-r-richard-rosenow-pmp?trk=mp-reader-card), and specifically you can download R (https://mirror.las.iastate.edu/CRAN/) and RStudio (https://www.rstudio.com/products/rstudio/download3/). There are lots of helpful tips online about getting started with R - I'm writing this post with the assumption that you have RStudio installed and you're able to run code that I provide.
+If you've never used R before, check out Richard Rosenow's Intro to R post (https://www.linkedin.com/pulse/hr-analytics-starter-kit-part-2-intro-r-richard-rosenow-pmp), and specifically you can download R (https://mirror.las.iastate.edu/CRAN/) and RStudio (https://www.rstudio.com/products/rstudio/download3/). There are lots of helpful tips online about getting started with R - I'm writing this post with the assumption that you have RStudio installed and you're able to run code that I provide.
 
 ## Code for this article
-The raw code for this article is found on my github repository at  (https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd).
+The R notebook used to produce this article is found on my github repository at  (https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd). If you just want the script with code only, that's found at
+
+##?? -- add link to script only - also is this where I mention both sets of articles?
 
 ## Dataset
-The dataset is based on the HR Employee Attrition and Performance dataset from IBM Watson Analytics (https://www.ibm.com/communities/analytics/watson-analytics-blog/hr-employee-attrition/). I've modified it slightly and saved it to my github repository (https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv), which allows me to read in the .csv file directly from the Internet, without needing to download a file.
+The example dataset is based on the HR Employee Attrition and Performance dataset from IBM Watson Analytics (https://www.ibm.com/communities/analytics/watson-analytics-blog/hr-employee-attrition/). I've modified it slightly and saved it to my github repository (https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv), which allows me to read in the .csv file directly from the Internet, without needing to download a file.
 
-In practice, your dataset will be your standard HRIS report of headcount, attrition, performance, or whatever data you want to use for a report. That way, each month, quarter, or year, you'll be able to run this same line of code, replacing last month's file with the name of the most recent dataset that you want to work with. If all the columns are the same, the rest of the code will run without you having to make changes each month. 
+In practice, your dataset will be your standard HRIS report of headcount, attrition, performance, or whatever data you want to use for a report. That way, each month, quarter, or year, you'll be able to run this same line of code, replacing the previous file with the name of the most recent dataset that you want to work with. If all the needed data fields have the same names each time, the rest of the code will run without you having to make changes each month. 
 
 ```{r}
 mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv", stringsAsFactors = FALSE)
@@ -33,9 +35,9 @@ date = "November 2016"
 ```
 
 ## The ReporteRs package
-What makes this possible is the `ReporteRs` package. To learn a lot more about what the package can do, check out http://davidgohel.github.io/ReporteRs/. It allows you to use R to run your analysis, print plots, and export everything to a PowerPoint document in a repeatable, automated way.
+R isn't able to write .pptx files by default. What makes this possible is the `ReporteRs` package. To learn a lot more about what the package can do, check out http://davidgohel.github.io/ReporteRs/. It allows you to use R to run your analysis, print plots, and export everything to a PowerPoint document in a repeatable, automated way.
 
-`ReporteRs` requires `rJava` and for java to be installed on your machine. This will make sure it's installed, and will show you the version of Java (it should be at least 1.6).
+`ReporteRs` requires `rJava` and for Java to be installed on your computer. This code will make sure it's installed, and will show you the version of Java (it should be at least 1.6).
 ```{r}
 require(rJava)
 system("java -version")
@@ -59,13 +61,13 @@ library(magrittr)
 ```
 
 ## Analysis
-What analysis needs to be done for the report? HR is often guilty of producing reports and dashboards on HR processes that don't directly help business leaders make better decisions. To keep things simple, I may be joining that trend. Since I don't have a specific business problem I'm trying to solve, and because HR is used to reporting on attrition, I'll prepare some data for a basic attrition report with a few bar charts to visualize the data. 
+What analysis needs to be done for the report? HR is often guilty of producing reports and dashboards on HR processes that don't directly help business leaders make better decisions. To keep things simple, I may be joining that trend. Since I don't have a specific business problem I'm trying to solve in this example, and because HR is used to reporting on attrition, I'll prepare some data for a basic attrition report with a few bar charts to visualize the data. 
 
-Just know that R is able to produce various types of charts and produce whatever analysis is necessary to help your business, given the correct data.
+Just know that R is able to produce various types of charts and produce whatever analysis is necessary to help your business. If you have any specific examples in mind you'd like to see, let me know.
 
-In this case, the first slide will be a table with an overview of overall attrition.
+For this example, the first slide will be a table with an overview of attrition.
 
-First, we take our data and get the number of employees, the number of employees who left, and the attrition rate for this month (calculated as `# of employee gone/# of employees at the start of the month`)
+This code takes the data and uses `aggregate` to extract the total number of employees, the number of employees who left, and the attrition rate for this month (calculated as `# of employees gone/# of employees at the start of the month`), all by department.
 ```{r}
 overall_attrition <- as.data.frame(as.list(aggregate(Attrition ~ Department,
                                                      data = mydata,
@@ -77,28 +79,29 @@ overall_attrition <- as.data.frame(as.list(aggregate(Attrition ~ Department,
 
 Next, I add a row of totals using `rbind`.
 ```{r}
-overall_attrition <- rbind(overall_attrition, c(0,
-                           sum(overall_attrition$Attrition.n),
-                           sum(overall_attrition$Attrition.s),
-                           mean(overall_attrition$Attrition.mn)))
+overall_attrition <- rbind(overall_attrition, c(
+                             0, # to be replaced with the word "Total"
+                             sum(overall_attrition$Attrition.n),
+                             sum(overall_attrition$Attrition.s),
+                             mean(overall_attrition$Attrition.mn)))
 overall_attrition[nrow(overall_attrition),1] <- 'Total'
 ```
 
-Before I put the data into a table, I want to add % signs and make the column names more presentable. I also change the font size before putting into a special kind of `ReporteRs` table called a `vanilla.table`.
+Before I put the data into a table, I want to add % symbols and to make the column names more presentable. I also change the font size before putting it into a special kind of `ReporteRs` table called a `vanilla.table`.
 ```{r}
-# final formatting
+# format as percentages, rename columns
 overall_attrition$Attrition.mn <- percent(as.numeric(overall_attrition$Attrition.mn))
 names(overall_attrition) <- c('Department', 'Headcount', 'Attrition', 'Attrition %')
 
-# Put data into a table
+# put data into a table
 options("ReporteRs-fontsize"=24) # you can adjust the font size
 overall_attrition_table_simple <- vanilla.table(overall_attrition)
 overall_attrition_table_simple
 ```
 
-Following that overview, my report will show attrition by job role, performance, and hire source (or recruiting channel). The first set of analysis is attrition by job role. I'm going to make a plot that shows the turnover by job role, and then I will build a small dataset for a table that resembles the overall attrition table. 
+Following that overview, I report attrition by job role, performance, and hire source (or recruiting channel). I'm going to make a plot that shows the turnover by job role, and then I will build a small dataset for a table that resembles the overall attrition table. 
 
-This code should look familiar.
+This code should look familiar -- I'm extracting the total number of employees, the number of employees who left, and the attrition rate for this month by job role.
 ```{r}
 jobrole_attrition <- as.data.frame(as.list(aggregate(Attrition ~ JobRole,
                                                      data = mydata,
@@ -107,35 +110,34 @@ jobrole_attrition <- as.data.frame(as.list(aggregate(Attrition ~ JobRole,
                                                        s = sum(x, na.rm = T),
                                                        mn = mean(x, na.rm = T)))))
 
-names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionPerc')
+names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionRate')
 ```
 
-For making graphs, I use the popular `ggplot2` package. It's a really powerful package that allows you customize your charts to look just like you want them to. 
+For making graphs, I use the popular `ggplot2` package. It's a really powerful package that allows you to visualize all kinds of data, and customize the resulting plots.
 
-Here, I title the graph `jobrole_attrition_plot_simple` so I can use it later. Then I make a bar chart where each bar represents a `JobRole` and the height of the bar represents the attrition rate. The bit of customization I do include here is to make the axis labels into percentages, to flip the graph so it's horizontal, and to add custom labels. You can see how I'm using the `month` and `date` information from the beginning of the script.
+Here, I make a bar chart where each bar represents a `JobRole` and the height of the bar represents the attrition rate. The bit of customization I do include here is to make the axis labels into percentages, to flip the graph so it's horizontal, and to add custom labels. You can see how I'm using the `month` and `date` information from the beginning of the script. I save the graph as `jobrole_attrition_plot_simple` so I can use it later.
 ```{r}
-(jobrole_attrition_plot_simple <- ggplot(jobrole_attrition, aes(JobRole, AttritionPerc)) +
+(jobrole_attrition_plot_simple <- ggplot(jobrole_attrition, aes(JobRole, AttritionRate)) +
   geom_col() +
   scale_y_continuous(labels = percent) +
   labs(list(y = paste("Attrition in ", month, sep = ""), x = "Job Role",
             title = paste("Attrition by Job Role, ", date, sep = ""))) +
   coord_flip())
-
 ```
 In this example, I'm demonstrating simple bar charts with little customization, but in the advanced version of this script I do more to make the graph look like I want it to. Check it out if you're interested in things like changing the colors, sorting the bars from highest to lowest, or removing that gray background.
 
 I want my table to be sorted from highest to lowest, so first I sort my dataset.
 ```{r}
-jobrole_attrition <- jobrole_attrition[order(jobrole_attrition$AttritionPerc, decreasing = TRUE),]
+jobrole_attrition <- jobrole_attrition[order(jobrole_attrition$AttritionRate, decreasing = TRUE),]
 ```
 
-Although I won't include it in this table, I can use this information to get the impact of reducing attrition for the job role with the highest attrition. I'll use this in the Recommendations section, but it's easier to calculate it now.
+Although I won't include it in this table, I can use this information to get the impact of reducing attrition for the job role with the highest attrition. I'll use this in the recommendations section, and it's easier to calculate it now.
 
 ```{r}
 reduction = .02            # how much could we reduce attrition?
 replacement_cost = 1       # how much does it cost to replace an employee, as a multiplier of their salary?
 top_role <- as.character(jobrole_attrition$JobRole[1])   # job role with highest attrition
-top_role_attrition <- jobrole_attrition$AttritionPerc[1] # attrition for that role
+top_role_attrition <- jobrole_attrition$AttritionRate[1] # attrition for that role
 salary_lost = 
   sum(mydata$MonthlyIncome[mydata$JobRole == top_role & mydata$Attrition == 1]) * 12 * # total annual salary lost 
   replacement_cost                                                                     # times replacement cost
@@ -145,20 +147,16 @@ impact = salary_lost - (salary_lost/top_role_attrition) * (top_role_attrition - 
 Formatting the table should look familiar.
 ```{r} 
 
-# final formatting
-jobrole_attrition$AttritionPerc <- percent(jobrole_attrition$AttritionPerc)
+# format as percentages, rename columns
+jobrole_attrition$AttritionRate <- percent(jobrole_attrition$AttritionRate)
 names(jobrole_attrition) = c('Job Role', 'Headcount', 'Attrition', 'Attrition %')
 
-#create the table object
-
-#settings for all tables:
-options("ReporteRs-fontsize"=16) #font size for tables
-jobrole_attrition_table_simple <- vanilla.table(jobrole_attrition)
-jobrole_attrition_table_simple
+# put data into a table
+options("ReporteRs-fontsize"=16) #using a smaller font
+(jobrole_attrition_table_simple <- vanilla.table(jobrole_attrition))
 ```
 
-
-Now I'm going to do the same thing for the other two attrition things I already decided on. The only difference is I use `scale_x_reverse` on performance rating so that the '1' rating is at the top of the graph. I'm also calculating the hire sources that have the highest and lowest attrition rates, for use in the recommendations section.
+Now I'm going to make the same graph and table for performance and hire source. The only difference is I use `scale_x_reverse` on performance rating so that the '1' rating is at the top of the graph. I'm also calculating the hire sources that have the highest and lowest attrition rates, for use in the recommendations section.
 ```{r}
 performance_attrition <- as.data.frame(as.list(aggregate(Attrition ~ PerformanceRating,
                                                          data = mydata, FUN = function(x) c(
@@ -166,9 +164,9 @@ performance_attrition <- as.data.frame(as.list(aggregate(Attrition ~ Performance
                                                            s = sum(x, na.rm = T),
                                                            mn = mean(x, na.rm = T)))))
 
-names(performance_attrition) = c('PerformanceRating', 'Headcount', 'Attrition', 'AttritionPerc')
+names(performance_attrition) = c('PerformanceRating', 'Headcount', 'Attrition', 'AttritionRate')
 
-(performance_attrition_plot_simple <- ggplot(performance_attrition, aes(PerformanceRating, AttritionPerc)) +
+(performance_attrition_plot_simple <- ggplot(performance_attrition, aes(PerformanceRating, AttritionRate)) +
   geom_bar(stat = "identity") +
   scale_y_continuous(labels=percent) +
   scale_x_reverse() + 
@@ -177,11 +175,11 @@ names(performance_attrition) = c('PerformanceRating', 'Headcount', 'Attrition', 
             title = paste("Attrition by Performance Rating, ", date, sep = ""))) +
   coord_flip())
 
-# final formatting
-performance_attrition$AttritionPerc <- percent(performance_attrition$AttritionPerc)
+# format as percentages, rename columns
+performance_attrition$AttritionRate <- percent(performance_attrition$AttritionRate)
 names(performance_attrition) = c('Performance Rating', 'Headcount', 'Attrition', 'Attrition %')
 
-#create the table object
+# put data into a table
 (performance_attrition_table_simple <- vanilla.table(performance_attrition))
 ```
 
@@ -191,9 +189,9 @@ hiresource_attrition <- as.data.frame(as.list(aggregate(Attrition ~ HireSource, 
                                                          s = sum(x, na.rm = T),
                                                          mn = mean(x, na.rm = T)) )))
 
-names(hiresource_attrition) = c('HireSource', 'Headcount', 'Attrition', 'AttritionPerc')
+names(hiresource_attrition) = c('HireSource', 'Headcount', 'Attrition', 'AttritionRate')
 
-(hiresource_attrition_plot_simple <- ggplot(hiresource_attrition, aes(HireSource, AttritionPerc)) +
+(hiresource_attrition_plot_simple <- ggplot(hiresource_attrition, aes(HireSource, AttritionRate)) +
   geom_bar(stat = "identity") +
   scale_y_continuous(labels = percent) +
   labs(list(y = paste("Attrition in ", month, sep = ""),
@@ -201,39 +199,39 @@ names(hiresource_attrition) = c('HireSource', 'Headcount', 'Attrition', 'Attriti
             title = paste("Attrition by Recruiting Channel, ", date, sep = ""))) +
   coord_flip())
 
-# final formatting
-hiresource_attrition <- hiresource_attrition[order(hiresource_attrition$AttritionPerc, decreasing = TRUE),]
-hiresource_attrition$AttritionPerc <- percent(hiresource_attrition$AttritionPerc)
+# sort by attrition rate, format as percentages, rename columns
+hiresource_attrition <- hiresource_attrition[order(hiresource_attrition$AttritionRate, decreasing = TRUE),]
+hiresource_attrition$AttritionRate <- percent(hiresource_attrition$AttritionRate)
 names(hiresource_attrition) = c('Recruiting Channel', 'Headcount', 'Attrition', 'Attrition %')
 
-#create the table 
+# put data into a table 
 (hiresource_attrition_table_simple <- vanilla.table(hiresource_attrition))
 
-#Save hire sources with highest and lowest levels of attrition
+# save hire sources with highest and lowest levels of attrition
 top_hire <- hiresource_attrition$`Recruiting Channel`[1]
 bottom_hire <- hiresource_attrition$`Recruiting Channel`[nrow(hiresource_attrition)]
 ```
-
-What's great about using R to do the graphs is that next month, when the new data comes in, all I have to do is change the date, and the rest happens automatically. It takes a little more investment at first, but now all that dreaded Excel work will take almost no time at all! 
+What's great about using R to do the graphs is that whenever I need to update this report with new data, all I have to do is change the date, and the rest happens automatically. It takes a little more investment at first, but now all that dreaded Excel work will take almost no time at all! 
 
 ## Creating the Report
 
-Once the charts and tables are finished, I need to put them into PowerPoint. I've done this many times by copy-pasting the graphs from R into the report, but it's tedious and allows room to make mistakes with where I place them, or what size they are.
+Once the charts and tables are finished, I need to put them into PowerPoint. I've done this many times by copy-pasting the graphs from R into the report, but it's tedious and hard to be consistent with their size and placement.
 
-Again, for more details about how this works, the guide is on the author's github page: http://davidgohel.github.io/ReporteRs/articles/powerpoint.html. I implement some advanced features, like using a corporate template and bullet points, in the advanced version of this script.
+Again, for more details about how this works, the guide is on the author's github page: http://davidgohel.github.io/ReporteRs/articles/powerpoint.html. I implement some additional features, like using a corporate template and bullet points, in the advanced version of this script.
 
-First I create a new `pptx` document and call it `mydoc`. I set the font size to 24, and I like to use `slide.layouts(mydoc)` to see what kind of PowerPoint slides are available. The basic structure is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`).
+First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(mydoc)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`).
 
-```{r}
-mydoc <- pptx(title = paste(date, "Acme Co.\nAttrition Report"))
-options("ReporteRs-fontsize"=24) #font size for text
-slide.layouts(mydoc)
+```{r, }
+report <- pptx(title = paste(date, "Acme Co.\nAttrition Report"))
+options("ReporteRs-fontsize"=24) #font size for slide text
+options("ReporteRs-default-font"="Verdana")
+slide.layouts(report)
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Title Slide") %>%
   addTitle(paste(date, "Acme Co. Attrition Report"))
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Title and Content") %>%
   addTitle("Table of Contents") %>%
   addParagraph( c("Overall Attrition Statistics")) %>%
@@ -243,38 +241,38 @@ mydoc <- mydoc %>%
                                   "by Job Level"), append = T) %>%
   addParagraph( c("Recommendations"), append = T)
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Section Header") %>%
   addTitle("Overall Attrition Statistics")
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Title and Content") %>%
   addTitle(paste0("Summary of Attrition in ", date)) %>%
   addFlexTable(overall_attrition_table_simple)
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Section Header") %>%
   addTitle("Attrition by Subgroup")
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Two Content") %>%
   addTitle("Which Jobs have the Highest Attrition?") %>%
   addPlot(function() print(jobrole_attrition_plot_simple)) %>%
   addFlexTable(jobrole_attrition_table_simple)
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Two Content") %>%
   addTitle("Are we Keeping Our Top Performers?") %>%
   addPlot(function() print(performance_attrition_plot_simple)) %>%
   addFlexTable(performance_attrition_table_simple) 
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Two Content") %>%
   addTitle("Which Hiring Channels have High Turnover?") %>%
   addPlot(function() print(hiresource_attrition_plot_simple)) %>%
   addFlexTable(hiresource_attrition_table_simple)
 
-mydoc <- mydoc %>%
+report <- report %>%
   addSlide(slide.layout = "Title and Content") %>%
   addTitle("Key Insights") %>%
   addParagraph( c(paste0("The job group with the highest attrition was ", top_role,
@@ -292,12 +290,13 @@ mydoc <- mydoc %>%
                 append = T,
                 par.properties = parProperties(list.style = "unordered", level = 1)) 
 
-writeDoc(mydoc, paste0("~/Desktop/",date," Attrition Report (Simple).pptx"))
+writeDoc(report, paste0("~/hr_data/examples/",date," Attrition Report (Simple).pptx"))
 ```
 
+And there you have it! The final report is on git hub 
 
-Notes:
-https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt?trk=hp-feed-article-title-like
+## explain where report is, close article1
+
 https://www.linkedin.com/pulse/hr-attrition-dashboard-shiny-ggplot2-rstats-rohit-dhankar
 http://www.hranalytics101.com/
 
