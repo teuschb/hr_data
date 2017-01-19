@@ -55,9 +55,9 @@ Before we can get started, we have to load in a few other packages I like to use
 If you see a package name you don't recognize, make sure you run install.packages for it. For example, `install.packages('ggplot2')`.
 ```{r}
 library(ReporteRs)
-library(ggplot2)
-library(scales)
-library(magrittr)
+library(ggplot2)     # for plotting graphs
+library(scales)      # for plot scaling
+library(magrittr)    # for the %>% operator
 ```
 
 ## Analysis
@@ -65,16 +65,18 @@ What analysis needs to be done for the report? HR is often guilty of producing r
 
 Just know that R is able to produce various types of charts and produce whatever analysis is necessary to help your business. If you have any specific examples in mind you'd like to see, let me know.
 
+#### Attrition Overview Table
 For this example, the first slide will be a table with an overview of attrition.
 
 This code takes the data and uses `aggregate` to extract the total number of employees, the number of employees who left, and the attrition rate for this month (calculated as `# of employees gone/# of employees at the start of the month`), all by department.
 ```{r}
-overall_attrition <- as.data.frame(as.list(aggregate(Attrition ~ Department,
-                                                     data = mydata,
-                                                     FUN = function(x) c(
-                                                       n = length(x),
-                                                       s = sum(x, na.rm = T),
-                                                       mn = mean(x, na.rm = T)))), stringsAsFactors = F)
+overall_attrition <- as.data.frame(
+  as.list(aggregate(Attrition ~ Department,
+                    data = mydata,
+                    FUN = function(x) c(
+                      n = length(x),
+                      s = sum(x, na.rm = T),
+                      mn = mean(x, na.rm = T)))), stringsAsFactors = F)
 ```
 
 Next, I add a row of totals using `rbind`.
@@ -101,6 +103,7 @@ overall_attrition_table_simple
 
 Following that overview, I report attrition by job role, performance, and hire source (or recruiting channel). I'm going to make a plot that shows the turnover by job role, and then I will build a small dataset for a table that resembles the overall attrition table. 
 
+#### Attrition by job role
 This code should look familiar -- I'm extracting the total number of employees, the number of employees who left, and the attrition rate for this month by job role.
 ```{r}
 jobrole_attrition <- as.data.frame(as.list(aggregate(Attrition ~ JobRole,
@@ -157,12 +160,15 @@ options("ReporteRs-fontsize"=16) #using a smaller font
 ```
 
 Now I'm going to make the same graph and table for performance and hire source. The only difference is I use `scale_x_reverse` on performance rating so that the '1' rating is at the top of the graph. I'm also calculating the hire sources that have the highest and lowest attrition rates, for use in the recommendations section.
+
+#### Attrition by Performance
 ```{r}
-performance_attrition <- as.data.frame(as.list(aggregate(Attrition ~ PerformanceRating,
-                                                         data = mydata, FUN = function(x) c(
-                                                           n = length(x),
-                                                           s = sum(x, na.rm = T),
-                                                           mn = mean(x, na.rm = T)))))
+performance_attrition <- as.data.frame(
+  as.list(aggregate(Attrition ~ PerformanceRating,
+                    data = mydata, FUN = function(x) c(
+                      n = length(x),
+                      s = sum(x, na.rm = T),
+                      mn = mean(x, na.rm = T)))))
 
 names(performance_attrition) = c('PerformanceRating', 'Headcount', 'Attrition', 'AttritionRate')
 
@@ -182,12 +188,14 @@ names(performance_attrition) = c('Performance Rating', 'Headcount', 'Attrition',
 # put data into a table
 (performance_attrition_table_simple <- vanilla.table(performance_attrition))
 ```
-
+#### Attrition by Recruiting Channel
 ```{r}
-hiresource_attrition <- as.data.frame(as.list(aggregate(Attrition ~ HireSource, data = mydata,
-                                     FUN = function(x) c(n = length(x),
-                                                         s = sum(x, na.rm = T),
-                                                         mn = mean(x, na.rm = T)) )))
+hiresource_attrition <- as.data.frame(
+  as.list(aggregate(Attrition ~ HireSource, data = mydata,
+                    FUN = function(x) c(
+                      n = length(x),
+                      s = sum(x, na.rm = T),
+                      mn = mean(x, na.rm = T)))))
 
 names(hiresource_attrition) = c('HireSource', 'Headcount', 'Attrition', 'AttritionRate')
 
@@ -214,13 +222,22 @@ bottom_hire <- hiresource_attrition$`Recruiting Channel`[nrow(hiresource_attriti
 What's great about using R to do the graphs is that whenever I need to update this report with new data, all I have to do is change the date, and the rest happens automatically. It takes a little more investment at first, but now all that dreaded Excel work will take almost no time at all! 
 
 ## Creating the Report
-
+#### Explanation
 Once the charts and tables are finished, I need to put them into PowerPoint. I've done this many times by copy-pasting the graphs from R into the report, but it's tedious and hard to be consistent with their size and placement.
 
-Again, for more details about how this works, the guide is on the author's github page: http://davidgohel.github.io/ReporteRs/articles/powerpoint.html. I implement some additional features, like using a corporate template and bullet points, in the advanced version of this script.
+Again, for more details about how this works, the guide is on the author's github page: http://davidgohel.github.io/ReporteRs/articles/powerpoint.html. 
 
-First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(mydoc)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`).
+First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(mydoc)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`). Finally, I use `writeDoc` to save the file.
 
+If you've never seen the %>% operator, you can read it like, "then". So the following code:
+```{r, }
+report <- report %>%
+  addSlide(slide.layout = "Title Slide") %>%
+  addTitle(paste(date, "Acme Co. Attrition Report"))
+```
+can be read, "take `report` and add a title slide, then add a title, and save it as `report`."
+
+#### Code
 ```{r, }
 report <- pptx(title = paste(date, "Acme Co.\nAttrition Report"))
 options("ReporteRs-fontsize"=24) #font size for slide text
@@ -268,7 +285,7 @@ report <- report %>%
 
 report <- report %>%
   addSlide(slide.layout = "Two Content") %>%
-  addTitle("Which Hiring Channels have High Turnover?") %>%
+  addTitle("Which Hiring Channels have High Attrition?") %>%
   addPlot(function() print(hiresource_attrition_plot_simple)) %>%
   addFlexTable(hiresource_attrition_table_simple)
 
@@ -293,10 +310,9 @@ report <- report %>%
 writeDoc(report, paste0("~/hr_data/examples/",date," Attrition Report (Simple).pptx"))
 ```
 
-And there you have it! The final report is on git hub 
+And there you have it! The final report can be seen on SlideShare (http://www.slideshare.net/BenTeusch/automated-attrition-report-using-r-simple-version).
+Again, if you're interested in learning some additional tricks, check out the full report at 
 
-## explain where report is, close article1
+# LINK TO FULL VERSION
 
-https://www.linkedin.com/pulse/hr-attrition-dashboard-shiny-ggplot2-rstats-rohit-dhankar
-http://www.hranalytics101.com/
-
+I hope this guide can be helpful for analytics teams, and especially people analytics teams or HR reporting teams, who would like to reduce the amount of time they spend on routine reports. Well-considered reporting is still a pillar of effective people analytics, but the best teams reduce the time they spend on it as much as possible, so they can work on more advanced analytics. If you find other helpful guides for people analytics, or would like to see something specific, please let me know in the comments!
