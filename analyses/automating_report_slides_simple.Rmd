@@ -1,8 +1,8 @@
 ---
-title: "Making PowerPoint Slides with R"
+title: "Making PowerPoint Slides with R (simple version)"
 output: html_notebook
 ---
-This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published earlier this year (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a quant background. There are already plenty of tutorials to show you how to run a regression or other kinds of predictive models, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
+This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published in 2016 (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a quant background. There are already plenty of tutorials to show you how to run a regression or other kinds of predictive models, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
 
 What I'm going to do is focus on showing you how to do things that don't require too much of a data background, but would be really helpful for the HR folks I know. Those with a stronger data background can use this as a starting point to add in more complex analyses, if they want.
 
@@ -131,7 +131,7 @@ Here, I make a bar chart where each bar represents a `JobRole` and the height of
             title = paste("Attrition by Job Role, ", date, sep = ""))) +
   coord_flip())
 ```
-In this example, I'm demonstrating simple bar charts with little customization, but in the advanced version of this script I do more to make the graph look like I want it to. Check it out if you're interested in things like changing the colors, sorting the bars from highest to lowest, or removing that gray background.
+In this example, I'm demonstrating simple bar charts with little customization, but in the full version of this script I do more to make the graph look like I want it to. Check it out if you're interested in things like changing the colors, sorting the bars from highest to lowest, or removing that gray background.
 
 I want my table to be sorted from highest to lowest, so first I sort my dataset.
 ```{r}
@@ -141,14 +141,15 @@ jobrole_attrition <- jobrole_attrition[order(jobrole_attrition$AttritionRate, de
 Although I won't include it in this table, I can use this information to get the impact of reducing attrition for the job role with the highest attrition. I'll use this in the recommendations section, and it's easier to calculate it now.
 
 ```{r}
-reduction = .02            # how much could we reduce attrition?
-replacement_cost = 1       # how much does it cost to replace an employee, as a multiplier of their salary?
+reduction = .05            # how much could we reduce attrition?
+replacement_mult = 1       # how much does it cost to replace an employee, as a multiplier of their salary?
 top_role <- as.character(jobrole_attrition$JobRole[1])   # job role with highest attrition
 top_role_attrition <- jobrole_attrition$AttritionRate[1] # attrition for that role
+left_from_top_role <- mydata$JobRole == top_role & mydata$Attrition == 1 
 salary_lost = 
-  sum(mydata$MonthlyIncome[mydata$JobRole == top_role & mydata$Attrition == 1]) * 12 * # total annual salary lost 
-  replacement_cost                                                                     # times replacement cost
-impact = salary_lost - (salary_lost/top_role_attrition) * (top_role_attrition - reduction) # amount we could save
+  sum(mydata$MonthlyIncome[left_from_top_role]) * 12 *     # total annual salary lost 
+  replacement_mult                                         # times replacement cost
+impact = salary_lost * reduction # amount we could save
 ```
 
 Formatting the table should look familiar.
@@ -233,7 +234,7 @@ What's great about using R to do the graphs is that whenever I need to update th
 #### Explanation
 Once the charts and tables are finished, I need to put them into PowerPoint. I've done this many times by copy-pasting the graphs from R into the report, but it's tedious and hard to be consistent with their size and placement.
 
-Again, for more details about how this works, the guide is on the author's github page: http://davidgohel.github.io/ReporteRs/articles/powerpoint.html. 
+Again, for more details about how this works, the guide is on the author's github page (http://davidgohel.github.io/ReporteRs/articles/powerpoint.html). 
 
 First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(mydoc)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`). Finally, I use `writeDoc` to save the file.
 
