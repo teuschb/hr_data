@@ -236,7 +236,7 @@ Once the charts and tables are finished, I need to put them into PowerPoint. I'v
 
 Again, for more details about how this works, the guide is on the author's github page (http://davidgohel.github.io/ReporteRs/articles/powerpoint.html). 
 
-First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(mydoc)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`). Finally, I use `writeDoc` to save the file.
+First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(report)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`). Finally, I use `writeDoc` to save the file.
 
 If you've never seen the %>% operator, you can read it like, "then". So the following code:
 ```{r, }
@@ -320,6 +320,6 @@ writeDoc(report, paste0("~/hr_data/examples/",date," Attrition Report (Simple).p
 ```
 
 And there you have it! The final report can be seen on SlideShare (http://www.slideshare.net/BenTeusch/automated-attrition-report-using-r-simple-version).
-Again, if you're interested in learning some additional tricks, check out the full report at https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd.
+Again, if you're interested in learning some additional tricks, check out the full report at http://rpubs.com/teuschb/making_ppt_slides.
 
 I hope this guide can be helpful for analytics teams, and especially people analytics teams or HR reporting teams, who would like to reduce the amount of time they spend on routine reports. Well-considered reporting is still a pillar of effective people analytics, but the best teams reduce the time they spend on it as much as possible, so they can work on more advanced analytics. If you find other helpful guides for people analytics, or would like to see something specific, please let me know in the comments!
