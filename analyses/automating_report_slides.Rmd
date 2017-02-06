@@ -2,23 +2,25 @@
 title: "Making PowerPoint Slides with R"
 output: html_notebook
 ---
-This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published in 2016 (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a quant background. There are already plenty of tutorials to show you how to run a regression or other kinds of predictive models, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
+This guide is directed at what I referred to as the "third audience" in an article I published in 2016 (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a quant background. There are already plenty of tutorials to show you how to run a regression or other kinds of predictive models, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
 
 What I'm going to do is focus on showing you how to do things that don't require too much of a data background, but would be really helpful for the HR folks I know. Those with a stronger data background can use this as a starting point to add in more complex analyses, if they want.
 
 ## Making HR Reports
-No matter how mature people analytics is at your organization, at some point you're going to need to make some reports. This is especially true if you're an HRBP with limited technical support -- you might even be making these reports yourself! These reports, often done monthly, can take hours of VLOOKUPs and copy-pasting in Excel, then another while to put the right numbers into a PowerPoint template. Today I'm going to show you how to automate those reports using R, so you can save a bunch of time down the road. Andrew Marritt recently wrote about his process for automating quality reports (https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt), and his advice is great. I'll be showing you less strategy and more tactics about how to actually make this report (http://www.slideshare.net/BenTeusch/automated-attrition-report-using-r-simple-version) in R. 
+No matter how mature people analytics is at your organization, at some point you're going to need to make some reports. This is especially true if you're an HRBP with limited technical support -- you might even be making these reports yourself! These reports, often done monthly, can take hours of VLOOKUPs and copy-pasting in Excel, then another while to put the right numbers into a PowerPoint template. Today I'm going to show you how to automate those reports using R, so you can save a bunch of time down the road. Andrew Marritt recently wrote about his process for automating quality reports (https://www.linkedin.com/pulse/manager-level-reporting-how-we-automate-process-andrew-marritt), and his advice is great. I'll be showing you less strategy and more tactics about how to actually make this report (http://www.slideshare.net/BenTeusch/automated-attrition-report-using-r) in R. 
 
 ## Getting Started with R
 If you've never used R before, check out Richard Rosenow's Intro to R post (https://www.linkedin.com/pulse/hr-analytics-starter-kit-part-2-intro-r-richard-rosenow-pmp), and specifically you can download R (https://mirror.las.iastate.edu/CRAN/) and RStudio (https://www.rstudio.com/products/rstudio/download3/). There are lots of helpful tips online about getting started with R, and I'm writing this post with the assumption that you have RStudio installed and you're able to run code that I provide.
 
 ## Code for this article
-The R notebook used to produce this article is found on my github repository at  https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd. If you just want the script with code only, that's found at https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.R. There is also a simplified version of this code at https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides_simple.Rmd which produces a PowerPoint report using much simpler code, but doesn't look quite as nice.
+The R notebook used to produce this article is found on my GitHub repository at  https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.Rmd. If you just want the script with code only, that's found at https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides.R. There is also a simplified version of this code at https://github.com/teuschb/hr_data/blob/master/analyses/automating_report_slides_simple.Rmd which produces a PowerPoint report using much simpler code, but doesn't look quite as nice.
 
 ## Dataset
-The example dataset is based on the HR Employee Attrition and Performance dataset from IBM Watson Analytics (https://www.ibm.com/communities/analytics/watson-analytics-blog/hr-employee-attrition/). I've modified it slightly and saved it to my github repository (https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv), which allows me to read in the .csv file directly from the Internet, without needing to download a file.
+The example dataset is based on the HR Employee Attrition and Performance dataset from IBM Watson Analytics (https://www.ibm.com/communities/analytics/watson-analytics-blog/hr-employee-attrition/). I've modified it slightly and saved it to my GitHub repository (https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv), which allows me to read in the .csv file directly from the Internet, without needing to download a file.
 
 In practice, your dataset will be your standard HRIS report of headcount, attrition, performance, or whatever data you want to use for a report. That way, each month, quarter, or year, you'll be able to run this same line of code, replacing the previous file with the name of the most recent dataset that you want to work with. If all the needed data fields have the same names each time, the rest of the code will run without you having to make changes each month. You can even use R to get several standard reports and merge them together quickly, again in an automated way, but here I use just one data file.
+
+This code loads the data from GitHub into R.
 
 ```{r}
 mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv", stringsAsFactors = FALSE)
@@ -93,7 +95,7 @@ overall_attrition[nrow(overall_attrition),1] <- 'Total'
 
 Before I put the data into a table, I want to add % symbols and to make the column names more presentable. I also change the font size before putting it into a special kind of `ReporteRs` table called a `vanilla.table`.
 
-# ALSO DESCRIBE THE ADDITIONAL TABLE STUFF
+Once I make the table, I also format it. I use `setZebraStyle` to add some shading, and `setFlexTableWidths` to adjust the column widths to fit the text. The final block of code justifies the text to the left or center, and makes some text bold.
 
 ```{r}
 # format as percentages, rename columns
@@ -101,7 +103,7 @@ overall_attrition$Attrition.mn <- percent(as.numeric(overall_attrition$Attrition
 names(overall_attrition) <- c('Department', 'Headcount', 'Attrition', 'Attrition %')
 
 # Put data into a table
-options("ReporteRs-fontsize"=24) #font size for tables
+options("ReporteRs-fontsize"=16) #font size for tables
 overall_attrition_table <- vanilla.table(overall_attrition) %>%
   setZebraStyle(odd = '#eeeeee', even = 'white' ) %>%
   setFlexTableWidths(widths = c(4.5, 2.5, 2, 2.5)) 
@@ -113,7 +115,7 @@ overall_attrition_table[4,] = textProperties(font.weight = 'bold' )
 overall_attrition_table
 ```
 
-Following that overview, I report attrition by job role, performance, and hire source (or recruiting channel). For each one I'm going to make a plot that shows the turnover, and then create a table that resembles the overall attrition table. 
+Following that overview, I report attrition by job role, performance, and hire source (or recruiting channel). For each one I'm going to make a plot that shows the turnover, and then create a table that resembles the overall attrition table.
 
 #### Attrition by job role
 This code should look familiar -- I'm extracting the total number of employees, the number of employees who left, and the attrition rate for this month by job role.
@@ -133,12 +135,13 @@ names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionRate
 
 For making graphs, I use the popular `ggplot2` package. It's a really powerful package that allows you to visualize all kinds of data, and customize the resulting plots.
 
-Here, I make a bar chart where each bar represents a `JobRole` and the height of the bar represents the attrition rate. The bit of customization I do include here is to make the axis labels into percentages, to flip the graph so it's horizontal, and to add custom labels. You can see how I'm using the `month` and `date` information from the beginning of the script. I save the graph as `jobrole_attrition_plot` so I can use it later.
+Here, I make a bar chart where each bar represents a `JobRole` and the height of the bar represents the attrition rate. I save the graph as `jobrole_attrition_plot` so I can use it later.
 
-# DESCRIBE NON-SIMPLE STUFF
+I do a bit of customization here. I use scale_fill_manual to make the bars blue. Theme_minimal removes a lot of extra chart lines that I prefer not be there. I also change the axis labels into percentages with labels=percent, flip the graph so it’s horizontal with coord_flip, and add custom labels with labs.
 ```{r}
-(jobrole_attrition_plot <- ggplot(jobrole_attrition, aes(reorder(JobRole, AttritionRate), AttritionRate)) +
-  geom_bar(stat = "identity", aes(fill = '')) +
+(jobrole_attrition_plot <- ggplot(jobrole_attrition,
+                                  aes(reorder(JobRole, AttritionRate), AttritionRate)) +
+  geom_col(aes(fill = '')) +
   scale_fill_manual(values = c("#1D243C"),guide=FALSE) +
   theme_minimal() +
   scale_y_continuous(labels=percent) +
@@ -175,7 +178,7 @@ names(jobrole_attrition) = c('Job Role', 'Headcount', 'Attrition', 'Attrition %'
 
 # put data into a table
 options("ReporteRs-fontsize"=16) #font size for tables
-table_widths = c(2.8, 1.2, 1, 1.5) 
+table_widths = c(2.8, 1.2, 1, 1.6) 
 
 jobrole_attrition_table <- vanilla.table(jobrole_attrition) %>%
   setZebraStyle(odd = '#eeeeee', even = 'white' ) %>%
@@ -375,7 +378,7 @@ writeDoc(report, paste0("~/hr_data/examples/",date," Attrition Report.pptx"))
 ```
 
 
-And there you have it! The final report can be seen on SlideShare (http://www.slideshare.net/BenTeusch/automated-attrition-report-using-r-simple-version).
-Again, if you're interested in learning some additional tricks, check out the full report at http://rpubs.com/teuschb/making_ppt_slides_simple.
+And there you have it! The final report can be seen on SlideShare (http://www.slideshare.net/BenTeusch/automated-attrition-report-using-r).
+Again, if you're interested in starting with a simple version of this code, check out http://rpubs.com/teuschb/making_ppt_slides_simple.
 
 I hope this guide can be helpful for analytics teams, and especially people analytics teams or HR reporting teams, who would like to reduce the amount of time they spend on routine reports. Well-considered reporting is still a pillar of effective people analytics, but the best teams reduce the time they spend on it as much as possible, so they can work on more advanced analytics. If you find other helpful guides for people analytics, or would like to see something specific, please let me know in the comments!

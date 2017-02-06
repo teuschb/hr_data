@@ -2,7 +2,7 @@
 title: "Making PowerPoint Slides with R (simple version)"
 output: html_notebook
 ---
-This is the first of what I hope will be a series of articles directed at what I referred to as the "third audience" in an article I published in 2016 (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a quant background. There are already plenty of tutorials to show you how to run a regression or other kinds of predictive models, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
+This guide is directed at what I referred to as the "third audience" in an article I published in 2016 (https://www.linkedin.com/pulse/people-analytics-show-me-dont-tell-ben-teusch) - those who have a data background, but little HR expertise, and those in HR with a willingness to work with data, but not much of a quant background. There are already plenty of tutorials to show you how to run a regression or other kinds of predictive models, and I'm not sure that's what this audience will find most helpful. Please give me feedback on that. 
 
 What I'm going to do is focus on showing you how to do things that don't require too much of a data background, but would be really helpful for the HR folks I know. Those with a stronger data background can use this as a starting point to add in more complex analyses, if they want.
 
