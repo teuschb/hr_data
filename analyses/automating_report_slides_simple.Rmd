@@ -28,8 +28,8 @@ mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/dat
 The one thing I do manually update each month is the date of the report. By setting it once at the top, I can reference it throughout the script without worrying about all the places I may have used it.
 
 ```{r}
-month = "February"
-date = "February 2017"
+month = "May"
+date = "May 2017"
 ```
 
 ## The ReporteRs package
@@ -142,7 +142,7 @@ Although I won't include it in this table, I can use this information to get the
 
 ```{r}
 reduction = .05            # how much could we reduce attrition?
-replacement_mult = 1       # how much does it cost to replace an employee, as a multiplier of their salary?
+replacement_mult = 1.5       # how much does it cost to replace an employee, as a multiplier of their salary?
 top_role <- as.character(jobrole_attrition$JobRole[1])   # job role with highest attrition
 top_role_attrition <- jobrole_attrition$AttritionRate[1] # attrition for that role
 left_from_top_role <- mydata$JobRole == top_role & mydata$Attrition == 1 
@@ -239,7 +239,7 @@ Again, for more details about how this works, the guide is on the author's githu
 First I create a new `pptx` document and call it `report`. I set the font size to 24, and I like to use `slide.layouts(report)` to see which PowerPoint slide layouts are available. The basic idea is to add a slide (`addSlide`), choose a layout, and then fill that layout with a title (`addTitle`) and text (`addParagraph`), a table (`addFlexTable`), or a graph (`addPlot`). Finally, I use `writeDoc` to save the file.
 
 If you've never seen the %>% operator, you can read it like, "then". So the following code:
-```{r, }
+```{r, eval=FALSE}
 report <- report %>%
   addSlide(slide.layout = "Title Slide") %>%
   addTitle(paste(date, "Acme Co. Attrition Report"))
@@ -288,7 +288,7 @@ report <- report %>%
 
 report <- report %>%
   addSlide(slide.layout = "Two Content") %>%
-  addTitle("Are we Keeping Our Top Performers?") %>%
+  addTitle("Are We Keeping Our Top Performers?") %>%
   addPlot(function() print(performance_attrition_plot_simple)) %>%
   addFlexTable(performance_attrition_table_simple) 
 
@@ -305,7 +305,7 @@ report <- report %>%
                         " with an attrition rate of ",as.character(percent(top_role_attrition)),"."))) %>%
   addParagraph( c(paste0("Additional focus should be placed on retaining ", top_role, "s.")),
                 append = T) %>%
-  addParagraph( c(paste0("We estimate that replacing an employee costs ", replacement_cost,
+  addParagraph( c(paste0("We estimate that replacing an employee costs ", replacement_mult,
                          "x their annual salary. Reducing attrition by ", percent(reduction),
                          " in ", month, " could have saved ", dollar(round(impact,0)), ".")),
                 append = T) %>%

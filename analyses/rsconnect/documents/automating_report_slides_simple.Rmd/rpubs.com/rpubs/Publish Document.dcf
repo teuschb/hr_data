@@ -4,5 +4,5 @@ account: rpubs
 server: rpubs.com
 appId: https://api.rpubs.com/api/v1/document/243081/297a7361a0af453cb4fcdedc9d7b89e6
 bundleId: https://api.rpubs.com/api/v1/document/243081/297a7361a0af453cb4fcdedc9d7b89e6
-url: http://rpubs.com/publish/claim/243081/a3a8650ee67c416fafc3ef47e918a9a8
-when: 1484873757.95378
+url: http://rpubs.com/teuschb/243081
+when: 1493244161.57896

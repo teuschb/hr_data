@@ -1,30 +1,39 @@
 
+####
+# Simplified Guide for making an automated attrition report using R, 
+# 5/2017
+# Ben Teusch
+####
+
+##
+# Load Data
+##
 
 mydata <- read.csv("https://raw.githubusercontent.com/teuschb/hr_data/master/datasets/modified_watson_dataset.csv",
                    stringsAsFactors = FALSE)
+##
+# Set Report Parameters
+##
 
+month = "May"
+date = "May 2017"
 
-month = "November"
-date = "November 2016"
-
-
-
-
-
-
+##
+# Libraries
+##
 
 require(rJava)
-system("java -version")
 if (!require('ReporteRs')) {
   install.packages("ReporteRs")
 }
-
-
 library(ReporteRs)
-library(ggplot2)
-library(scales)
-library(magrittr)
+library(ggplot2)     # for plotting graphs
+library(scales)      # for formatting numbers
+library(magrittr)    # for the %>% operator
 
+##
+# Attrition Overview Table
+##
 
 overall_attrition <- as.data.frame(as.list(aggregate(Attrition ~ Department,
                                                      data = mydata,
@@ -51,6 +60,9 @@ options("ReporteRs-fontsize"=24) # you can adjust the font size
 overall_attrition_table_simple <- vanilla.table(overall_attrition)
 overall_attrition_table_simple
 
+##
+# Attrition by Job Role
+##
 
 jobrole_attrition <- as.data.frame(as.list(aggregate(Attrition ~ JobRole,
                                                      data = mydata,
@@ -61,7 +73,7 @@ jobrole_attrition <- as.data.frame(as.list(aggregate(Attrition ~ JobRole,
 
 names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionRate')
 
-
+# bar chart
 (jobrole_attrition_plot_simple <- ggplot(jobrole_attrition, aes(JobRole, AttritionRate)) +
     geom_col() +
     scale_y_continuous(labels = percent) +
@@ -69,9 +81,11 @@ names(jobrole_attrition) = c('JobRole', 'Headcount', 'Attrition', 'AttritionRate
               title = paste("Attrition by Job Role, ", date, sep = ""))) +
     coord_flip())
 
+# sort data
 jobrole_attrition <- jobrole_attrition[order(jobrole_attrition$AttritionRate, decreasing = TRUE),]
 
-reduction = .02            # how much could we reduce attrition?
+# to be used later
+reduction = .05            # how much could we reduce attrition?
 replacement_cost = 1       # how much does it cost to replace an employee, as a multiplier of their salary?
 top_role <- as.character(jobrole_attrition$JobRole[1])   # job role with highest attrition
 top_role_attrition <- jobrole_attrition$AttritionRate[1] # attrition for that role
@@ -80,6 +94,7 @@ salary_lost =
   replacement_cost                                                                     # times replacement cost
 impact = salary_lost - (salary_lost/top_role_attrition) * (top_role_attrition - reduction) # amount we could save
 
+# create table
 # format as percentages, rename columns
 jobrole_attrition$AttritionRate <- percent(jobrole_attrition$AttritionRate)
 names(jobrole_attrition) = c('Job Role', 'Headcount', 'Attrition', 'Attrition %')
@@ -87,6 +102,10 @@ names(jobrole_attrition) = c('Job Role', 'Headcount', 'Attrition', 'Attrition %'
 # put data into a table
 options("ReporteRs-fontsize"=16) #using a smaller font
 (jobrole_attrition_table_simple <- vanilla.table(jobrole_attrition))
+
+##
+# Attrition by Performance
+##
 
 performance_attrition <- as.data.frame(as.list(aggregate(Attrition ~ PerformanceRating,
                                                          data = mydata, FUN = function(x) c(
@@ -111,6 +130,10 @@ names(performance_attrition) = c('Performance Rating', 'Headcount', 'Attrition',
 
 # put data into a table
 (performance_attrition_table_simple <- vanilla.table(performance_attrition))
+
+##
+# Attrition by Recruiting Channel
+##
 
 hiresource_attrition <- as.data.frame(as.list(aggregate(Attrition ~ HireSource, data = mydata,
                                                         FUN = function(x) c(n = length(x),
@@ -139,6 +162,9 @@ names(hiresource_attrition) = c('Recruiting Channel', 'Headcount', 'Attrition', 
 top_hire <- hiresource_attrition$`Recruiting Channel`[1]
 bottom_hire <- hiresource_attrition$`Recruiting Channel`[nrow(hiresource_attrition)]
 
+##
+# Create and Publish Report
+##
 
 report <- pptx(title = paste(date, "Acme Co.\nAttrition Report"))
 options("ReporteRs-fontsize"=24) #font size for slide text
